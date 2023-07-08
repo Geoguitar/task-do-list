@@ -25,9 +25,10 @@ O Resultado esperado deverá ser via metodo GET e o texto devolvido em json.
 
 - Criar os pacotes entities e controller.
 
-- Criar as classes com os atributos encapsulados, e os Getters e setters.
+- Criar as classes com os atributos encapsulados, e os Getters e setters. "Não esquecendo de observar que a classe que esta associado com 
+  modelo relacional de outra classe, deverá ter este atributo adicionado com seu getter e setter."
 
-- Criar um construtor sem parametros e outro com parametros.
+- Criar um construtor sem parametros(argumentos) e outro com parametros.
 
 - Na classe do controller que disponibilizara o endpoint, deverá ter as anotation para configurar os recursos: 
 
@@ -36,7 +37,7 @@ O Resultado esperado deverá ser via metodo GET e o texto devolvido em json.
 
 - Criar os metodos na classe controller para implementar os objetos, e neste fazer uso da anotation @GetMapping.
 
-
+- Testar a API no browser e no Postman.
 
 
 
