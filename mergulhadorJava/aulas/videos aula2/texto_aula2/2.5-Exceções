@@ -1,0 +1,1278 @@
+[Música]
+0:03
+durante a execução de um programa coisas
+0:05
+erradas inesperadas podem acontecer como
+0:08
+por exemplo um erro de programação ou a
+0:11
+violação de alguma regra de negócio né E
+0:13
+quando algo de errado acontece uma
+0:17
+exceção é lançada durante a execução do
+0:19
+programa que desvia o fluxo normal de
+0:23
+execução das instruções programadas
+0:24
+então basicamente
+0:27
+exceções em inglês a gente conhece como
+0:29
+Exception são situações anormais e
+0:34
+geralmente
+0:34
+indesejáveis que podem ocorrer durante a
+0:37
+execução de um programa
+0:39
+se uma execução não for tratada que
+0:43
+acontece a execução do programa é
+0:46
+interrompida nós já lançamos inclusive
+0:48
+exceções aqui no nosso programa
+0:50
+anteriormente lembra disso Olha só aqui
+0:53
+na classe conta por exemplo aqui no
+0:55
+método depositar nós podemos lançar
+0:57
+exceção aqui e também no método sacar
+1:00
+Olha que interessante aqui ó se não
+1:01
+tiver saldo disponível em ventilação uma
+1:04
+exceção
+1:05
+colocando a mensagem Saldo insuficiente
+1:08
+então aqui é uma violação de uma regra
+1:11
+de negócio só podemos fazer um saque se
+1:14
+tiver saldo disponível né E para fazer o
+1:17
+lançamento de exceções a gente usa a
+1:20
+palavra chave troll que significa lançar
+1:23
+em inglês né seguido pela Instância de
+1:27
+um objeto de exceção aqui no caso a liga
+1:30
+o state Exception
+1:32
+um objeto
+1:35
+de exceção é uma Instância de uma classe
+1:39
+que tem como super classe uma classe com
+1:43
+o nome bem esquisitinho chamado trouble
+1:45
+Quer ver Deixa eu te mostrar eu vou
+1:48
+clicar com botão com a tecla Command ou
+1:51
+control dependendo do sistema
+1:52
+operacional para entrar no código fonte
+1:54
+dessa classe aqui ó de exceção entramos
+1:57
+aqui na código fonte da classe da
+1:59
+exceção liga o state Exception veja que
+2:02
+essa classe herda outra classe ó tá
+2:04
+vendo herança aqui sendo usada ela
+2:06
+extende ela é Run time Exception que
+2:09
+indica que essa é uma classe de exceção
+2:11
+vamos dar uma olhada aí one time
+2:12
+Exception
+2:14
+herda uma outra classe chamada Exception
+2:17
+vou clicar aqui e acetception trouble
+2:21
+que é exatamente aquele nome
+2:22
+esquisitinho que eu te falei então isso
+2:24
+aqui indica que é um objeto lançável ou
+2:29
+seja ele tem a capacidade de ser lançado
+2:31
+então tem todo um tratamento especial de
+2:35
+projetos desse tipo de classe tá quando
+2:37
+você
+2:40
+tem um objeto desse tipo de trouble você
+2:43
+pode usá-lo para lançar usando a
+2:48
+palavra-chave troll ou seja Você lança
+2:50
+um objeto
+2:51
+que está representando algum problema
+2:54
+então vamos entender melhor aqui como
+2:56
+funciona tá quando nós executamos um
+3:00
+programa Java é criada uma pilha de
+3:03
+quadros dos métodos executados em inglês
+3:07
+nós chamamos isso de qual steck é uma
+3:10
+pilha é de chamadas tá e quando uma
+3:15
+exceção é lançada como nesse exemplo
+3:17
+aqui ó o método dois é lançado Tá então
+3:20
+vamos só conferir aqui ó aqui o bem o
+3:23
+método Man chama o método um E aí faz a
+3:27
+Invocação aqui um método um chama o
+3:29
+método dois e é feito a Invocação aqui
+3:31
+aqui ao lado direito você pode conferir
+3:35
+hashtag a pilha de chamadas então começa
+3:38
+tudo aqui ó uma pilha de baixo para cima
+3:39
+o método Man é um quadro tá vendo o
+3:42
+método Man é um quadro aí o Man chama o
+3:45
+método um ele vai chamar o método um
+3:47
+então ele vai empilhar um quadro acima
+3:49
+dele o método um chama o método 2 então
+3:52
+ele vai empilhar mais um quadrado acima
+3:54
+dele e assim por diante dependendo de
+3:56
+quantos quantas chamadas você tem tá
+3:59
+então vai empilhando esse quadro tá bom
+4:01
+E aí voltando aqui então quando o método
+4:05
+dois lança uma exceção
+4:09
+esse método aqui a execução dele é
+4:12
+interrompida e o fluxo de execução no
+4:15
+programa passa para o quadro anterior da
+4:17
+pilha de execução Então olha você que
+4:19
+tava no método dois e vai passar para o
+4:21
+quadro anterior vai desempilhar e vai
+4:24
+voltar para o método um tá esse método
+4:26
+um aqui esse método recebe essa exceção
+4:29
+e ele assim método pode capturar essa
+4:32
+exceção e pode tratar essa exceção agora
+4:35
+se esse método não tratar a exceção ou
+4:38
+seja não capturar ela para fazer alguma
+4:40
+coisa com essa recessão aí a exceção ela
+4:43
+é propagada na pilha de chamadas na qual
+4:46
+ostec Ou seja é como se fosse relançada
+4:49
+para o quadro anterior novamente o
+4:52
+quadro anterior é esse quadro esse
+4:54
+primeiro quadro que é o quadro Man aqui
+4:56
+né até chegar no último quadro né que no
+4:58
+caso é esse aqui E aí o programa
+5:00
+encerrado tá
+5:03
+qualquer bloco de código nessa pilha de
+5:06
+chamadas aqui pode capturar e tratar
+5:08
+exceção evitando que o programa sem
+5:11
+série então se você ao programar recebe
+5:15
+uma exceção sabe que uma exceção pode
+5:16
+ser lançada você tem a chance de
+5:18
+capturar essa exceção e fazer alguma
+5:20
+coisa com ela tá fazer alguma
+5:22
+alternativa ou Tentar novamente enfim
+5:25
+você pode executar a lógica que você
+5:27
+quiser quando uma exceção avançada agora
+5:29
+se você não faz nada essa exceção que
+5:32
+chega para o último quadro e aí o
+5:34
+programa é encerrado automaticamente tá
+5:36
+então agora vamos simular uma exceção
+5:40
+aqui tá vamos simular essa exceção aqui
+5:42
+do Saldo insuficiente por exemplo eu vou
+5:44
+pegar aqui
+5:46
+vou tentar
+5:48
+fazer um pagamento
+5:51
+não vou tentar fazer um saque aqui ó um
+5:54
+saque 30 mil vou tentar sacar 35 mil não
+5:58
+consegue sacar 35 mil porque eu só tenho
+5:59
+30 mil que eu depositei tá e vou rodar
+6:02
+esse programa aí veja só quando ocorre
+6:07
+uma exceção e ela não é tratada como foi
+6:09
+o caso aqui nós não tratamos essa
+6:11
+exceção
+6:13
+uma steck 3 ou seja um rastro da pilha
+6:18
+né esse aqui é o que a gente chama de
+6:19
+rastro da pilha um espectros ela é
+6:22
+exibida aqui no câncer ou seja na saída
+6:25
+padrão aqui na saída de erro né ela foi
+6:28
+exibida aqui tá então a stec Trace é uma
+6:32
+lista de chamadas de métodos que levam
+6:35
+ao lançamento da exceção você pode ver
+6:37
+aqui ó que você tem aqui
+6:40
+chamadas ó classe principal chamou a
+6:43
+classe conta né poderíamos vamos fazer o
+6:46
+seguinte vamos pegar aqui sacar um valor
+6:48
+menor e vamos fazer um pagamento de um
+6:50
+boleto aqui de
+6:52
+35 mil tá para você ver que vai ser um
+6:57
+rastro de pilha um rastro da pilha um
+7:00
+pouco maior Olha só uma linha a mais né
+7:03
+porque porque a classe principal aqui na
+7:06
+linha 34 essa aqui é a linha tá
+7:08
+fez uma invocação de algum método da
+7:13
+classe caixa eletrônico na linha 20 ele
+7:15
+fez uma invocação da classe conta e aí
+7:18
+na linha 36 lançou o Saldo insuficiente
+7:22
+Então esse aqui esse aqui é a stec Tracy
+7:25
+que vai mostrar para a gente
+7:28
+é todo o toda a pilha de chamadas dos
+7:32
+métodos que levaram ao lançamento da
+7:34
+exceção junto com os nomes dos arquivos
+7:36
+e número das linhas em que as chamadas
+7:38
+ocorreram tá e como eu expliquei
+7:41
+anteriormente durante o desempilhamento
+7:44
+dos quadros quando uma exceção é lançada
+7:46
+né Por Exemplo foi lançada aqui na conta
+7:49
+né aí vai vai ser feito desempilhamento
+7:52
+dos quadros da pilha da qual steck
+7:55
+quando a exceção é lançada e um
+7:58
+capturador de exceção pode
+8:02
+interromper esse desempealhamento para
+8:05
+fazer algum tratamento né é chamado de
+8:07
+Exception render né um tratador um
+8:10
+capturador de exceção que vai tratar a
+8:12
+exceção né então quando isso acontece o
+8:15
+controle do fluxo de execução é
+8:17
+transferido para esse capturador para
+8:19
+ele executar alguma regra de negócio
+8:20
+alguma coisa para tratar essa exceção tá
+8:23
+então capturador de exceção nada mais é
+8:25
+que um bloco de código responsável por
+8:28
+capturar uma exceção de um determinado
+8:30
+tipo e pegar o controle do fluxo de
+8:33
+execução desse programa para ele para
+8:34
+fazer alguma coisa vamos ver isso aqui
+8:36
+na prática como que funciona Tá então
+8:39
+vamos lá aqui na classe principal por
+8:40
+exemplo E aí eu poderia eu posso
+8:43
+escolher onde eu quero fazer essa
+8:44
+captura tá
+8:45
+dentro de toda essa pilha de chamadas
+8:48
+você escolhe qual que é o local local
+8:50
+mais apropriado que você tem informações
+8:52
+suficientes para fazer o tratamento da
+8:54
+exceção tá se você quiser fazer na
+8:56
+classe conta na Casas contas não faz
+8:58
+sentido a gente fazer o tratamento aqui
+9:00
+né porque aqui é o próprio método sacar
+9:02
+que lanças não iria fazer um tratamento
+9:03
+aqui Provavelmente na Caixa na classe
+9:07
+caixa eletrônico na classe caixa
+9:09
+eletrônica que no método pagar
+9:11
+poderíamos de repente fazer um
+9:13
+tratamento aqui ó capturar exceção e
+9:14
+fazer um tratamento sim poderíamos ou
+9:17
+aqui na classe principal eu vou fazer
+9:18
+aqui na classe principal então quando a
+9:21
+classe conta o método pagar a lançar
+9:23
+exceção vai passar para caixa eletrônico
+9:25
+que vai passar para classe principal e
+9:27
+na classe principal a gente vai fazer a
+9:30
+captura dessa exceção antes de fazer
+9:33
+essa captura a gente tem que colocar o
+9:35
+código que pode lançar a exceção dentro
+9:38
+de um bloco try E aí qual o código que
+9:41
+pode lançar exceção aqui vamos falar de
+9:43
+sacar Vamos pensar apenas no saque na
+9:46
+retirada do dinheiro bom aqui pode
+9:48
+lançar exceção isso aqui também aqui
+9:50
+deve estar também porque é um tipo de
+9:51
+saque né poder evitar que ele acaba
+9:53
+chamando sacar ou pagamento aqui desses
+9:57
+boletos né então tem várias coisas aqui
+10:00
+que podem lançar exceção Então a gente
+10:02
+vai colocar tudo isso dentro de um bloco
+10:04
+try Olha só né Um bloco try e eu vou
+10:08
+colocar
+10:10
+até aqui
+10:12
+bom se eu faço isso dentro de um bloco
+10:15
+try aí essas essas referências aqui
+10:18
+essas variáveis boleto escola elas não
+10:20
+vão ser acessíveis por aqui porque aí
+10:22
+essa variável ela se torna com escopo
+10:26
+apenas dentro desse bloco então eu vou
+10:28
+colocar esse fechamento do try eu vou
+10:31
+colocar aqui certo porque a gente
+10:33
+consegue acessar essa variável
+10:34
+normalmente aqui então eu tô falando
+10:36
+assim ó tem de drink inglês significa
+10:39
+tente né tentativa tem que executar esse
+10:42
+bloco de código aqui é isso que eu tô
+10:44
+dizendo e
+10:47
+Aí eu falo o seguinte Beleza mas se eu
+10:51
+vou fazer um Cat agora captura caso
+10:53
+lance uma exceção captura para mim uma
+10:56
+determinada exceção qual exceção e você
+10:59
+pode especificar aqui Qual é o tipo de
+11:01
+exceção que você quer tratar eu vou
+11:03
+colocar aqui o a liga state Exception
+11:06
+Então você fala qual que é o nome da
+11:08
+classe de exceção que você quer você
+11:10
+quer capturar coloca aqui espaço o nome
+11:13
+da variável porque uma exceção é um
+11:16
+objeto de um tipo de classe então é um
+11:18
+objeto desse tipo eu quero atribuir esse
+11:21
+objeto a essa variável aqui posso
+11:23
+colocar assim exceção posso mas em geral
+11:26
+a gente coloca uma letrinha só nesse
+11:28
+caso aqui eu vou cair tá e abre um bloco
+11:30
+aqui então caso qualquer uma dessas
+11:33
+instruções aqui
+11:34
+lance uma exceção e essa sessão não foi
+11:38
+tratada
+11:40
+acima dessa pilha de chamadas e chegou
+11:43
+até aqui aí esse Cat vai tratar Claro Se
+11:46
+for esse tipo de exceção aqui se for
+11:47
+outro tipo não vai tratar porque eu não
+11:49
+especifiquei que eu quero tratar Tá bom
+11:51
+então aqui é o capturador de exceção que
+11:54
+nós vamos colocar e aqui eu coloco as
+11:57
+instruções para o tratamento adequado da
+12:00
+exceção aí depende do que que você quer
+12:01
+fazer no nosso caso aqui você imprimir
+12:04
+uma mensagem dizendo assim ó erro
+12:08
+ao erro
+12:11
+erro que que eu coloco em erro ao
+12:16
+executar operação na conta isso aqui é
+12:21
+operação na conta Vou Colocar assim e
+12:23
+vou pegar a mensagem vou colocar pegar
+12:25
+então aqui ó com katenar com tá vendo
+12:28
+esse desenho aqui objeto de exceção e
+12:30
+ponto e toda exceção nós temos
+12:33
+esse método Get message que ele vai
+12:36
+pegar a mensagem da exceção tá bom então
+12:39
+vou concretenar com a mensagem da
+12:41
+exceção e vamos executar agora vou
+12:45
+executar
+12:46
+veja que não deu mais aquela aquela
+12:51
+step 3 aqui né aquele erro mas a exceção
+12:55
+foi tratada Olha só eu Executar a
+12:57
+operação na conta Saldo insuficiente viu
+13:00
+não deu erro no programa porque a gente
+13:02
+tratou exceção é claro não foi possível
+13:05
+realmente fazer a
+13:09
+o saque aqui né Foi em qual local o
+13:12
+pagamento do boleto né Não foi possível
+13:14
+porém a gente conseguiu tratar e dar um
+13:18
+retorno que não seja um erro para o
+13:20
+usuário final né Entendeu até aqui então
+13:23
+quando você vai fazer a captura de uma
+13:27
+exceção aqui eu fiz uma captura com um
+13:29
+tipo muito específico né dessa classe
+13:32
+ali gostei de etc
+13:34
+porém é importante você saber que você
+13:36
+pode fazer a captura de exceção também
+13:39
+usando upcasting ou seja usando aqui um
+13:43
+super tipo se a gente olhar aqui a liga
+13:45
+o state Exception
+13:47
+que é da excessfections na realidade
+13:51
+as exceções elas em geral vai herdar vai
+13:55
+ser um subtipo de Exception né tem ainda
+13:57
+trouble aqui mas é um tipo muito vamos
+14:00
+dizer muito baixo nível tá esse tipo
+14:03
+aqui você é dificilmente vai usar ele
+14:05
+até mesmo para fazer podcast mas o
+14:08
+Exception aqui ó é um tipo bem conhecida
+14:11
+que você percebe então e veja que tá na
+14:13
+hierarquia da herança aqui do Exception
+14:16
+então eu poderia fazer o orcasting fazer
+14:19
+a captura da exceção através de um super
+14:22
+Tipo poderia colocar aqui Exception E aí
+14:24
+nós capturaremos aqui todas as Exception
+14:29
+Independente se é ali gostei se é
+14:33
+qualquer uma outra
+14:34
+que ela é da x-ception nós vamos
+14:36
+capturar aqui tá E aí vai continuar
+14:39
+funcionando logicamente porém agora
+14:43
+outras exceções também serão capturadas
+14:46
+pelo por esse mesmo capturador aqui e aí
+14:50
+você pode pensar que isso aqui é uma
+14:52
+coisa boa né porque você captura de uma
+14:54
+única vez várias exceções Mas você tem
+14:56
+que tomar cuidado ao fazer isso aqui
+14:58
+porque se você captura algo dessa forma
+15:01
+você tá fazendo aqui um tratamento mais
+15:03
+genérico Já que você não sabe exatamente
+15:05
+o que aconteceu né Você sabe você sabe
+15:08
+apenas que deu uma exceção você não tem
+15:11
+exatamente o que aconteceu porque ele
+15:12
+não tá capturando algo muito específico
+15:14
+dessa forma você acaba não conseguindo
+15:17
+fazer algo no tratamento específico
+15:19
+também então você deve evitar isso aqui
+15:21
+ao máximo Tá bom se você tem mais de uma
+15:24
+exceção que você quer tratar de formas
+15:26
+diferentes o ideal é que você adicione
+15:28
+mais blocos de captura mais Cat você
+15:31
+pode continuar fazendo aqui ó liga o arg
+15:34
+Exception por exemplo e faz o e faz o
+15:38
+tratamento aqui normalmente então você
+15:40
+pode ir Colocando vários blocos quets tá
+15:41
+mas aqui nós vamos deixar apenas um e
+15:44
+algumas dúvidas comuns em relação a
+15:46
+captura de Exception são seguinte ó
+15:48
+primeiro o que que você é o que que você
+15:51
+coloca dentro do bloco drive veja que
+15:53
+aqui no bloco trying nós colocamos
+15:55
+várias instruções né bom você deve
+15:59
+analisar se existem outras instruções
+16:02
+abaixo da instrução que pode gerar
+16:04
+alguma expection e se houver
+16:08
+que se houver alguma exceção não pode
+16:10
+ser executada então por exemplo
+16:13
+Vamos pensar aqui ó se depois que eu
+16:16
+tentei sacar da minha conta esse sacar
+16:19
+aqui lançou uma exceção se lançar uma
+16:22
+exceção aqui esse código aqui não vai
+16:25
+ser executado porque porque o fluxo de
+16:29
+execução do programa ele vai linha por
+16:31
+linha na instrução Então vai rodar aqui
+16:33
+vai rodar aqui aí ele rodar aqui o
+16:35
+depositar vai rodar o sacar se esse
+16:37
+método sacar lançar uma exceção o
+16:39
+controle aqui do fluxo vai ser
+16:42
+transferido para o cat e você for
+16:44
+transferido para o cat nós vamos tratar
+16:45
+essa exceção mandar essa mensagem não
+16:48
+vai ser executado nada disso aqui ó e
+16:51
+vai continuar a execução aqui embaixo já
+16:53
+vai imprimir o saldo entendeu então se
+16:56
+você por exemplo falar assim não eu
+16:58
+quero fazer eu quero tentar fazer esse
+17:00
+saque aqui mas eu não consegui executar
+17:03
+eu quero continuar o fluxo normalmente
+17:06
+dessas instruções aqui aí essa forma de
+17:09
+fazer não estaria correta você teria que
+17:11
+fazer aqui ó um try Cat separado aqui
+17:16
+entendeu porque se você faz dessa forma
+17:17
+Ele vai tentar fazer isso aqui você der
+17:20
+alguma exceção aqui no sacar por exemplo
+17:22
+você captura aqui imprime essa mensagem
+17:24
+e continua a executar essas instruções
+17:28
+aqui você não pula ela entendeu então
+17:31
+Como que você faz o bloco try ele
+17:34
+engloba todas as instruções ou só uma
+17:37
+parte isso vai depender da sua lógica do
+17:41
+que que você precisa fazer tá bom e
+17:43
+outra dúvida que você pode ter é Onde
+17:46
+capturar e tratar exceção né qual classe
+17:50
+né que tem uma hierarquia uma uma pilha
+17:52
+de chamadas aí né uma classe que chama
+17:54
+outra que chama outra onde que você vai
+17:56
+colocar a captura de exceção e nesse
+18:01
+ponto aí não tem uma regra para saber
+18:03
+exatamente em qual local o seu programa
+18:05
+deve tratar uma exceção isso depende do
+18:08
+contexto se o método que tá recebendo a
+18:11
+exceção tem informações suficientes para
+18:14
+capturar exceção e dar um tratamento
+18:17
+para ela Aí você faz nesse local tá
+18:20
+então se o método não tem condições para
+18:23
+tratar a exceção Muito provavelmente é
+18:26
+porque ele não deveria fazer isso mesmo
+18:28
+E outra camada da aplicação que vai
+18:31
+batendo aqui fazer o tratamento Então
+18:33
+você possa o tratamento Deixa isso para
+18:36
+para quem Para mais para frente tá então
+18:40
+quanto mais para frente você deixar se
+18:42
+você não tem informação é melhor é
+18:44
+melhor do que você fazer um tratamento
+18:46
+de exceção sem poder
+18:49
+manipular essa exceção ou seja sem poder
+18:52
+fazer uma tratativa adequada certo e o
+18:56
+que fazer no bloco Cat né que que você
+18:58
+deve fazer um bom você pode
+19:03
+pensar primeiro em tentar corrigir o
+19:05
+problema né ou seja por exemplo aqui
+19:08
+executar uma outra operação ou tentar
+19:11
+solicitar informação novamente
+19:12
+dependendo se for um sistema que você tá
+19:15
+solicitando informação para o usuário
+19:16
+por exemplo e a exceção foi lançada
+19:20
+porque ele informou algo errado você
+19:23
+pode tentar pedir o usuário a formação
+19:25
+novamente né agora se é um problema de
+19:28
+infraestrutura de sistema sei por
+19:32
+exemplo imagina Está acessando o banco
+19:33
+de dados o banco de dados está fora do
+19:34
+ar não tenho muito o que fazer nesse
+19:36
+caso apenas você deve nesse caso
+19:39
+registrar esse problema em um arquivo de
+19:41
+log
+19:42
+e simplesmente não fazer mais nada né
+19:46
+porque não tem o que fazer né no máximo
+19:48
+registrar um log e gerar um alerta
+19:50
+alguma coisa assim tá outras coisas que
+19:52
+você pode fazer quando você
+19:54
+captura uma exceção e aí eu vou falar
+19:57
+que você tem que tomar muito cuidado com
+19:58
+isso é ignorar exceção captura e não faz
+20:02
+nada em geral o melhor é você sempre
+20:04
+logar a exceção mas casos muito
+20:08
+específicos e de novo eu falo também
+20:09
+muito cuidado com isso ignorar isso aqui
+20:12
+é ignorar exceção Ó faz um enquete e não
+20:15
+faz nada por que que falta muito cuidado
+20:17
+com isso aqui porque seu programa ele
+20:19
+pode começar a Gerar erros e você nunca
+20:22
+vai descobrir que está gerando erros
+20:23
+porque simplesmente tá ignorando você
+20:24
+não tá registrando um log não tá
+20:27
+imprimindo isso para uma saída em lugar
+20:29
+nenhum entendeu então toma muito cuidado
+20:30
+com isso aqui
+20:31
+ou ainda você pode aqui dentro do cat
+20:35
+lançar uma nova exceção você pode já
+20:37
+receber uma liga state Exception vou
+20:39
+lançar um outro tipo diferente entendeu
+20:42
+mas apropriado mais específico também é
+20:46
+uma possibilidade Tá bom então beleza e
+20:50
+a linguagem já ela já possui diversas
+20:53
+exceções padrão que você pode usar né
+20:56
+como esse caso aqui ó liga o state
+20:58
+Exception que nós usamos porém muitas
+21:01
+vezes
+21:02
+esses tipos de exceção eles não refletem
+21:06
+exatamente o que nós estamos tentando
+21:10
+expressar no código
+21:12
+mas nós podemos deixar o nosso código
+21:15
+mais transparente e facilitar até a
+21:18
+captura e tratamento das exceções
+21:20
+criando novos tipos de exceções
+21:23
+customizadas então a gente não precisa
+21:25
+se a ter ficar preso apenas esses tipos
+21:30
+padrão que já existe na muito pelo
+21:32
+contrário é interessante você criar
+21:34
+exceções específicas que expressem bem O
+21:37
+que que significa aquela exceção para
+21:40
+fazer isso basta a gente criar uma nova
+21:43
+classe que representa a exceção por
+21:45
+exemplo nesse caso aqui de quando o
+21:48
+saldo é insuficiente ao invés de usar o
+21:51
+a liga state Exception Com certeza nesse
+21:53
+caso eu criaria uma exceção customizada
+21:55
+para expressar melhor no nosso código
+21:58
+então vamos fazer isso vou criar aqui
+22:00
+dentro de modelo mesmo
+22:01
+deixa eu criar um pacote tá criar um
+22:04
+pacote para ficar mais organizadinho
+22:05
+aqui vou colocar assim esse exceção
+22:09
+é Colocar assim exceção vou criar agora
+22:12
+uma classe e vou chamar ela de Saldo
+22:16
+insuficiente e Exception Você já
+22:19
+percebeu que em geral a gente usa esse
+22:22
+sufixo Exception os nomes das nossas
+22:25
+classes que representam as exceções né
+22:27
+Não que seja obrigatório Mas é uma boa
+22:30
+prática tá se você não colocar vai
+22:32
+funcionar também mas é uma boa prática é
+22:34
+um padrão sempre você colocar esse
+22:36
+Exception no final da classe então tô
+22:38
+dizendo é uma exceção de Saldo
+22:39
+insuficiente Então vamos seguir essa
+22:42
+conversão e aí é uma exceção é uma
+22:47
+classe que herda
+22:50
+uma super classe né uma super classe de
+22:54
+Exception eu vou então ele dá aqui ó
+22:57
+extens a gente pode dar Exception porém
+23:02
+existem alguns tipos de exceto algumas
+23:05
+coisas que fazem diferença que é o
+23:07
+seguinte se você herdar sua classe da
+23:10
+classe execception nesse caso essa
+23:13
+exceção ela fica ela tem uma
+23:15
+característica que é chamada de
+23:17
+Exception ela fica sendo uma exceção
+23:20
+checada e o que que isso quer dizer quer
+23:22
+dizer que uma exceção checada quando ela
+23:24
+é lançada nós somos obrigados a tratar
+23:28
+exceção ou o código nem vai compilar tá
+23:31
+então por exemplo aqui no caso quando a
+23:33
+gente
+23:33
+lançou aqui o ali gostei de Exception
+23:36
+Ela não é uma exceção checada ou seja
+23:39
+nós não somos obrigados a tratar Ela
+23:40
+tanto é que você viu que mesmo sem ter o
+23:43
+bloco trike aqui ó o nosso código
+23:45
+compila normalmente certo ele combina
+23:48
+normalmente
+23:49
+porque porque essa não é uma exceção
+23:52
+checada uma exceção checada não
+23:54
+permitiria isso que o código fosse
+23:56
+compilado ele obriga você a tratar
+23:59
+exceção em alguns casos isso pode ser
+24:01
+interessante porque você quer obrigar
+24:03
+quem chama o seu método a tratar exceção
+24:05
+você pode usar uma exceção checada e
+24:08
+lembrando para usar uma exceção checada
+24:10
+basta que a sua classe herde e Exception
+24:14
+agora se você quer usar uma exceção não
+24:17
+checada é que é aquela que não obriga o
+24:21
+chamador do seu método que pode lançar a
+24:25
+exceção a tratar capturar e tratar
+24:27
+recessão aí então você vai herdar Run
+24:31
+time Exception
+24:32
+é uma exceção não checada não é obrigado
+24:35
+a tratar você pode capturar e tratar mas
+24:38
+não é obrigado tá
+24:40
+eu vou usar então aqui o Gran time x
+24:42
+Action E aí
+24:45
+aqui agora vamos gerar um gerar um
+24:48
+Construtor aqui para receber a message a
+24:50
+mensagem da exceção tá só isso aqui já
+24:52
+era suficiente mas eu acho legal ter a
+24:54
+mensagem também para detalhar mais a
+24:56
+exceção uma mensagem vou criar aqui de
+24:58
+Generation e nós vamos aqui tá a gente
+25:02
+vai criar um Construtor chamando o
+25:04
+Construtor pai o Construtor da Super
+25:06
+classe Qual que é a super classe
+25:08
+tem várias aqui que a gente poderia usar
+25:11
+mas vou usar só esse aqui ó message
+25:12
+então nosso construtor de Saldo
+25:15
+insuficiente Exception vai receber uma
+25:17
+mensagem e vai chamar super construtor
+25:21
+da Super classe né Já estudamos sobre
+25:22
+isso o Construtor da Super classe
+25:24
+passando da mensagem pronto então é uma
+25:27
+classe normal Java porém a
+25:30
+característica especial dela é aquela
+25:31
+merda então ela se torna uma classe de
+25:35
+exceção tá beleza e agora basta a gente
+25:40
+Lançar aqui
+25:42
+a exceção que a gente quer então aqui eu
+25:45
+vou colocar
+25:47
+Saldo insuficiente Exception o resto
+25:49
+daquela classe padrão e a mensagem eu
+25:52
+posso deixar igual Se eu quisesse eu
+25:54
+poderia colocar aqui a mais informações
+25:55
+né até mesmo para não ficar com o mesmo
+25:58
+Saldo insuficiente o próprio nome da
+26:01
+exceção já disse que é saúde é
+26:02
+insuficiente né poderia colocar em uma
+26:04
+mensagem mais completa aqui para até
+26:06
+para facilitar para quem tá usando vamos
+26:08
+deixar assim mesmo Tá bom então agora
+26:10
+aqui na classe principal se eu rodar
+26:13
+novamente
+26:16
+veja que voltou a lançar a exceção aqui
+26:19
+a mostrar que a Spectra é esse na saída
+26:23
+porque porque eu não tô capturando a
+26:26
+exceção Saldo insuficiente Exception nós
+26:28
+estamos capturando a liga state
+26:30
+Exception Mas vamos mudar isso aqui para
+26:31
+capturar Saldo insuficiente Exception e
+26:35
+rodar novamente e aí veja que não tem
+26:38
+aqui a stec Trace mas nós capturamos e
+26:41
+tratamos a exceção certo então
+26:45
+é uma boa prática a gente preferir
+26:49
+lançar exceções mais específicas como
+26:52
+nós fizemos agora aqui tá quanto mais
+26:54
+específica for a exceção melhor para
+26:57
+quem tá chamando o método que vai lançar
+26:59
+essa exceção porque ele pode tratar de
+27:01
+uma forma melhor tá então sempre pense
+27:04
+em seus colegas de trabalho ou no seu
+27:07
+entre aspas aí no seu eu do Futuro tá
+27:09
+que não conhece o seu código e por isso
+27:12
+capturar exceções com tipos genéricos
+27:15
+que não dizem sobre problema dificulta
+27:17
+bastante na programação além de
+27:19
+dificultar o tratamento de um erro
+27:21
+específico de uma forma especial de uma
+27:23
+forma diferente então sempre tenta
+27:26
+encontrar uma classe que se encaixe no
+27:28
+problema que foi gerado né na exceção
+27:31
+que foi gerado por exemplo nesse caso
+27:33
+Nós preferimos criar uma exceção Saldo
+27:35
+insuficiente Exception que especifica
+27:37
+muito bem o problema né ao invés de
+27:40
+lançar apenas uma liga state Exception
+27:43
+que pode significar muitas coisas certo
+

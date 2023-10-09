@@ -1,0 +1,526 @@
+
+[Música]
+0:03
+apesar de termos tipos de contas
+0:05
+específicas ou seja subclasses conta
+0:08
+investimento também a subclasse conta
+0:11
+especial a instanciação de conta dessa
+0:15
+classe conta ainda tá funcionando aqui
+0:17
+na classe principal se a gente fizer
+0:19
+isso aqui ó conta New conta e passar
+0:23
+aqui os argumentos que são três né
+0:27
+colocar aqui olha só isso aqui ainda tá
+0:30
+funcionando tá vendo
+0:32
+mas nós não gostaríamos de permitir isso
+0:35
+aqui porque Imagine que o banco onde nós
+0:37
+trabalhamos só possui conta investimento
+0:40
+ou conta especial nesse sentido a classe
+0:45
+conta apenas é essa classe aqui ela é
+0:49
+apenas uma abstração aqui no nosso
+0:51
+código Ou seja é um conceito que existe
+0:53
+no domínio de negócio que nós estamos
+0:56
+trabalhando mas não deveriam existir em
+1:00
+instâncias de objetos desse tipo
+1:01
+específico aqui conta tá sem ser um tipo
+1:05
+desse tipo da Verdade mas genérico conta
+1:08
+né deveria ser um tipo mais específico
+1:10
+contra especial ou conta investimento
+1:12
+entendeu então nós estamos usando aqui
+1:14
+essa classe conta para uma abstração
+1:18
+para a gente fazer a gente usa essa
+1:20
+abstração para a gente poder aproveitar
+1:22
+muitos comportamentos muitas
+1:24
+características em comum dos tipos
+1:26
+específicos especial e investimento
+1:28
+conta em especial enquanto investimento
+1:30
+a gente coloca aqui tá então a gente não
+1:32
+quer suportar permitir isso aqui porque
+1:35
+isso aqui
+1:37
+é uma conta Apenas não existe no nosso
+1:40
+negócio tá para resolver isso nós temos
+1:43
+que indicar o compilador que
+1:47
+nós queremos que essa classe conta seja
+1:50
+realmente uma classe abstrata e para
+1:53
+fazer isso basta a gente adicionar aqui
+1:55
+na declaração da classe conta colocar
+1:59
+aqui Public abstract então aqui eu tô
+2:02
+indicando essa aqui é uma classe
+2:04
+abstrata ao fazer isso deixa eu dar um
+2:07
+control Z aqui ó ao fazer isso esta em
+2:09
+instanciação que antes funcionava não
+2:12
+funciona mais agora a gente tá impedindo
+2:15
+que objetos dessa classe conta sejam
+2:17
+instanciados diretamente sem ser por uma
+2:21
+subclasse específica tá então o que nós
+2:24
+desejávamos conseguimos apenas dizendo
+2:27
+que a classe conta é uma classe abstrata
+2:31
+beleza e aí claro deixa eu responder
+2:34
+algumas dúvidas que pode estar surgindo
+2:36
+na sua cabeça para que criar uma classe
+2:38
+abstrata Thiago é que não pode ser
+2:40
+instanciada bom já respondi isso mas é
+2:42
+bom às vezes bater na mesma tecla para a
+2:45
+ficha cair tá porque a classe Conta essa
+2:48
+classe conta aqui ela
+2:51
+não é uma classe concreta né agora ela é
+2:55
+uma classe abstrata né Se ela é uma
+2:56
+classe abstrata
+2:59
+ela não deve ser instanciada né Então se
+3:02
+no banco que a gente trabalha nós
+3:03
+entendemos que só existe contas
+3:06
+específicas especial ou de investimento
+3:08
+por exemplo tá não faz sentido
+3:10
+instancial uma classe conta apenas tá
+3:13
+uma classe conta é muito abstrata se a
+3:16
+classe conta é muito abstrata a gente
+3:17
+não vai deixar de criar ela porque ela
+3:19
+faz sentido aqui para a gente na nossa
+3:22
+estrutura da hierarquia que né para usar
+3:24
+herança porém a gente indica que ela é
+3:27
+uma classe abstrata tá é mas você não
+3:29
+pode ser distanciado essa classe Então
+3:33
+porque não cria né as classes filhas né
+3:37
+classe especial e investimento sem
+3:39
+herança né bom se você lembra lembra
+3:41
+disso se você criar classe especial e
+3:44
+classe conta investimento sem herança
+3:46
+sem herdar a classe conta que agora é
+3:48
+uma classe abstrata de fato você não vai
+3:51
+ter o benefício da reutilização de
+3:53
+código você não vai ter o benefício do
+3:55
+polimorfismo A partir dessa classe
+3:57
+abstrata tá ou seja uma classe abstrata
+4:01
+é criada apenas para criar realmente a
+4:05
+abstração né Como o próprio nome diz
+4:07
+para representar um conceito abstrato ou
+4:10
+seja um conceito mais Genérico e não
+4:12
+para sem instanciada note inclusive que
+4:15
+mesmo após colocar aqui o abstract na
+4:18
+classe conta
+4:19
+o método imprimir saldo aqui do caixa
+4:22
+eletrônico continua funcionando
+4:25
+normalmente trabalhando aqui com a
+4:28
+abstração do tipo conta tá vendo Então
+4:31
+essa classe aqui não tem essa classe com
+4:34
+a caixa eletrônico não tem nenhuma
+4:36
+dependência com os tipos concretos ou
+4:39
+seja como os tipos mais específicos
+4:41
+contra especial e conta investimento
+4:42
+essa caixa conta Caixa Eletrônico só tem
+4:45
+dependência com o tipo abstrato conta tá
+4:48
+ou seja um dos maiores benefícios das
+4:52
+classes abstratas é que elas nos ajudam
+4:55
+a trabalhar com o polimorfismo e deixar
+4:57
+o nosso código muito mais flexível e com
+5:00
+baixa acoplamento e quando você tem uma
+5:03
+classe abstrata você pode
+5:05
+muitas vezes é decidir criar métodos
+5:09
+abstratos também então não é só a classe
+5:12
+que pode ser abstrata não você pode ter
+5:15
+métodos abstratos também deixa eu te
+5:17
+mostrar aqui então Vamos pensar num
+5:19
+exemplo aqui ó
+5:20
+vou criar aqui colocar aqui
+5:23
+organizadinho depois do método sacar
+5:25
+antes dos gamers e séries eu gosto de
+5:27
+organizar dessa forma tá não seja
+5:29
+obrigatório Então vou colocar aqui um
+5:32
+método
+5:35
+debitar tarifa mensal imagina que as
+5:39
+nossas contas deste banco podem debitar
+5:42
+tarifas
+5:43
+tarifa 15 pacotes de serviço pacote de
+5:47
+serviço da conta sabe então pode deitar
+5:50
+tarifa porém as regras o cálculo para
+5:53
+debitar essa tarifa mensal vai depender
+5:55
+de cada tipo de conta por exemplo pode
+5:58
+ter alguma conta que se tiver
+6:01
+um saldo acima de tantos reais você
+6:04
+isenta tarifa ou dependendo do tipo da
+6:07
+conta Você pode cobrar mais caro pode
+6:09
+cobrar mais barato então a gente não
+6:11
+conseguiria em conseguiria implementar
+6:14
+essas regras aqui nessa classe conta
+6:16
+porque ela é abstrata demais ela não tem
+6:19
+informações suficientes nesse ponto aqui
+6:21
+para você fazer essas regras certo
+6:25
+então a gente
+6:28
+poderia pensar o seguinte Beleza então
+6:31
+não é o local correto Tiago implementar
+6:33
+aqui beleza se você pensar assim você
+6:35
+tiraria esse método daqui e
+6:38
+implementaria aqui
+6:40
+tanto na classe quanto especial você
+6:42
+implementaria esse método e na classe
+6:44
+conta investimento também você poderia
+6:46
+implementar este método certo mas qual
+6:49
+que é o problema se você fizer isso o
+6:51
+problema é que você não vai tirar
+6:53
+proveito do polimorfismo que que eu
+6:56
+quero dizer com isso se em algum local
+6:58
+do seu código do seu projeto vou fazer
+7:00
+aqui na classe principal mesmo mas acho
+7:02
+que nesse ponto você já entendeu que sem
+7:04
+algum local você tiver uma referência do
+7:07
+tipo abstrato conta
+7:09
+tem uma referência do tipo abstrato
+7:11
+conta você não vai conseguir chamar o
+7:14
+método debitar tarifa mensal Não importa
+7:16
+se o objeto não importa o seu objeto que
+7:20
+está atribuído nessa conta seja uma
+7:22
+conta investimento ou uma conta especial
+7:23
+você não vai conseguir fazer isso porque
+7:26
+a gente está enxergando aqui o tipo
+7:29
+conta né agora se você quiser tirar
+7:32
+proveito do polimorfismo aí qual que é a
+7:35
+saída é você criar esse método abstrato
+7:38
+aqui na conta e aí você vai colocar
+7:41
+assim ó Public abstract void e o nome do
+7:45
+método você não vai criar nenhuma
+7:47
+implementação um método abstrato não tem
+7:50
+implementação por isso ele não vai ter
+7:52
+esse bloco abre a abertura e fechamento
+7:54
+de Chaves não vai ter você finaliza com
+7:56
+ponto e vírgula dizendo Então nesse caso
+7:59
+aqui estamos dizendo que a classe conta
+8:01
+Tem sim um método de habitar tarifa
+8:03
+mensal porém ele é abstrato quando nós
+8:06
+temos um método abstrato em uma classe
+8:08
+abstrata a subclasses que herdam a
+8:12
+classe conta que é a super classe né a
+8:15
+subclasses vão ser obrigadas a
+8:17
+implementar esse método abstrato então
+8:19
+aqui na conta especial e conta
+8:22
+investimento eu vou até tirar isso aqui
+8:24
+para você ver ó tirar essa implementação
+8:27
+veja que ela não compila mais porque tá
+8:29
+falando assim olha você precisa
+8:30
+implementar um método abstrato de evitar
+8:32
+tarifa mensal aí beleza eu falo cara
+8:34
+implementar ele aí cria-se Aqui um
+8:37
+método deve ter tarifa mensal entendeu
+8:39
+e aqui na conta especial vamos sacar r$
+8:44
+20 para debitar r$ 20 de tarifa por
+8:46
+exemplo Tá bom agora na conta
+8:48
+investimento se colocar um overwide que
+8:50
+também agora como isso aqui é uma sobre
+8:52
+a escrita né colocar aqui over right e
+8:54
+vamos sobrescrever então esse aqui é um
+8:57
+método concreto que está implementando o
+9:00
+método abstrato que foi declarado lá na
+9:03
+classe abstrata conta e aqui nós vamos
+9:05
+fazer uma regrinha diferente vamos
+9:06
+verificar se o saldo for menor que 10
+9:10
+mil nós vamos
+9:12
+nós vamos debitar r$ 30 se ele for maior
+9:16
+igual a 10.000 a gente vai isentar esse
+9:19
+essa titular dessa conta de qualquer
+9:22
+tarifa mensal tá então se for abaixo de
+9:25
+10 mil a gente saca r$ 30 entendeu E O
+9:27
+legal é que quando a gente faz isso
+9:29
+então
+9:30
+como nós declaramos aqui na classe conta
+9:32
+esse método abstrato olha só que legal
+9:34
+passa a funcionar viu a gente agora
+9:37
+consegue enxergar o método debitar
+9:40
+tarifa mensal justamente porque a classe
+9:43
+conta a classe conta declarou que existe
+9:47
+sim um método debitar tarifa mensal ela
+9:50
+simplesmente falou existe um método só
+9:52
+que não sou eu que implemento esse
+9:53
+método abstrato que implementa são as
+9:55
+classes concretas ou seja as subclasses
+9:58
+que vão herdar da classe conta entendeu
+10:02
+então beleza agora vamos só rodar aqui
+10:04
+para ver funcionar ó eu vou eu não vou
+10:06
+fazer em minha conta porque vou fazer
+10:08
+aqui pegar nossas contas minhas contas
+10:10
+sua conta mesmo tá vou pegar aqui e vou
+10:13
+pegar a minha conta e Vou debitar tá aí
+10:17
+com a mensal ó vou pegar sua conta e Vou
+10:20
+debitar tarifa mensal também então vamos
+10:22
+evitar a tarifa das duas contas Tá eu
+10:25
+vou rodar aqui
+10:26
+veja que foi debitado normalmente
+10:28
+ausente a Estava menos 500 antes né de
+10:30
+saldo agora ficou menos 520 porque
+10:32
+debitou os r$ 20 tá vendo
+10:34
+bom muito legal né então só lembrando
+10:37
+uma classe abstrata não Obrigatoriamente
+10:41
+ela precisa ter métodos abstratos porém
+10:43
+se ela tiver métodos abstratos a
+10:46
+subclasses concretas que herdam essa
+10:49
+classe abstrata Obrigatoriamente vão ter
+10:52
+que implementar esses métodos abstratos
+10:55
+exceto se a classe que herdou a conta
+10:58
+foi uma classe abstrata também essa aqui
+11:00
+também foi uma classe abstrata aí tudo
+11:02
+bem ela pode sobreviver implementar ou
+11:06
+não se ela não implementar a classe
+11:09
+concreta primeira classe concreta que
+11:11
+herdar essa conta especial vai ter que
+11:14
+implementar mas não é o caso aqui tá o
+11:16
+caso aqui nós queremos que conta
+11:18
+especial seja realmente uma classe
+11:19
+concreta já com implementação

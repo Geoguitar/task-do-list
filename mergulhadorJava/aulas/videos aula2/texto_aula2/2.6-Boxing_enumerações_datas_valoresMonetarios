@@ -1,0 +1,788 @@
+
+[Música] em Java as únicas coisas que não são objetos são os tipos primitivos por
+0:09
+exemplo tipos int nós usamos ele aqui ó int os tipos
+0:15
+aqui nós usamos o Double e etc eles não pertencem eles não são um tipo de classe
+0:22
+né eles são definidos na própria linguagem Java mesmo já outros tipos são
+0:27
+de classe por exemplo pessoa é uma própria classe Que Nós criamos não foi mas vamos aqui dentro daquelas pessoas
+0:33
+temos aqui a string SS maiúsculo aqui já diz tudo né é uma classe também não é um
+0:40
+tipo primitivo né até por isso então ele começa com maiúsculo porque tem a convenção né de classes iniciam com
+0:46
+maiúsculo então tipos primitivos etc e tem os tipos de classe tá
+0:52
+deixa eu te mostrar uma coisa aqui se a gente criar que a classe pessoa se a
+0:58
+gente criar uma um criar aqui um uma variável de distância vou chamar essa variável de distância de rendimento
+1:05
+anual tipo Double tipo primitivo tá se a gente entrar aqui na classe principal e
+1:11
+eu vou colocar um Break Point aqui bem no início tá na hora de instanciar uma
+1:17
+pessoa então Olha só vamos ver eu já vou visualizar eu vou fazer um step over Então vai instanciar um novo objeto do
+1:25
+tipo pessoa Note que o valor padrão desse rendimento anual que é um tipo primitivo recebeu o
+1:33
+valor zero né então porque porque um tipo primitivo ele não aceita nulo E se
+1:40
+ele não aceita nulo ele já tem um valor padrão que é o valor zero mais algumas
+1:46
+vezes nós precisamos enxergar alguns Alguns
+1:51
+valores né alguns dizem alguns números caracteres ou até mesmo valores boleanos como objetos também
+1:58
+justamente um dos motivos é para isso aqui não acontecer para você não ter um
+2:04
+valor Zerado às vezes um valor Zerado você sabe que é diferente de nulo né Um
+2:09
+Valor nulo Você pode considerar que ele não existe não foi informado de repente já um valor Zerado é realmente um valor
+2:17
+zero né então por exemplo imagina que você tenha um outro exemplo aqui imagina que você tenha na pessoa aqui uma
+2:23
+variável de Instância idade é diferente idade nula do que idade zero né idade
+2:29
+zero pode ser um recém-nascido concorda agora idade nula que não é possível com
+2:36
+o tipo primitivo mas se tivesse uma idade nula você poderia considerar que a idade não foi informada você não tem
+2:42
+essa informação percebe a diferença Então quando você não dese aqui aconteça
+2:48
+isso aqui que aconteceu você usa um não usa tipo primitivo você usa tipo de
+2:55
+classe e aí você pode pensar o é Thiago mas como assim se é tipo primitivo Double não tem como usar tipo de classe
+3:01
+ah aí que você se enganou Tem sim sabe por quê Já havia muito legal né ele tem
+3:07
+tipos de classe correspondentes aos tipos primitivos Olha que legal então ao
+3:15
+invés de usar o Double com D minúsculo que é um tipo primitivo você usa o Double com D maiúsculo que é um tipo de
+3:21
+classe esse Double aqui ele vem lá do pacote Java contra o Lang inclusive tudo que vem do pacote já vai ponto Lang não
+3:27
+sei se eu falei isso antes você não precisa importar tá vendo ele é alto importado para você legal né Só uma
+3:33
+curiosidade Então você usa o tipo Double com D maiúsculo que é um tipo de classe
+3:40
+correspondente ao tipo primitivo Double né que é com D minúsculo né
+3:46
+essas classes elas são chamadas de classes water né porque classes wapper
+3:53
+porque ela embrulha o tipo primitivo dentro dela para que
+3:58
+possa ser tratado como objeto né ou seja um objeto de uma classe Harper como aqui
+4:04
+no caso o Double ele armazena o valor Double primitivo lá dentro dele tá é
+4:12
+somente uma classe que dentro dele tem o tipo primitivo Claro se tiver valor nesse valor vai ter te primitivo com
+4:19
+aquele valor lá então ele consegue gerenciar isso aí tá bom e todos os tipos primitivos possuem uma classe
+4:26
+waper correspondente então se você quer um tipo primitivo na classe waper você vai usar o winter tá não é o mesmo nome
+4:33
+enter se você quer um bolha bolha você pode usar um bolha com b maiúsculo se
+4:40
+você quer usar um char tipo primitivo aí é um cara que quer tá vendo então sempre
+4:45
+vai ter um rapper correspondente ao tipo primitivo e agora
+4:52
+Opa mas não é que eu queria mexer eu vou voltar para cá tá vou deixar tipo
+4:58
+primitivo Por enquanto aqui na classe conta eu queria mexer na verdade na classe pessoa vou colocar um double aqui
+5:03
+porque é o que nós havíamos testado aqui com Break Point coloquei um double com D maiúsculo tipo hacker eu vou fazer o the
+5:10
+bug aqui e agora vamos dar uma olhada aqui com step over veja que o rendimento
+5:15
+anual Não tá zerado mais tá vendo ele tá nulo né Lembra que eu te primitivo ele tava Zerado pois é agora com tipo de
+5:22
+classe tá nulo porque não fornecemos nenhuma Instância para o Double beleza
+5:28
+como que nós podemos então fornecer uma uma instância para esse Double aqui vamos gerar o
+5:37
+sétimo get dele vou gerar aqui ó para a gente poder ter acesso a ele e era inserir então ele não vai ser
+5:45
+obrigatório a gente não vai passar é nem tem Construtor aqui em pessoa né ele não vai ser obrigatório não mas se a gente
+5:50
+quiser passar basta a gente vir aqui ó e fazer assim ó titular um ponto sete
+5:57
+rendimento anual e agora como que a gente passa uma Instância de Double veja
+6:03
+que aqui não é o tipo primitivo é o tipo Harper né como que a gente passa uma Instância de Double existe um método
+6:09
+aqui dentro de Double dessa classe Double existe um método que a gente pode fazer assim ó Double ponto velho e aqui
+6:17
+nós podemos passar uma string onuble passar esse Doble aqui nós passamos um double tipo primitivo aqui ó aqui já
+6:23
+assim tipo primitivo então nós falamos olha instancia para mim aqui um double com D maiúsculo né
+6:33
+tipo primitivo E aí eu posso passar aqui o valor do double primitivo entendeu E
+6:39
+aí ele vai criar para mim uma Instância de um objeto do tipo do tipo e agora
+6:46
+vamos verificar aqui ó vou fazer o debate novamente para você ver
+6:53
+step over veja que nós temos aqui o valor de 15 mil tá vendo Então beleza é
+7:00
+essa instanciação aqui né Inclusive a gente
+7:06
+veja que não usamos o operador New né usamos esse verbo de método de fábrica
+7:11
+tá eles não colocaram não proteger um Construtor
+7:18
+acho que a gente não consegue fazer assim deixa eu ver se
+7:24
+Olha só não não funciona tá falando aqui ah na verdade esse existia antigamente
+7:31
+esse Construtor Nilda mas tá falando aqui que esse Construtor ele tá depreciado ele tá marcado para ser
+7:37
+removido que que é um algo depreciado algo depreciada que não é recomendado mas o uso qualquer momento eles podem
+7:44
+alguma versão do Java remover isso então não é o correto você usar esse Construtor Double correto melhor você
+7:51
+usar esse método velho óbvio que ele vai te tornar uma Instância mas essa como eu tava dizendo nessa
+7:58
+distância ela é chatinha né tem que fazer isso aqui né apesar de ser não tão grande mas
+8:05
+você tem que fazer isso aqui mas talvez você tenha percebido aqui que a ideia tá Amarelinho aqui né tá vendo ele tá
+8:12
+indicando aqui que tem alguma coisa que você pode melhorar tá compilando beleza mas pode melhorar tá se você passar o
+8:18
+mouse aqui em cima ela vai dizer olha O que será que ela tá querendo dizer com
+8:24
+isso vamos clicar aqui em remover Boxing para ver o que acontece olha só tá passando Double tipo primitivo
+8:30
+diretamente para o método 7 rendimento anual mas os sete rendimento anual não
+8:36
+recebe um tipo primitivo aqui ele recebe um tipo rapper e funciona ah pode
+8:42
+parecer estranho né porque a gente passou esse literal aqui em double primitivo e ele funcionou mesmo assim
+8:48
+que que aconteceu aqui é que existe uma funcionalidade no Java chamada de Alto
+8:54
+Box ou seja automaticamente o compilador
+9:00
+ao perceber que você tá tentando atribuir um tipo primitivo em um tipo
+9:07
+rapper correspondente logicamente ele o computador ele converte para você do
+9:14
+tipo primitivo para o tipo Harper de forma implícita então aqui no final das
+9:19
+contas o comp vai fazer isso aqui para você tá mas você não enxerga isso no código isso é o chamado de Alto Boxing
+9:27
+tá ou seja ele vai alto encaixotar para você que quer um cachorro tá vamos dizer encaixotar é colocar dentro de um rapper
+9:34
+então ele vai fazer isso esse encaixotamento essa palavra mesmo vai fazer isso para você automaticamente
+9:42
+quando você coloca o tipo primitivo assim por isso o nome alto boxe e O
+9:47
+legal é que ele também faz o alto unboxing desencaixotamentos não sei se seria essa
+9:54
+palavra vamos fazer o seguinte ó vou pegar aqui um double colocar aqui valor colocar rendimento Colocar assim titular
+9:59
+um ponto get rendimento anual Então esse método get atendimento anual retorna um double que é um tipo rapper né e a gente
+10:06
+atribui com um tipo rapper Porém você poderia atribuir aqui a um tipo primitivo também só que para fazer isso
+10:13
+aqui são tipos Diferentes né um é o tipo de classe da boca com D maiúsculo porque
+10:18
+esse método retorna e aqui é um tipo primitivo para isso aqui funcionar o Java tem a funcionalidade a chamada de
+10:24
+Alto unboxing né que na verdade é o inverso ele vai converter o compilador
+10:30
+vai fazer para você o a conversão pegando o tipo
+10:36
+convertendo esse tipo Harper para um tipo primitivo então ele vai fazer isso automaticamente para você tá eu só dei
+10:43
+aqui um exemplo com Double de tanto do auto box em Alto unboxing mas isso vale para todos os tipos de rapper Tá bom
+10:48
+então hoje em dia é muito simples trabalhar com tipoper por conta dessas
+10:54
+funcionalidades né de autobotsing e alto unboxing certo então beleza agora vamos
+11:00
+falar de enumerações deixa eu abrir aqui a classe A classe A
+11:06
+pessoa Imagine que a gente queira aqui na classe pessoa é discriminar se a
+11:13
+pessoa é pessoa física ou você é uma pessoa jurídica ou seja se é uma empresa como que nós poderíamos fazer isso bom
+11:21
+uma ideia seria a gente colocar aqui Talvez um inteiro que que você acha coloca um índio assim e chama de tipo e
+11:28
+aí se o tipo for zero é uma pessoa física seu tipo for um é uma pessoa jurídica Bom muitos anos atrás era assim
+11:37
+que funcionava era comum esse tipo de coisa mas esse aqui gera alguns problemas o principal problema é que
+11:44
+isso aqui permite que alguém atribua um valor fora
+11:50
+do intervalo né permitido Então se zero é física e uma jurídica esse alguém
+11:56
+atribui dois né então você tem que ficar fazendo muita checagens deixa o seu código mais complexo Então hoje em dia
+12:02
+tem uma forma muito melhor de fazer isso aqui que é usando as enumerações ou seja
+12:08
+criando algo que a gente chama de e num tipo eum usando tipo é num tá como a
+12:13
+gente faz isso eu vou criar aqui [Música] meu Java cless mas não vai ser uma
+12:20
+classe normal tradicional vai ser um e num você clica aqui em um e nós vamos
+12:25
+criar aqui vou chamar de tipo pessoa então vamos criar uma enumeração para representar uma lista de valores de
+12:33
+constantes e aqui dentro basta a gente colocar E aí eu vou colocar tudo em maiúsculo porque é a convenção em Java
+12:41
+quando a gente fala de constantes dessa forma aqui eu vou colocar assim ó física vírgula jurídica então aqui temos
+12:50
+uma enumeração ou seja uma lista de constantes onde temos o física e jurídica e aí aqui na classe pessoa a
+12:59
+gente vai declarar uma variável de Instância e o tipo dela vai ser tipo pessoa e vou dar o nome dela de tipo
+13:06
+então o legal agora é que isso aqui não vai aceitar valores quaisquer não aceita
+13:11
+um valor um dois não aceita só aceita o que essas constantes que estão dentro do
+13:16
+tipo pessoa e para isso vou até colocar já um valor padrão caso no forneça nada
+13:21
+vai ser isso aqui ó porque se não se deixar assim vai ser nulo né então eu quero que vamos saciar uma pessoa por
+13:28
+padrão já seja a pessoa física pode colocar assim ó tipo pessoa ponto física veja aqui dentro de pessoa eu posso
+13:35
+colocar o física ou jurídica não posso inventar alguma coisa aqui também porque senão não compila tá bom isso aqui é o
+13:41
+que a gente chama que ele é Type Safe esse aqui é um grande benefício ele é Type Safe ou seja ele
+13:46
+te obriga a escolher uma das opções de constantes que você tenha aqui dentro
+13:51
+dessa enumeração tá então vou colocar isso aqui vou gerar agora aqui o gatter
+13:58
+e série para essa variável de distância para poder alterar e ler também essa
+14:03
+variável de fora né dar o acesso a ela beleza e agora aqui na classe principal
+14:09
+nós vamos pegar e falar assim ó tipo vamos pegar primeiro e fazer um print
+14:15
+aqui primeiro tá ó titular um ponto get tipo é o tipo da pessoa tá
+14:20
+aqui vai ter que física né porque o padrão é a pessoa física ó ele já imprime para a gente o nome da Constante
+14:27
+isso aqui também é um outro grande benefício quando a gente usa num ao invés de usar um tipo ínte por exemplo
+14:32
+né Porque que é muito mais fácil a gente ler o código fazer the bug Ler arquivos
+14:40
+de log ou aqui a saída né ele imprime realmente aqui já descrição da Constante
+14:46
+né E se eu quiser alterar ó titular um ponto sete tipo aí eu tenho que
+14:52
+especificar aqui ó não posso pesquisar nada diferente do tipo pessoa é tipo pessoa ponto e que vou colocar jurídica
+14:59
+que vou rodar novamente e veja que agora olha tipo tá jurídica E logicamente Você
+15:04
+pode ter regras de negócio no seu programa que tomam decisões baseado no tipo da pessoa né então é muito fácil
+15:12
+fazer validações fazer isso baseado nesse tipo de pessoa
+15:17
+e as enumerações em javas são muito mais poderosas do que isso aqui que eu te mostrei tá essa aqui eu tô te ensinando
+15:23
+apenas o essencial das enumerações e agora nós vamos falar de data e hora em
+15:31
+Java existe uma API antiga de data Tá mas nós vamos estudar aqui até mais
+15:37
+atual e mais recomendada hoje em dia que é api conhecida como daten time
+15:44
+data e hora essa epi é bem completa e permite que a gente represente o tempo
+15:49
+de diferentes formas ela possui diversas funcionalidades para realizar as operações como por exemplo diferença
+15:56
+entre datas cálculos tradicional subtrair períodos e etc e essa aí daí
+16:02
+tentar inibe ela é centrada em um padrão conhecido como ISO 8601 que que é isso
+16:11
+iso é uma organização essa aqui ó organização internacional para padronização ela define diversas normas
+16:18
+entre elas essa ISO 8601 que define como representa a data e hora em texto
+16:25
+em um formato internacionalmente insuportável de forma que humanos e
+16:30
+máquinas possam entender sem qualquer ambiguidade ou seja api foi baseada
+16:37
+nesse padrão aqui tá é uma pi bem extensa Mas nós vamos colocar aqui na
+16:44
+classe que representa uma data e hora local então aqui deixa eu fechar isso
+16:50
+aqui na classe pessoa Vamos criar mais uma variável de Instância aqui nós
+16:55
+queremos representar Qual é a data e hora da última atualização dos dados dessa pessoa então vou criar aqui uma
+17:02
+variável distância e o tipo que nós vamos usar é esse date time veja que tem
+17:08
+um local David que representa apenas uma data mas se queremos representar uma data hora vamos usar o local Day Time
+17:14
+veja que vem lá do pacote java.time então quando eu clicar aqui ele vai importar automaticamente para a gente ó
+17:19
+lá desse pacote tá bom e que que esse local de time é uma classe que
+17:25
+representa uma data e hora sem fuso horário ou seja não é um instante
+17:30
+específico na linha do tempo tá esse nome louca aqui ó ele significa que é um
+17:36
+objeto temporal sem a informação do fuso horário tá bom E aqui porque nessa pei
+17:44
+também tem outros tipos que representam datas incluindo fuso horário certo mas vamos trabalhar com essa aqui e aqui nós
+17:50
+vamos colocar o nome da variável vou chamar aqui de data última atualização Beleza então temos aqui uma variável que
+17:57
+representa uma data hora local vou criar aqui um Construtor para essa
+18:03
+classe pessoa e na verdade não precisa ser um Construtor né eu posso fazer aqui ó
+18:10
+atribuir aqui mesmo atribuir um local de time eu quero que ao instanciar um
+18:17
+objeto da classe pessoa eu quero atribuir automaticamente nessa variável
+18:23
+data útilização a hora data hora local atual tá então vou fazer assim no local
+18:29
+da time ponto ele tem esse método chama de método fábrica né ponto não Ou seja
+18:35
+agora então ele vai atribuir Qual que é a data hora de agora do momento dessa
+18:40
+dessa instanciação de um objeto de pessoa poderia colocar isso no Construtor também mas eu posso já
+18:46
+atribuir dessa forma também já na declaração faça atribuição e aqui eu vou
+18:51
+gerar aqui o Gere sério tá bom a gente vai poder
+18:57
+daqui a pouco fazer um uma alteração nessa data você vê como funciona também
+19:02
+Beleza então feito isso agora aqui ó eu vou fazer um print
+19:09
+do titular um ponto eu vou pegar aqui ó última atualização
+19:16
+vamos a rodar aqui para a gente ver o que acontece olha aqui ele imprimiu para a gente a
+19:23
+data hora no padrão ISO aquele padrão que eu te mostrei que é exatamente isso ele
+19:28
+organiza dessa forma é o ano primeiro depois um tracinho um mês um tracinho o
+19:34
+dia aí a separação de data com a hora é seguido por um t tem uma letra T aqui né
+19:40
+que significa time né para dividir a data e a hora então nesse horário aqui ó 22 horas
+19:45
+00 e minutos né e segundos e aqui os milissegundos pontos né e continua Então
+19:53
+veja que nós temos aqui a representação de data hora local e a string que
+19:59
+representa essa data hora local é uma swing no padrão ISO tá e se a gente quiser atribuir uma nova data ó pegar
+20:07
+aqui titular um da outra hora né ó dá sete data última atualização ele vai
+20:13
+receber aqui um local da time a gente não pode passar uma string aqui tá não podemos
+20:18
+nós precisamos passar uma Instância do tipo local Day Time como que nós podemos
+20:24
+obter uma Instância de local daytime da seguinte forma local de time você já
+20:29
+sabe né ponto final mas ponto Now ele retorna data hora agora eu não quero a data hora agora imagina que eu quero
+20:35
+especificar uma data hora diferente e aí você pode usar que por exemplo o método
+20:42
+parça esse método parse ele vai converter uma string em um local da time
+20:49
+Então vou colocar aqui entre aspas uma string e essa string precisa também ser
+20:55
+no padrão iso se você colocar um que uma estrelinha aqui que não seja no padrão is ele não vai conseguir entender vai
+21:01
+dar algum problema então vou colocar aqui ó o ano Qual que é o padrão isso ó Exatamente esse ano depois um mês depois
+21:09
+o dia vou colocar aqui já 27 aí seguido pela letra T para falar que agora eu vou
+21:15
+explicar a hora eu vou colocar 13 horas e 20 minutos 00 segundos não precisa especificar 20
+21:23
+segundos não tá se eu quiser eu posso mas não precisa eu vou aqui rodar agora
+21:30
+e vejo que está imprimindo aqui ainda né veja que conseguimos alterar então a
+21:36
+data hora da última atualização dessa pessoa e agora vamos falar de cálculos
+21:43
+de números decimais tá vou criar uma nova classe aqui para gente fazer um teste vou criar
+21:49
+aqui uma classe chamada teste cálculo e nessa classe aqui vou ter um método Man e vamos fazer o seguinte imagina um
+21:56
+exemplo um exemplo básico aqui ó double x é igual a 1.0 Então temos o número 1.0 eu vou falar assim ó x = x - 0.10 x
+22:06
+= x - 0.20.30 e aqui eu vou imprimir o
+22:11
+resultado qual vai ser o resultado se aqui eu tenho três quatro cinco três
+22:17
+quatro cinco seis o resultado deveria ser 0.40 concorda 1 - 0.10 - 0,20 - 0.30
+22:26
+deve ser Então 0.4 concorda comigo vamos rodar isso aqui para ver o que acontece
+22:32
+vamos rodar essa classe vou ver o que acontece olha só o que que retornou
+22:38
+0.39999999 bom Era tão simples né porque nós temos números redondos aqui e por
+22:45
+que que ele não retornou 0.4 ele retornou esse número aqui que é muito que é tão próximo de 0.4 mas
+22:52
+não é 0.4 concorda comigo bom esse comportamento aqui não é um bug da linguagem já tá bom isso acontece em
+23:00
+diversas linguagens que usam um padrão conhecido como e
+23:06
+e754 esse padrãozinho aqui ó então diversas linguagens incluindo Java usa
+23:13
+esse padrão tá que adota a representação binária para armazenar os valores ponto
+23:18
+flutuante e como a jvm trabalha com representação binária o valor pode acabar virando uma dízima periódica como
+23:25
+você viu ali no exemplo que eu te mostrei tá então o que você deve considerar como uma boa prática é o
+23:32
+seguinte você pode usar os tipos float e os tipos Double para cálculos que não
+23:38
+precisam de tanta precisão e alguns casos você não precisa da precisão tão
+23:43
+exata né pode ter dízimas assim não tem problema como por exemplo para calcular o tamanho de um elemento que vai
+23:49
+aparecer na tela alguma biblioteca gráfica etc isso não vai fazer grandes diferença não e muitos casos né mas para
+23:58
+cálculos monetários onde a precisão é extremamente importante a boa prática é
+24:04
+você não usar esses tipos Double e float em hipótese alguma certo então ao
+24:12
+contrário do do tipo Double né que usa a representação binária nós vamos usar um
+24:18
+tipo diferente que armazena o valor usando a base decimal e
+24:24
+esse tipo é o Big décimo comentar isso aqui e vou colocar agora do Play aqui
+24:31
+vou colocar senha é o tipo Big décimo certo esse tipo Big décimo Ele trabalha então com a base decimal e você não vai
+24:38
+ter esse tipo de problema só que para trabalhar com tipo Big décimo ele é uma
+24:44
+uma classe e um pouco mais vamos dizer um pouco mais burocrático para você
+24:49
+trabalhar com ele mas não é difícil é só mais burocrático deixa o código mais burocrático por exemplo eu quero
+24:54
+distanciar aqui um big décimo do tipo 1.0 que não tem o box não tá
+25:00
+infelizmente não tem um box para ele já fazer a conversão automaticamente não você tem que distanciar New Big décimo e
+25:08
+aqui você vai colocar entre aspas até você pode especifica mas eu recomendo
+25:14
+que você não passe um double que você sempre passa uma string para evitar qualquer tipo de imprecisão tá bom
+25:20
+porque aí você ele vai conseguir fazer a conversão dessa string para um big decimo sem ter problema e aqui olha eu
+25:28
+quero subtrair então agora o X é um big decimo eu não faço subtração as penas usando o operador menos não não consigo
+25:34
+eu tenho que usar aqui o método da classe
+25:40
+do tipo do tipo Big décimo então x que é uma Instância de Big décimo né ponto subtract então ele tem as operações de
+25:47
+subtração de multiply de divisão é de adição Plus né mas aqui a gente quer um
+25:54
+subtract vai subtrair aqui pelo Opa tem que fazer um New Big décimo
+26:00
+novamente pelo menos pelo pelo 10 deixa eu ver tá
+26:06
+faltando aqui um mais um parênteses ao invés de ao invés de fazer tudo novamente vou copiar com esse mais
+26:12
+rápido ó então 20 e 30 e depois vamos imprimir o resultado quer ver a
+26:18
+diferença Olha só vamos ver se ele tem precisão Ah agora sim ó bem preciso 0.40
+26:24
+certo então você vai tratar de dinheiro precisa de precisão usa o Big décimo não
+26:31
+usa Double float não tá bom vou deixar essa classe aqui só para referência sua Mas nós vamos agora fazer a refaturação
+26:39
+de todo o nosso projeto ou seja mudar todo o nosso projeto porque nós usamos de forma vou dizer incorreta o Double
+26:47
+para fazer conta com dinheiro é claro eu usei isso aqui porque eu não podia te introduzir para você a classe lá atrás
+26:55
+no curso senão você poderia ficar perdido né já que ela é uma classe né envolve orientação objetos então agora
+27:01
+nós vamos fazer refaturação do todo o nosso código vamos começar pela aquelas pessoas aqui rendimento anual Vamos
+27:09
+mudar aqui para big e décimo bom vai dar um trabalho fazer isso aqui porque a gente trabalhou tudo com Doble né mas
+27:14
+tudo que é duble aqui ó vamos dar para big dimo acredita que é isso né Agora
+27:21
+vamos aqui para classe conta aqui Big décimo
+27:27
+Big décimo e aqui eu vou pegar olha para saber que se é menor ou igual a zero eu
+27:33
+não consigo fazer dessa forma vou ter que fazer aqui um Comper New Big décima ou
+27:38
+Zero ao invés de fazer isso aqui New Big décimo zero ele tem uma uma constante né
+27:44
+que é big dessa o ponto zero se a gente coloca big 101.0 é a mesma coisa de
+27:50
+fazer uma New Big décimo passando zero lá dentro que que eu tô fazendo aqui eu tô comparando Eu Tô verificando se esse
+27:55
+valor aqui comparado com zero se ele é menor igual a zero tá vendo é um pouquinho mais burocrático né mas é
+28:02
+assim que funciona e aqui eu tenho que somar ó eu tenho que somar somar é o é o
+28:07
+Ed né então vou somar com o valor
+28:16
+décimo ponto zero mas é um trabalho um pouquinho repetitivo aqui né que eu vou
+28:21
+fazer um subtractual disponível não tá com um big dessa deixa eu ver aqui
+28:27
+né aqui ó passar aqui bem descendo também vamos mudar tudo aqui para onde
+28:33
+está adubo para big décimo porque aí agora assim ó
+28:39
+o valor se eu subtrair isso aqui
+28:46
+com o pé com Big décimo ponto zero se for menor que zero usado insuficiente
+28:53
+essa aqui já ficou mais complexa essa esse código aqui né
+28:58
+é que eu vou fazer um subtract valor aqui no subtrat mesmo é subtract
+29:06
+que eu vou fazer um Edge Ah tem que mudar para 10ª Big
+29:12
+décimo vou fazer um Ed taxa SAC
+29:18
+beleza Ok acredito que não temos mais que não
+29:25
+temos mais Double aqui na conta né Agora vamos pegar a conta especial
+29:33
+Big décimo bem décimo aqui vamos colocar 20
+29:42
+então tem que descansar aqui também
+29:48
+e aqui tem que somar um com o outro então é adicionar
+29:55
+ok aqui no sete valor limite contribuir Big décimo ok também não temos nenhum
+30:01
+tipo Double aqui mais conta investimento aqui não tem nada aqui nós queremos
+30:08
+saber se é menor que 10 mil então com o pé com 1000 Big décima
+30:21
+10 mil se for menor do que zero
+30:26
+ou seja essa é menor do que 10 mil aí eu vou instanciar New Big décimo é 30 que
+30:31
+tava aqui 30 e aqui eu vou acreditar rendimentos aqui
+30:38
+eu vou fazer assim ó multiply escolher para multiplicar Então
+30:45
+vamos fazer assim para ficar mais fácil deixa eu comentar isso aqui vou fazer
+30:51
+assim ó big vai escrever aqui em cima tá bom então get saldo ponto multiply vou
+30:57
+multiplicar pelo percentual de juros que tem que ser um big décimo inclusive Opa Big 10 mano beleza vou multiplicar pelo
+31:05
+percentual de juros e vou dividir vou dividir pelo por 100
+31:16
+beleza e aqui deposito o valor do rendimentos Porém quando a gente vai fazer a divisão
+31:22
+é interessante a gente usar aqui um tipo
+31:28
+de arredondamento inclusive Talvez ele esteja até ele tá até indicando para a
+31:33
+gente que a gente deveria usar um tipo de arredondamento aqui na divisão de visão chamado sem um modo de
+31:41
+arredondamento não argumento de modo de arredondamento porque é uma boa prática você usar um modo de arredondamento tá
+31:47
+se você dividir um valor pelo por outro as casas decimais você não quer arredondar né quando você trabalha com
+31:54
+dinheiro principalmente em banco existe um tipo de arredondamento chamado Baker bakers
+32:02
+round arredondamento bancário tá estatisticamente esse modo de
+32:08
+arredondamento ele minimiza erros cumulativos Quando é usado de forma repetitiva em uma sequência de cálculos
+32:15
+não se é um padrão bancário usar esse tipo de arredondamento nós vamos usar ele e
+32:21
+para fazer isso basta a gente passar aqui como um segundo argumento quantas
+32:27
+casas desse mais então primeiro Qual que é o valor que nós queremos dividir se é do método de divisão Tá vamos passar
+32:33
+quais quantas casas decimais nós queremos arredondar colocar que é duas ou round e agora nós vamos colocar E aí
+32:41
+é uma é uma constante de uma numeração ó round tá vendo a gente aprendeu a
+32:48
+numeração né Tá vendo o Ezinho aqui é uma numeração Existem várias formas de arredondamento
+32:53
+esse bem que bem queres round que eu te falei do andamento bancário é o Half
+32:59
+even ó esse Half even E aí ele vai fazer o arredondamento para a gente de acordo
+33:05
+com o padrão como que foi esse round evening
+33:11
+o valor 2.524 imagina que o resultado da divisão
+33:16
+deu esse aqui ó 2.524 ele vai arredondar para dois pontos 52
+33:23
+se for o valor 25 26 ele vai arredondar para dois 53 ou seja abaixo de 5 aqui ó
+33:32
+nessa nesse último dígito aqui abaixo de cinco ele é redonda para baixo
+33:38
+aí ele tira ele acima de cinco no caso aqui o 6 ele é redonda para cima ele aumenta esse
+33:45
+dígito aqui para três ó beleza mas é só isso não não é só isso não tem uma coisa
+33:51
+interessante também e se der 2.525 Ou seja no meio que que ele vai
+33:56
+fazer bom 2525 ele vai arredondar para cima
+34:01
+e vai arredondar para 25 2 3 ele vai arredondar para cima porque sempre vai
+34:07
+ser assim não nesse caso aqui vai não dá para cima porque ele vai olhar esse
+34:12
+dígito aqui ó se esse dígito aqui for na verdade isso não esse aqui ó se os
+34:18
+dígito antes que anterior esse aqui ó anterior aqui se
+34:27
+ele for ímpar aí vai arredondar isso aqui para
+34:33
+cima então ele vai andar para três entendeu isso aqui é ímpar ele é redonda para cima agora se isso aqui for par o
+34:42
+mesmo 25 aqui no finalzinho mas isso aqui for par aí ele vai redondar isso aqui para baixo tá mas qual a lógica
+34:50
+disso Thiago bom é simplesmente uma forma que eles encontraram para minimizar erros cumulativos porque se no
+34:57
+meio do caminho ele sempre arredondasse ou para cima ou sempre arredondasse abaixo ao fazer muitas contas imagina um
+35:06
+banco Quantas contas fazem teria uma discrepância grande então ao fazer esse
+35:11
+bankers round que é essa forma que eu te expliquei aqui é minimiza erros
+35:16
+cumulativos tá então alguns pequenininhos aí centavos né não chega nem a centavo né
+35:23
+eles vão fazer nessa essa
+35:28
+redondamento certo Então beleza vamos continuar aqui porque tem mais coisas eu
+35:34
+acredito que tem o tipo Double aqui pessoa já peguei aqui tipo a pessoa não tem ah
+35:42
+pagamento com certeza vai ter alguma coisa aqui ó pagamento isso aqui vamos
+35:47
+passar para big décimo também Ok e agora aqui em boleto
+35:55
+alterar tudo aqui
+36:03
+aqui beleza temos aqui que fazer a multiplicação né valor hora é um big
+36:09
+décimo multiplay porque décima quantidade de horas
+36:16
+beleza Ok acho que não tem nada caixa eletrônico tem alguma coisa Eu Já mexi
+36:24
+acredito que não vamos dar uma olhada aqui na classe principal se tem alguma coisa na classe principal
+36:32
+aqui ó rendimento 15000
+36:41
+beleza Ah tem vários lugares aqui ó
+36:47
+aqui eu não posso usar esse underscore tá então vou tirar na hora distanciar o Big décimo deixa eu copiação aqui para
+36:53
+ser mais rápido que é meu
+37:08
+aqui é 100 reais
+37:13
+beleza tá dando algum erro ainda vamos ver qual é que tem mil reais
+37:24
+acredito que tá tudo certo agora vamos executar que essa classe principal para ver se com pilha executa Opa tá dando
+37:31
+erro não pode invocar vamos ver onde é não pode invocar
+37:41
+passando porque o saldo tá nulo Ah o saldo tá nulo Olha que interessante
+37:47
+quando a gente tinha aqui o tipo primitivo do tipo Double quando a gente
+37:52
+tem um tipo primitivo qual é o valor padrão zero lembra disso quando a gente tem um tipo de classe qual é o valor
+37:58
+padrão é nulo Então o que tá falando aqui ó quando executa tá dando um novo
+38:05
+Pointer x Action porque em algum momento a gente tentou fazer aqui um depósito aí ele tentou pegar aqui o objeto dentro
+38:12
+dessa referência saldo mas tá nulo E aí deu no Pointer Exception uma exceção indicando que tem
+38:18
+uma variável que tem que não tem nada não tem valor nela tá nulo E aí dá no
+38:24
+Pointer etc para resolver isso vamos Sempre iniciar com o valor Zerado Big
+38:30
+décimo ponto zero Aí sim vamos rodar novamente e agora Olha tudo funcionando
+38:36
+normalmente porém com uma precisão correta para quando a gente está
+38:41
+trabalhando com dinheiro é isso aí mergulhador parabéns por ter chegado até aqui você tá indo muito bem aprender
+38:48
+programação é complexo mesmo mas eu acredito que eu estou conseguindo simplificar bastante para você sem
+38:54
+deixar de aprofundar no que é essencial se você continuar com a sua dedicação você pode se tornar um excelente
+39:00
+desenvolvedor Java e vai ser desejado pelas empresas mais importante que a
+39:05
+velocidade é a consistência então não deixe que nada pare os seus estudos
+39:10
+antes de encerrar essa aula eu quero responder uma pergunta que algumas pessoas me fazem porque eu e todos nós
+39:17
+aqui da alga works ensinamos tudo que sabemos porque fazemos eventos como esse aqui criamos cursos vídeo aulas
+39:24
+publicamos livros e diversos conteúdos para comunidade de programadores e a
+39:29
+resposta é muito simples nós fazemos tudo isso porque acreditamos que programa não pode mudar não só a vida do
+39:36
+usuário final mas também das pessoas que trabalham com isso assim como eu considero que hoje eu sou um
+39:42
+profissional bem-sucedido com programação eu acredito que muitas pessoas também podem alcançar isso e eu
+39:49
+gostaria de ajudar essas pessoas a conseguirem esse resultado de forma mais rápida sem precisar quebrar tanto a
+39:55
+cabeça por muitos anos sabe é por isso que nós investimos na produção de conteúdos e criamos um mergulho Java no
+40:03
+entanto para aqueles que querem se aprofundar muito mais em Java e se tornar especialistas Nós criamos um
+40:09
+treinamento imersivo completo e avançado chamado especialista Java ele é um curso muito
+40:15
+mais intenso e detalhado com mais de 89 horas de vídeo aulas um conteúdos do
+40:21
+básico ao avançado onde você vai sair do zero e alcançar em pouco tempo o nível
+40:27
+de especialista em desenvolvimento com a linguagem Java e até mesmo se você já
+40:34
+com Java vai melhorar muito a qualidade de seus projetos e vai se tornar muito
+40:39
+mais produtivo só para você ter uma ideia Olha o que esse aluno falou sobre o curso foi o Pedro falou que eu gostei
+40:46
+é dos detalhes Que Deixamos passar agora pegar os detalhes e tirar algumas Manias que vamos criando o que gosto muito é
+40:53
+que o curso não te deixa fazer as coisas no automático e sei que muitas das vezes fazemos isso sem perceber legal né bom
+41:01
+daqui alguns dias nós vamos abrir as matrículas para o especialista Java mas
+41:07
+eu vou te dar mais detalhes sobre isso nas próximas aulas E por falar nisso a
+41:12
+próxima aula vai ser publicada amanhã vai ser mão na massa e você vai aprender algumas epis importantes do Java e
+41:20
+também vai desenvolver uma aplicação de um serviço De back end com Spring Então já separa aí na sua agenda algumas horas
+41:27
+amanhã para assistir e aprender ainda mais e só lembrando que as aulas desse curso vão sair do ar quando a do curso
+41:34
+acabar agora lembra de fazer o seu marketing pessoal e posta uma foto aí
+41:40
+sua no Linkedin ou no Instagram mencionando sobre o que você aprendeu nessa aula lembra de marcar o perfil da
+41:46
+algaworks para a gente ver a sua evolução tá bom e depois que fizer isso rola a tela aqui para baixo envia a sua
+41:53
+dúvida ou um comentário sobre o que achou dessa aula vamos interagir na nossa comunidade porque isso é leva a
+42:00
+nossa energia para mergulhar juntos cada vez mais outra coisa se você tem algum amigo que quer aprender ou já está
+42:07
+estudando até mesmo trabalhando com Java Compartilha o link desse curso com ele pode compartilhar nos grupos de
+42:13
+programação que você participa também dessa forma você vai estar não só contribuindo com a nossa missão que é
+42:19
+ajudar cada vez mais pessoas mas você vai contribuir também com seus amigos e com todo o mercado tem um provérbio que
+42:26
+eu gosto muito e diz assim quando a maré sobe todos os barcos sobem juntos então eu acredito que elevar o nível do nosso
+42:33
+mercado é bom para todo mundo Todos nós podemos crescer juntos um ajudando o outro então é isso um grande abraço e eu
+42:40
+te vejo na terceira aula
+
+

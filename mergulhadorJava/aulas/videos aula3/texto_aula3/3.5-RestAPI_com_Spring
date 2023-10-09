@@ -1,0 +1,1510 @@
+
+[Música] Então vamos lá agora você vai aprender a desenvolver um projeto de back end de
+0:08
+uma resplay mas o que é rest O que é uma IPI em português api né como muitas
+0:14
+vezes a gente fala aqui no Brasil Bom vamos lá vamos começar por eipi ao
+0:20
+acrônimo para PlayStation programing interface que significa em português interface de programação de uma
+0:26
+aplicação é um componente de software que possui um conjunto de funções que faz a intermediação de acesso as
+0:33
+funcionalidades de algum sistema para fazer sentido existe uma precisa
+0:39
+também existir dois papéis o papel do software consumidor aqui do lado
+0:44
+esquerdo que você tá vendo nesse nesse diagrama aqui e do software provedor você tá vendo aí do lado direito né
+0:50
+Então imagina que eu tenho um software e eu quero expor alguma funcionalidade dele para um outro software terceiro
+0:57
+interagir com essa funcionalidade através de uma linguagem de programação para isso eu crio uma epi Que expõe essa
+1:06
+funcionalidade do software provedor e através desta IPI um outro software que
+1:12
+no caso é o software consumidor pode acessar essa funcionalidade então basicamente nós temos um software
+1:18
+conversando com outro graças a uma IP Ai que o provedor disponibilizou o termo
+1:24
+epi não é muito específico sobre o meio de comunicação entre os sistemas por
+1:29
+exemplo podemos considerar a collections como uma EPI para trabalhar com coleções
+1:36
+assim como a streams IPI do Java é uma hapi para trabalhar com streams e etc
+1:41
+percebe que esse termo ele é muito genérico e serve para muitas coisas Atualmente é muito comum falarmos em Web
+1:50
+Services e O legal é que o Web Services nada mais são que eipiis que fornecem a
+1:56
+sua interface de comunicação pela internet no mundo que nós conhecemos hoje inclusive milhares de sistemas
+2:03
+conversam entre si usando epiis na internet via web ou seja usam Web
+2:10
+Services né Por exemplo se você tem um aplicativo aí do iFood instalado no seu
+2:17
+celular ao fazer um pedido a comunicação desse aplicativo com servidores do iFood
+2:23
+acontece e através de Web Services e quando falamos em Web Services
+2:29
+geralmente Falamos também em West que é um estilo arquitetural para desenvolver o Web Services existem outras formas
+2:35
+também tá mas esse hoje em dia é o mais comum resty é o acrônimo para representatition state transfer ele não
+2:43
+é uma tecnologia não é um software não é uma ferramenta ou uma biblioteca portanto não é possível você baixar e
+2:50
+instalar o resto tá o resto é uma especificação que define a forma de comunicação entre componentes de
+2:57
+software na web independente da linguagem e a programação usada a linguagem de programação tá E ele tem
+3:04
+como objetivo a formalização de um conjunto de melhores práticas e regras para desenvolvimento de Web Services o
+3:12
+modelo arquitetural rest é independente de linguagem de tecnologia e protocolo de Comunicação tá apesar do modelo ser
+3:18
+independente de protocolo para colocar em prática é preciso de um e o mais
+3:25
+comum é o pro tocolo http já ouviu falar de htp Então vamos entender pelo menos o
+3:31
+básico aqui de http tá não é objetivo aqui aprofundar tanto nesse protocolo a
+3:37
+primeira coisa sobre http é o fato de ele ser um protocolo requisição resposta
+3:43
+para formar uma requisição nós precisamos de um método
+3:49
+Precisamos de uma URI da versão do protocolo htp de cabeçalhos e o corpo ou
+3:57
+chamado também de payload só para você saber às vezes nós chamamos os métodos
+4:02
+de verbos http é a mesma coisa Tá bom então se eu falar verbo ou método eu tô
+4:08
+falando dessa mesma coisa aqui que tá em vermelho aqui nesse slide tá bom temos uma especificação que define um conjunto
+4:15
+de métodos então né que nós podemos utilizar para fazer as requisições htp que são esses métodos por exemplo nós
+4:22
+temos métodos get temos o post o bilhete e etc o
+4:29
+método indica a ação que nós desejamos que seja executada por exemplo um método
+4:35
+get solicita que seja devolvido na resposta os dados que nós precisamos
+4:40
+significa obter buscar né então estamos enviando um comando para um servidor de
+4:46
+busca né um comando que mandando para o servidor sei lá para pi né fala assim
+4:51
+busca alguma coisa para mim já o método post que é o caso Desse exemplo aqui ó
+4:57
+do lado direito aqui do lado esquerdo tá um modelinho do lado direito tá um exemplo seguindo esse modelo aqui né
+5:03
+dessa especificação então no caso aqui do método post ele submete os dados para
+5:08
+o servidor né então traduzindo o post significa postar submeter usamos muito
+5:14
+esse método para adicionar novos registros na nossa aplicação e existem
+5:20
+alguns outros métodos também tá cada um com uma semântica com um significado diferente Beleza
+5:26
+a URI tá vendo aqui ó ri então aqui no modelinho você tá vendo aqui do lado
+5:31
+você vê nesse exemplo o que que é o RI beleza é um caminho que identifica o que
+5:37
+nós queremos dentro do Servidor htp nesse exemplo aqui estamos interessando
+5:44
+o nosso comando para Barra produtos ou seja estamos fazendo post em barra
+5:51
+produtos em outras palavras estamos Cadastrando um novo produto aí tem a
+5:57
+versão do http que nesse caso aí tá dizendo no nosso exemplo que é 1.1 tá tem os cabeçalhos que são informações
+6:04
+sobre a requisição eles são definidos por Chaves e Valores que podem ser
+6:10
+usados pelo servidor para interpretar requisição e executar uma operação Temos
+6:15
+vários cabeçalhos pré-definidos no protocolo htp nesse exemplo aí nós temos o contentais
+6:22
+que define Qual é o tipo do conteúdo que está sendo enviado no corpo da
+6:27
+requisição ou seja esse corpo da requisição tá vendo o corpo payload
+6:33
+Qual que é o tipo do conteúdo que nós estamos dizendo ao enviar as informações submeter as informações para Barra
+6:40
+produto usando protocolo STP estamos dizendo Olha estou te mandando um tipo de conteúdo aplication Aqui tá o
+6:47
+conteúdo né então nós estamos dizendo aqui o formato né que é que é o formato Jason que é um
+6:55
+formato para transporte de dados bem simples de entender tá que é muito usado inclusive esse formato
+7:01
+Jason e por que que nós estamos enviando aqui esse contempype para o servidor porque aí
+7:07
+assim o servidor quando receber esse conteúdo ele vai saber como interpretar a mensagem que ele tá recebendo né
+7:13
+corretamente e temos também essa o cabeçalho accept que ele vai definir
+7:19
+quais são os tipos de conteúdos aceitos como uma resposta isso quer dizer que o
+7:24
+servidor deve Obrigatoriamente retornar uma resposta nesse formato que estamos especificando aqui no A7 tá como eu
+7:32
+disse existem vários outros cabeçalhos mas claro você pode ir aprendendo eles conforme você vai
+7:38
+precisando não precisa conhecer todos agora tá com relação ao corpo da requisição ele
+7:44
+não é obrigatório vai depender do método htp que você tá usando basicamente é no
+7:50
+corpo da requisição que nós enviamos os dados para o servidor da EPI nesse
+7:55
+exemplo aqui estamos enviando os dados de um produto em formato Jason que foi o
+8:00
+formato especificado lá no cabeçalho Vale notar que durante o desenvolvimento alguns desses detalhes do protocolo http
+8:09
+podem ficar meio escondidos porque a ferramenta ou Framework que você pode estar usando ele pode abstrair um pouco
+8:16
+disso para ajudar a gente no desenvolvimento Tá bom então nosso contato com protocolo htp quando a gente
+8:22
+tá desenvolvendo Web Services web né não é tão baixo o nível assim no nível do
+8:28
+protocolo como eu tô explicando aqui tá mas é importante você conhecer pelo menos o básico aqui para você saber o
+8:34
+que que tá acontecendo na hora que tiver desenvolvendo uma aplicação certo quando uma requisição é feita para o
+8:41
+servidor o cliente que está mandando essa requisição Ele espera por uma por uma resposta do Servidor tá uma resposta
+8:48
+também tem alguns elementos importantes Então vamos ver aqui qual que é a composição da resposta o que que o
+8:54
+servidor responde para um cliente Qual que é o formato disso tá então tem a versão do protocolo http ou status
+9:00
+status né o cabeçalhos e o corpo sobre a versão aí tá indicando por exemplo a
+9:08
+versão 1.1 aqui no nosso exemplo tá que tá um modelinho Aqui tá um exemplo seguindo esse modelo o status Como o
+9:16
+próprio nome indica né serve para descrever qual foi o resultado do processamento da requisição servidor
+9:22
+deve retornar um status adequado para cada situação para o cliente para o consumidor dessa dessa requisição que
+9:28
+fez a requisição para ele ficar sabendo o que que aconteceu lá no servidor né então por exemplo se o servidor
+9:34
+conseguiu executar com sucesso se houve algum erro e etc Note que o status 201
+9:42
+aqui ó é retornado uma resposta né que representa que um recurso foi criado com
+9:48
+sucesso ou seja Considerando o cadastro de um produto o 201 tá indicando que o
+9:53
+produto foi cadastrado com sucesso Beleza o cabeçalho da resposta
+9:59
+segue a mesma ideia que eu expliquei na requisição tá nesse caso são informações
+10:04
+sobre a resposta que o servidor envia para o consumidor essas informações podem ser usadas pelo software
+10:10
+consumidor para interpretar a resposta nesse exemplo a resposta em forma que o
+10:16
+conteúdo tá em formato Jason né e o corpo da
+10:21
+resposta é onde fica o conteúdo mesmo da resposta ele é opcional pode ter ou pode não ter o corpo vai depender do caso tá
+10:27
+nesse exemplo aí a resposta devolve um código de São que representa o produto
+10:33
+que acabou de ser cadastrado lá no servidor Beleza agora vamos de recursos
+10:39
+westl West resorts em inglês um recurso a qualquer coisa exposta não web como um
+10:45
+documento uma página um vídeo uma imagem e até mesmo um processo de negócio é
+10:50
+algo que tem importância suficiente para ser referenciado como uma coisa no
+10:55
+software tá por exemplo em um e-commerce um catálogo de produtos um único produto
+11:01
+uma nota fiscal um pagamento tudo isso pode ser considerado como um resource um
+11:06
+recurso por exemplo Imagine que esse é o recurso de um produto imagine também que
+11:12
+esse produto seja um Playstation então podemos dizer que esse é o recurso do
+11:17
+Playstation fazendo um paralelo com orientação objetos que você já aprendeu né pense no recurso como uma Instância
+11:25
+de um objeto de uma determinada classe um recurso que representa uma única
+11:30
+coisa é conhecido como um recurso único ou inglês sim Doutor
+11:36
+os recursos podem ser agrupados em coleções também e uma coleção contém
+11:41
+zero né quando ela tá vazia ou muitos recursos de um mesmo tipo e isso é
+11:46
+conhecido como recurso de coleção ou collections ou seja uma coleção de
+11:52
+recursos também é um recurso em si entendido até aqui beleza agora que você
+11:58
+já sabe o que é um recurso Você precisa aprender como identificar um recurso para referenciar ele na web West usa o
+12:06
+RI isso para identificar os recursos o RI significa e uniforme
+12:11
+ou seja identificador de recurso uniforme basicamente é um conjunto de
+12:17
+caracteres que tem como objetivo dar uma espécie de endereço para os recursos de
+12:22
+forma não ambígua então quando modelamos nossos recursos temos que pensar em um
+12:28
+RS para identificar não sei se o termo ri é novo para você mas eu tenho certeza
+12:33
+que você usa muito o termo URL certo e você pode estar na dúvida aí sobre
+12:38
+qual é a diferença entre o Ri e URL basicamente uma url é um tipo de URI URL
+12:46
+significa e uniformes locator ou localizador de recurso uniforme então
+12:52
+uma url é um tipo de identificação de recurso também mas ela específica não
+12:59
+apenas o identificador mas também a localização do recurso ou seja onde o
+13:05
+recurso está disponível E qual é o mecanismo para chegar até ele Por exemplo quando vemos o URL como
+13:14
+https: alguma coisa ponto com barra clientes nós estamos identificando um
+13:19
+recurso e também dizendo como chegar até ele que é através do protocolo http né
+13:25
+através do https certo agora vamos ver um exemplo aqui Aqui nós temos um
+13:32
+recurso de coleção nós queremos identificá-lo seguindo as boas práticas o ideal vai identificar o recurso com
+13:38
+uma URI que se refere a alguma coisa ou seja um substantivo e não um verbo ou
+13:43
+uma ação por isso aqui nós usamos o Barra produtos que pelo nome no plural
+13:48
+já dá para entender que é uma coleção de produtos né a URL completa para alcançar o recurso nesse exemplo pode ser isso
+13:55
+aqui ó gasto TPS dois pontos alga
+14:02
+marketing.com.br/produtos tá um exemplo só ou seja um consumidor da EPI pode
+14:07
+fazer uma requisição http nessa URL para buscar o recurso de coleção de produtos
+14:13
+ou seja uma lista de produtos mas aí você pode estar perguntando Thiago Mas como eu faço para incluir para atualizar
+14:19
+ou para excluir um produto se a gente não identificou a ação não ri Boa
+14:25
+pergunta ó nós fazemos isso apenas variando os métodos os verbos http
+14:32
+lembra deles por exemplo get para consultar post para incluir e etc agora
+14:38
+nesse exemplo nós temos um recurso único e para identificar esse recurso único nós podemos por exemplo tá usar a
+14:48
+uri/produtos/cod/produtos barra um código aqui tá esse código entre chave aqui é porque
+14:54
+você vai substituir aqui pelo próprio código do produto como nesse exemplo aqui embaixo tá bom Note que usamos o
+15:01
+Barra produto no plural porque dessa forma mantemos a interface de produtos
+15:07
+uniforme Isso aqui é uma boa prática tá porque você usa a interface uniforme deixa os seus recursos organizados
+15:15
+facilita a vida do consumidor da eti então agora vamos colocar a mão na massa
+15:20
+e desenvolver a nossa primeira reação e para fazer isso nós vamos usar o
+15:25
+ecossistema Spring que que é o ecossistema Spring é um conjunto de projetos que resolvem vários problemas
+15:32
+do dia a dia de um programador Java é um Eco muito conhecido e muito usado no
+15:39
+mundo todo eu tô aqui no site spring.io e vou te mostrar aqui a lista
+15:45
+dos projetos tá vamos falar de alguns deles claro nós vamos usar alguns desses projetos tá então Spring ele vai ajudar
+15:50
+a gente a criar aplicações com mais simplicidade e mais flexibilidade você
+15:56
+sabe que esse menu projects aqui Já tem alguns projetos conhecidos vou clicar aqui em View Project Project temos a
+16:03
+lista aqui de vários projetos deixa eu clicar aqui nesse Spring Framework
+16:09
+frame que veja que aqui do lado esquerdo tem uma lista de projetos e o Spring
+16:15
+framer aqui que eu cliquei é a base do ecossistema ele foi pensado para que nossas aplicações pudessem ter foco
+16:21
+maior nas regras de negócio e menos em infraestrutura então ele inclui dentro
+16:27
+dele por exemplo o Spring mvc esse Spring mvc
+16:33
+aqui é usado para criar aplicações web e Isso inclui West e tem várias outras
+16:39
+funcionalidades de ação de dependências transações algumas coisas mais avançadas
+16:44
+inclusive então isso aqui é algo que nós vamos usar tá veja aqui do lado esquerdo que tem aqui
+16:50
+Um Spring da Spring Day é um projeto que tem vários outros subprojetos tá vendo
+16:55
+que abriu vários outros aqui então tudo relacionado a dados a bancos de dados
+17:02
+trabalhar com persistência de dados tá dentro do Spring da inclusive nós vamos usar aqui o Spring da JPA uma parte dele
+17:09
+nós vamos usar beleza tem um outro projeto muito conhecido que
+17:14
+é o springboot que ajuda a criar projetos que que se auto configuram
+17:20
+seguindo convenções e ele tem uma visão opinativa que que quer dizer uma visão
+17:26
+opinativa quer dizer que o springbuth decide como configurar o projeto de
+17:32
+acordo com a própria visão dele a própria visão dos desenvolvedores que criou ele ou seja de acordo com algumas
+17:39
+Convenções que eles acham que são mais adequadas são as mais usadas ou as
+17:44
+melhores no mundo da programação Java né então você não precisa se preocupar com
+17:49
+a maioria das configurações claro que você pode sim configurar muitas coisas mas já vem Auto configurado tá então
+17:57
+basicamente quando você cria um projeto com Spring boot você começa a
+18:02
+desenvolver as regras de negócio e as funcionalidades do sistema de uma forma muito mais rápida sem ter que se
+18:09
+preocupar tanto com as configurações sociais Nós também vamos usar o
+18:14
+springboot Beleza então tá bom Como que Nós criamos uma aplicação
+18:20
+com Spring usando o Spring boot uma forma bem simples de começar é criando
+18:27
+um projeto básico uma estrutura inicial do projeto então ao invés de entrar aqui
+18:33
+no interior e criar um mil Project Limpo vamos dizer assim começar a
+18:38
+configurar as coisas a gente pode começar criando uma aplicação base já com as configurações iniciais a partir
+18:46
+desse aqui então Spring it Alive o que que ele é
+18:53
+uma ferramenta que te ajuda a criar projetos Spring boot Inicial veja que o springboat ele não é um gerador de
+18:59
+código tá ele é um projeto que vai te ajudar a criar aplicações às vezes ele
+19:04
+não gera código ou Spring a gente a laiser poderia dizer que é sim um gerador de código mas não é que ele vai
+19:09
+gerar sua aplicação inteira ele vai gerar uma primeira uma base uma estrutura base do seu projeto para você
+19:17
+começar para você não ter que digitar algumas coisas apesar de ser pouca configuração que você tem que colocar
+19:22
+ainda assim tem alguma coisa então Ele vai gerar para você esse projeto Inicial então para essa ferramenta funcionar
+19:29
+basicamente nós vamos precisar passar alguns parâmetros aqui e essa ferramenta
+19:34
+vai gerar o projeto em um arquivo zip é para a gente descompactar e importar na
+19:41
+nossa ideia e assim continuar o desenvolvimento tá Então veja Quais são esses parâmetros primeiro ele vai
+19:47
+perguntar esse projeto ele é o que é um gradle Raven Talvez isso seja novo para
+19:52
+você mas aqui ele tá perguntando como que você vai construir esse projeto qual ferramenta de
+19:59
+de construção de projetos gerenciamento de dependência se você quer usar nós
+20:04
+vamos usar aqui o maven tá então maven é uma ferramenta de gerenciamento de dependências ele faz automação de Build
+20:11
+de projetos basicamente quando você tem um projeto construído todo o seu código Você vai precisar construir Você vai
+20:18
+precisar empacotar esse projeto em um arquivo Você vai precisar adicionar dependências nesse projeto por exemplo
+20:24
+se nós estamos trabalhando com o banco de dados nós vamos precisar de bibliotecas que conectam com esse banco
+20:30
+de dados se nós vamos trabalhar com com o próprio Spring mesmo né Então precisamos de bibliotecas do Spring
+20:37
+então o meio vem faz Essa gestão aí das dependências tá nós vamos usar ele aqui
+20:42
+é perguntado Qual que é a linguagem de programação nós vamos usar Java pode ser outras também mas usar Java tá aqui no
+20:49
+spring boot tá perguntando qual é a versão já veio selecionado aqui a última versão estável eu vou manter aqui vou
+20:55
+usar três.1.1 tá a versão última versão estável do Spring boot no momento que eu
+21:01
+tô gravando essa aula aqui escolhe aí a versão estável também ou usa a mesma que eu estou usando beleza mas aqui abaixo
+21:08
+tá pedindo algumas informações do projeto por exemplo group o grupo aqui é
+21:14
+um identificador do projeto é maven então em geral a gente coloca o domínio
+21:20
+da empresa que você trabalha ao contrário identificando Qual é o Projeto então por
+21:26
+exemplo esse aqui a gente vai desenvolver um projeto de RH da área de RH de uma empresa Beleza Vamos colocar
+21:32
+assim ó com um ponto algoritz que a empresa onde eu trabalho ponto RH então
+21:37
+é um projeto de RH da algaworks aqui em artefact você especifica aqui o
+21:43
+identificador do artefato do Exatamente porque dentro
+21:49
+do projeto de RH nós podemos ter vários artefatos podemos ter por exemplo um
+21:55
+projeto de Epi podemos ter um projeto de um site um projeto de integrador com
+22:02
+banco de dados enfim Podemos ter várias coisas dentro do RH Então vou colocar aqui RH traço E aí porque nós vamos
+22:07
+desenvolver uma papei para o RH Tá aqui em nome vou deixar a mesma coisa nome RH
+22:14
+epiai mesmo description pode até deixar em branco mas vou colocar aqui api do RH beleza e aqui em Packet é qual
+22:25
+é o pacote Java pacote Java mesmo aquele que você aprendeu né que você quer criar
+22:31
+como base para essa aplicação eu vou colocar aqui ó com um ponto alto RH apenas vou tirar essa RH e pi aqui tá
+22:38
+bom E aqui ele tá perguntando qual que é o tipo de empacotamento basicamente quando você cria um projeto você pode
+22:45
+empacotar ele de algumas formas como um mais como é olhar Então nós vamos deixar
+22:52
+já que tá selecionado que é e a versão do Japa que nós estamos usando vou deixar aqui a 17
+22:58
+que é a última versão LTS Beleza agora
+23:04
+subindo aqui do lado direito tem essas dependências Então nós vamos adicionar
+23:09
+aqui algumas dependências em geral aqui Você pode adicionar
+23:15
+bibliotecas externas que o próprio springboot pode autoconfigurar para você e você pode adicionar starters também
+23:22
+que que é o Starter inclusive start é uma das principais funcionalidades do springboot tá quando a gente adiciona um
+23:29
+Starter que é uma dependência ele automaticamente adiciona um conjunto de
+23:37
+outras dependências no projeto e Auto configura ele para a gente então basicamente um Starter é um pacote de
+23:43
+dependência exato configuradas basicamente é isso por exemplo nós
+23:49
+queremos aqui trabalhar com queremos trabalhar com desenvolvimento web porque aí no final das contas é
+23:56
+desenvolvimento web então eu vou procurar aqui ó Spring web Spring web serve para
+24:02
+construir web incluindo aplicações web então quando a gente clica aqui em Spring web nós estamos
+24:09
+adicionando um Starter Spring web que ele vai botar todas as bibliotecas e
+24:16
+ferramentas que a gente precisa para desenvolver web tá incluindo um servidor web que a gente chama de servers
+24:22
+container que é o Apache Tom Cat por padrão ele já embute isso tudo para gente então ao invés de quando eu quero
+24:28
+criar um projeto web sair adicionando um monte de coisa externa avulso depois ter
+24:33
+que configurar tudo isso manualmente eu simplesmente adicione esse Spring web e ele vai automaticamente adicionar tudo o
+24:40
+que eu preciso e configurar para mim viu eu vou adicionar agora uma nova aqui ó nós vamos trabalhar com
+24:47
+[Música] um banco de dados em memória esse banco de dados e memória chamado de H2 para
+24:53
+simplificar aqui para ser mais rápido tá nós vamos adicionar esse banco de dados e memória que chama H2 Então vou adicionar ele também um bocado racional
+24:59
+e memória mas para trabalhar com banco de dados nós vamos usar um projeto do Spring chamado chamado Spring Day JPA então
+25:07
+para persistir os dados vai ver depois o que que é a gente vai clicar aqui para adicionar o Spring da JPA e eu vou
+25:14
+adicionar também aqui uma outra dependência que é esse springbuth deve Tools que ela serve para ajudar a gente
+25:21
+no em fase de desenvolvimento para a gente poder fazer reiniciar o nosso servidor de forma mais
+25:27
+rápida enquanto a gente tá desenvolvendo aplicação então ele fornece algumas melhorias otimizações para a gente
+25:33
+durante o desenvolvimento para a gente crescer mais produtivo não gastar tanto tempo no desenvolvimento Então vou
+25:39
+adicionar isso também basicamente são essas dependências não sei se a gente vai precisar de mais acredito que não
+25:45
+mas isso aqui caso você não selecione nesse momento depois você pode adicionar sem problema algum
+25:51
+dentro do próprio projeto tá aqui é só mesmo para a gente economizar nosso tempo e já deixar ele um projeto
+25:58
+pronto Ou pelo menos essa base pronta né feito isso configurado tudo clica aqui
+26:04
+nesse botão Generation ele vai gerar um arquivo zip e já baixou para mim aqui esse arquivo zip então eu vou entrar
+26:10
+aqui na pasta download acabou de baixar esse arquivo zip vou compactar esse arquivo e temos aqui a pasta do nosso
+26:17
+projeto Agora não vou explorar essa pasta aqui não eu vou abrir ela no inteligeia vou clicar aqui abrir o
+26:23
+inteligente clicar nesse botão Open para a gente abrir essa pasta que nós extraímos dentro do
+26:31
+Intel DJ que já é a pasta do projeto base então vou clicar em Open aqui Aqui podemos dizer que nós confiamos nesse
+26:38
+código aqui no projeto Beleza então ele tá importando aqui nesse momento e
+26:45
+dentro do projeto tá aliás dentro do projeto não dentro da ideia né então importou o projeto que nós baixamos
+26:52
+dentro da ideia Beleza Aqui nós temos então um projeto
+26:58
+maven tá então o springbuth ele usa o meio vem para
+27:05
+funcionar né então quando você abre o projeto aqui você vê
+27:11
+que nós temos aqui alguns arquivos diferentes por exemplo esse posts ml
+27:17
+temos uma pasta Surf menos teste tá vendo que tem uma estrutura um pouco diferente talvez que você já conheça
+27:23
+porque porque o meio vem ele define uma estrutura padrão de como é um projeto
+27:29
+então é bem tranquilo eu vou te explicar aqui mas antes disso é importante você
+27:34
+entender que o esse projeto ele tem dependências lembra que nós adicionamos e o mês vem ele é uma ferramenta de
+27:42
+gerenciamento de dependências então quando a gente importa o projeto aqui na ideia o maven é a nossa ideia inclusive já tem
+27:49
+suporte ao meio vem tá o maven Vai automaticamente baixar essas dependências da internet vai baixar
+27:56
+arquivos da internet e colocar no seu computador em um local que a gente chama de repositório local uma pastinha dentro
+28:02
+do seu computador aquela que ele coloca esses arquivos dessas dependências dessas bibliotecas que são arquivos com
+28:09
+extensão ponto de arta se tiver algum erro deu algum erro no seu projeto você apareceu algum erro
+28:15
+alguma coisinha aqui falando que tá com erro você pode tentar pode ser algum problema na sua internet você pode tentar clicar com o botão direito aqui ó
+28:20
+e aqui em May vem e dá um Reload Project aqui clica aqui em Reload Project que
+28:26
+ele pode tentar novamente para corrigir algum problema Beleza deixa eu te falar
+28:31
+aqui da estrutura básica aqui ó essa pasta montaria é uma pasta da própria
+28:37
+tela com algumas configurações esse ponto mvn aqui
+28:43
+ele coloca aqui um que a gente chama de maven Reaper então basicamente é uma versão embutida do Meio vem dentro do
+28:51
+projeto porque assim se outros desenvolvedores forem baixar esse projeto o código fonte desse projeto mas
+28:57
+não tem um mês vem instalado na máquina dele ou não tem uma ideia que suporta meio vem como nós já temos então nós nem
+29:03
+precisaríamos disso eles conseguem usar o maven mesmo assim porque já tem um
+29:08
+meio embutido dentro do projeto tá E aqui dentro dessa pasta Surf Nós temos duas subpastas Man e teste essa pasta
+29:15
+também tem a pasta Java Então dentro de Java temos aqui o código
+29:22
+fonte nós vamos colocar né até criou na verdade um aqui uma classe aqui Aqui é onde nós vamos colocar o nosso código
+29:28
+fonte que a gente vai desenvolver o código fonte que vai para a produção tá inclusive aqui já tem uma classe ó uma
+29:36
+classe que com o método bem Lembra do método bem então aqui é o ponto de partida de uma aplicação
+29:42
+Spring boot essa classe aqui a que vai ser executada quando a aplicação Foi
+29:47
+iniciada tá e temos essa pastas a gente coloca aqui
+29:53
+outros arquivos em geral tipo arquivos de configuração inclusive já tem um arquivo de configuração padrão do
+29:59
+springbut que é o PlayStation aqui mas pode adicionar configurações você pode colocar aqui arquivos
+30:06
+estáticos imagens templates enfim vários arquivos que não são códigos Java beleza e dentro de
+30:12
+teste se você tiver trabalhando com testes unitários testes de integração a gente não vai trabalhar aqui você coloca
+30:19
+dentro da pasta teste tá a gente não vai trabalhar com essa aqui beleza e temos
+30:24
+aqui olha aqui alguns arquivos documentação algumas coisas assim mas
+30:29
+vamos focar aqui no post ml o que que esse Ponche x ml isso aqui é chamado de Project Object Model ou seja modelo de
+30:37
+objeto do projeto aqui é o coração de um projeto mavening é um arquivo XML não
+30:42
+sei se você conhece esse formato XML de tagzinhas assim né e ele contém informações e configurações
+30:48
+do projeto usadas pelo MEI vem para fazer build ou seja para construir o nosso projeto só para ficar claro esse
+30:55
+arquivo aqui não é um arquivo do Spring boot ou qualquer outro projeto Spring tá bom é um arquivo do maven então qualquer
+31:03
+projeto maven dependente se for Spring ou não ele vai ter esse arquivo pont XML e aqui dentro já tem algumas
+31:09
+configurações aqui que a gente forneceu lá no spring challer para ele gerar isso
+31:15
+aqui então Todo projeto Spring boot inclusive vai ter olha só ele vai ter esse
+31:22
+aqui nós estamos basicamente herdando as configurações base do Desse nosso
+31:30
+projeto mailing do springbuth Então já a gente tá vendo isso aqui esse código que
+31:35
+é até relativamente pequeno mas na realidade esse posts ml Ele tem muito mais coisa do que isso aqui porque a
+31:41
+gente tá herdando um outro arquivo de configuração do Spring boot lembrança de classes do Java quando a gente é da
+31:47
+gente traz tudo da classes da classe da Super classe É tipo isso a gente tá buscando aqui tudo de uma configuração
+31:55
+do Spring boot Então esse pergunte aqui é como se fosse uma herança mesmo tá E aí
+32:02
+olha só tem aqui algumas configurações que a gente forneceu lá no challezer
+32:08
+tudo mais versão do Java e aqui embaixo nós temos as dependências ó essa tag
+32:15
+dependências temos várias dependências lembra que adicionamos algumas dependências Starter o Spring web acho
+32:21
+que chamava lá né que é um Spring boot Starter web foi essa aqui aquele Spring web lembra do Spring da JPA que
+32:27
+adicionamos essa aqui lembro deve Tools tá aqui do H2 aquele banco de dados de
+32:32
+memória então ele vai adicionando as dependências aqui se você no meio do projeto viu que precisa de uma nova
+32:38
+coisa você vem aqui e pode adicionar manualmente mesmo alguma dependência se você quiser aqui
+32:43
+no post ml Então não é que você precisa de um experimento a laser sempre você pode inclusive criar projeto na mão
+32:49
+desde que você conheça o que tá fazendo Tá e para cada dependência que a gente adicionar aqui o maven vai baixar da
+32:56
+internet de um repositório remoto e vai adicionar aqui no nosso repositório local na nossa máquina e
+33:03
+usar aqui no nosso projeto tá então beleza agora nós vamos criar nosso
+33:09
+primeiro endpoint da nossa IPI ou seja o primeiro recurso para a gente trabalhar
+33:16
+com funcionários a gente tá falando aqui no sistema de RH Então vamos criar o recurso de funcionários então a gente
+33:22
+precisa listar os funcionários cadastrar funcionários de repente atualizar os dados de algum funcionário vamos começar
+33:29
+a fazer isso aqui tá bom mas antes vamos iniciar Nossa aplicação aqui ó esse é arquivo essa classe RH e aplication que
+33:37
+foi criada Lembra que eu te falei que ela é a classe que ao ponto de partida vamos da nossa
+33:43
+aplicação Então vamos executar ela vamos executar e quando a gente fizer isso vai ser iniciado um servidor web Olha só se
+33:52
+tudo der certo né foi iniciado um servidor web na porta 8080 tá vendo ó Ele usou a parte
+33:58
+tonquete para fazer isso porque o Spring já faz isso automaticamente né já adicionou pra
+34:03
+gente uma parte tão enquete na porta 8080 caso nesse momento aqui de algum erro para você falando que a porta já tá
+34:11
+em uso alguma coisa assim dá uma olhada se você não tá usando o
+34:17
+essa porta 8080 para uma outra aplicação de repente você já tem um outro servidor nessa máquina usando essa porta aí vai
+34:23
+dar conflito se você puder parar essa outra aplicação você para inicia aqui que vai dar tudo certo caso você não
+34:28
+possa você pode vir aqui em aplication protects e mudar a porta ao invés de 80 e 80 você coloca assim ó server.port
+34:36
+igual a 8081 por exemplo um outro número que você quiser agora vou rodar de novo veja que vai iniciar em uma outra porta
+34:46
+ó na porta 8081 tá bom mas aqui para mim não tem problema usar 8080 então eu vou
+34:51
+tirar aqui vou iniciar no 8080 mesmo que é a porta padrão Beleza então feito isso
+34:58
+iniciou Vamos abrir aqui a ferramenta Postman essa ferramenta você já deve ter instalado aí no seu
+35:04
+computador tá ela é uma ferramenta que ajuda a gente a fazer requisições http em serviços inclusive e a gente vai
+35:12
+fazer os testes usando ela ao abrir ela nós vamos criar uma nova Collection uma Collection o próprio nome diz é uma
+35:18
+coleção uma coleção de requisições vou chamar aqui de
+35:24
+funcionários tá então criamos a nossa coleção de requisições e dentro dessa coleção nós vamos adicionar uma nova
+35:31
+requisição eu vou chamar aqui de fundo
+35:37
+funcionários listar e aqui nós vamos colocar Olha só o verbo htp lembra dele
+35:43
+vou chamar de gatos nós queremos obter eu vou colocar assim o local rosto local rosto é o endereço local da minha
+35:49
+máquina né dois pontos 80 Então estou especificando aqui qual é a porta onde eu quero acessar barra
+35:55
+funcionários então basicamente nós queremos acessar o recurso de funcionários
+36:01
+aqui tá localizado dentro da nossa própria máquina na porta 8080 Então nós
+36:06
+vamos bater lá na nossa aplicação springboot que tá iniciada eu vou clicar em sente veja que quando a gente faz
+36:12
+isso retorna aqui um código de status tá vendo aqui 404 esse 4404 indica que o
+36:20
+recurso não existe não foi encontrado ah como que você sabe disso já tá escrito aqui sound Mas você pode entrar também
+36:27
+aqui nesse site http status aí ou tem vários outros outras referências que
+36:33
+você pode consultar isso aqui tem os status htp que você pode consultar Quando é o 404 ó not found
+36:41
+indica que o servidor não encontrou esse recurso né você deve ter visto esse erro
+36:48
+quando você tenta acessar uma página que não existe numa num site qualquer né 404
+36:53
+então é justamente porque é um código de status do FTP Beleza então isso aqui é uma referência é importante você sempre
+36:59
+tem essa referência em mãos quando você não conhece um código tá bom Então beleza agora se não ele por que
+37:06
+que não existe né não existe porque a gente a gente não criou nada ainda na nossa aplicação a gente só Levantou aquela aplicação base nós precisamos
+37:13
+criar então esse recurso aqui vamos então abrir aqui a nossa aplicação vou
+37:20
+criar o nosso código fonte né vou criar aqui uma um pacote vou criar aqui um
+37:26
+pacote chamado controle tá porque controle porque nós vamos
+37:33
+criar uma classe que ela é chamada de controle colocar botão direito New Class e vou chamar aqui de funcionário com
+37:39
+Troller então é um controlador de funcionário um controlador é uma classe
+37:45
+que recebe algo de fora no caso recebe uma requisição htp processa alguma coisa
+37:52
+chama classes de negócio enfim ela pode fazer várias coisas e retorna uma resposta para quem requisitou então para
+37:59
+isso que nós queremos essa classe controle e aqui eu vou criar método que retorna uma string mesmo chama esse
+38:06
+método de testar por enquanto tá bom e nós vamos retornar aqui um testando um
+38:11
+dois três então basicamente que nós queremos ao fazer essa requisição aqui nós queremos que bata nesse método aqui
+38:18
+que chame ele e que retorne esse texto testando 1 2 3 pra gente começar aqui de
+38:23
+leve tá vamos fazer isso para a gente fazer isso nós precisamos mapear esse método dizendo que ele é um método que
+38:31
+vai responder pelo verbo HD peguete porque foi o verbo que nós usamos aqui ó tá vendo Então para fazer isso nós
+38:37
+usamos uma notação Java chamada get mapping Na verdade essa anotação ela vem
+38:43
+lá do Spring tá vendo Spring framer no caso do Spring mvc né então que tá
+38:49
+dentro desse Spring frame fizemos um mapeamento veja que fez não importa aqui em cima mas só isso não basta porque nós
+38:55
+precisamos também mapear essa classe aqui configurar essa classe funcionário controle dizendo que ela é um
+39:01
+controlador West Então vou anotar aqui um resto de controle dessa forma essa classe ela se torna
+39:07
+gerenciável agora pelo Spring então o próprio Spring Vai instanciar um objeto
+39:13
+dessa classe automaticamente quando for necessário quando iniciar a aplicação ele vai instanciar um objeto
+39:20
+dessa classe e vai começar a gerenciar esse objeto e aí quando chegar uma requisição ele vai bater aqui de Gatti
+39:27
+vai bater aqui nesse método testar porém antes disso nós precisamos mapear a URI essa URI aqui ó barra funcionárias
+39:36
+precisamos fazer um mapeamento para essa para essa classe aqui então vou colocar aqui ó uma anotação também do Spring e vou
+39:44
+colocar a URI aqui a barra funcionar então agora sim quando chegar uma requisição get
+39:50
+do verbo get em barra funcionários vai cair aqui nesse método e beleza agora só
+39:56
+fazer um build o botão aqui no menu de build Project ou a tecla de atalho se você quiser a gente não precisa
+40:02
+reiniciar Nossa aplicação porque a gente está usando o devitos então ele já faz o start aqui rapidamente para a gente com
+40:09
+as alterações que nós implementamos aqui eu vou fazer agora a requisição
+40:14
+novamente e veja que retornou o texto aqui 200 Ok 200 significa que OK tá tudo
+40:21
+certo requisição foi atendida pelo servidor e aqui o texto que nós informamos para retornar aqui como
+40:28
+Strings certo então beleza agora antes de continuar aqui porque fizemos
+40:33
+apenas um teste antes de continuar a listagem Vamos criar com a
+40:39
+funcionalidade de inclusão de um recurso de funcionário ou seja de cadastrar um funcionário porque se a gente consegue
+40:45
+cadastrar um funcionário depois a gente consegue finalizar aqui a implementação da listagem de funcionários E aí a gente
+40:51
+consegue realmente ver a lista de funcionários porque se a gente implementar a lista aqui agora vai vir uma lista vazia porque a gente não tem
+40:57
+funcionário cadastrado Então vamos pausar essa implementação da listagem e vamos aqui ó duplicar essa chamada aqui
+41:05
+e vou chamar aqui de vou chamar aqui de cadastrar tá a gente
+41:12
+vai cadastrar um novo funcionário e qual que é o verbo que a gente vai usar para cadastrar vamos usar aqui o post para
+41:18
+submeter lembra disso a gente usa o post para submeter informações e fazer um cadastro geralmente e aqui para submeter
+41:25
+para cadastrar um funcionário nós precisamos passar para o servidor da EPI um payload ou seja um corpo dessa
+41:32
+requisição Então a gente vai aqui nesse Bari você vai selecionar aqui em Roll ou seja puro e ao invés de texto você vai
+41:38
+colocar um Jason Então vamos usar aqui o formato Jason para enviar os dados
+41:44
+payload dessa requisição com os dados do funcionário eu vou abrir uma chave e fechar uma chave uma chave significa um
+41:50
+objeto Jason tá então basicamente esse aqui estamos dentro do objeto e agora nós podemos colocar algumas propriedades
+41:56
+vou colocar o nome assim ó o nome do funcionário esse aqui é o nome da propriedade né é uma chave aqui o valor
+42:02
+e colocar João opa
+42:08
+aqui e-mail João da Silva roubar
+42:15
+aqui o salário do João 31 mil reais a data Opa a data de admissão do João
+42:28
+2009-11-01 então usamos aqui o formato ISO que é ano mês e dia e
+42:36
+o status ativo tá você pode pensar
+42:44
+De onde você tirou essas propriedades bom tô inventando aqui agora tá não
+42:50
+existe Ainda nada no nosso projeto que diz que são essas propriedades daqui a pouco você vai ver isso porque nós vamos
+42:56
+criar uma classe com atributos com essas propriedades também Beleza então se a gente faz isso e se a
+43:04
+gente submete novamente temos aqui na verdade agora nós temos não temos um 404
+43:09
+temos um 405 falando ó esse método post aqui ele não existe porque porque ele
+43:14
+encontra esse essa r/ funcionários ele encontra um controlador que tá mapeado com essa URI Certo olha aqui o
+43:21
+controlador uma piada com essa rir porém não encontra o post mapping aqui tá
+43:27
+vendo não tem não encontrou o post mapping aqui tá
+43:32
+deixa eu só tirar essas correções ortográficas aqui tá não gosto disso não
+43:39
+queria atrapalha tanto a gente não mas vou desabilitar isso aqui
+43:44
+beleza OK então agora nós vamos criar o método
+43:50
+nós vamos criar um método para cadastrar um funcionário tá ele vai retornar um
+43:57
+Opa retornar o que né retornar o funcionário bom vamos criar aqui uma classe funcionário antes de criar o
+44:02
+método para cadastrar aqui vamos criar uma classe que representa o funcionário vou criar aqui primeiro o pacote deixa
+44:08
+mais pacote de Model onde nós fomos colocar classes que representam entidades Então vou criar aqui uma
+44:14
+primeira classe que é a funcionário ela representa o funcionário o funcionário tem o que ele vai ter um ID ele vai ter
+44:23
+um nome vai ser o identificador né Qual que é o identificador desse funcionário código dele código 1 2 3 enfim vai ter
+44:32
+que o e-mail um big décimo aqui de salário
+44:38
+um local date lá do J time data de missão e vamos criar uma enumeração chamada
+44:46
+status funcionário que vai ter o status essa numeração aqui fora então direito
+44:51
+meu Java clésia funcionário vai ser uma mulher num esses status funcionário vai
+44:57
+ter o ativo e Inativo beleza e voltando aqui funcionário Ok vamos gerar que o
+45:06
+os icos e hash code aqui eu vou gerar de todos tá sempre importante para você ver se realmente faz sentido ter alteração
+45:14
+de todos porque você tá expondo né Essas propriedades criar de todos aqui
+45:20
+botão direito de neurate vou gerar que também o string
+45:26
+Deixa todos vamos deixar com todos aqui beleza então agora que eu gerente
+45:33
+Strings Beleza agora voltamos aqui no controlador e vamos criar Agora sim um
+45:39
+método que Retornam um funcionário que acabamos de criar Vou Chamar esse método
+45:45
+de cadastrar e vai receber um funcionário
+45:50
+beleza e quando receber as funcionário nós vamos apenas imprimir aqui o funcionário E aí vai chamar o tio string
+45:57
+aqui para imprimir ele tá E vamos fazer uma ferramenta aqui ó
+46:02
+então aqui nós estamos mapeando o post em barra funcionários para chamar esse
+46:07
+método aqui o que que nós queremos opa não é não é verdade não é Sprint tá tem
+46:14
+retornar aqui ó tem que fazer um retorno aqui ó funcionário porque esse método aqui ele retorna vai retornar o
+46:21
+funcionário cadastrado então ele retorna um funcionário tem que fazer aqui também tá bom que eu tava dizendo aqui esse método
+46:29
+ele mapeia Então esse map matteia o Barra funcionários para cá porém nós
+46:34
+queremos mandar esse corpo aqui ó isso aqui que em formato Jason nós queremos atribuir nessa nesse objeto aqui desse
+46:43
+parâmetro então ao receber aqui o funcionário nós vamos receber uma
+46:48
+Instância de funcionária exatamente com esses parâmetros com esse nome de João da Silva com esse e-mail e tudo mais
+46:53
+para esse funcionar por padrão se a gente não quiser configurar nada a mais basta a gente
+46:59
+deixar esses nomes aqui ó nome meio salário exatamente iguais a esses nomes
+47:04
+aqui de propriedades tá E aí ele já vai fazer a o vínculo automaticamente para a gente e
+47:12
+vai transformar o Jason ele vai pegar o Jason e transformar em um objeto Java
+47:18
+para a gente aqui porém para isso funcionar a gente precisa fazer uma anotação desse argumento aqui usando uma
+47:25
+anotação chamada request Body então basicamente essa notação ela vincula o
+47:30
+parâmetro do método ao corpo do requisição e transforma ou seja de cerealiza aquele Jason que veio no corpo
+47:36
+da requisição em um objeto já basicamente essa anotação certo beleza feito isso vamos dar o build aqui e
+47:46
+vamos deixa eu deixar aqui em Run Beleza vou rodar aqui novamente veja que deu
+47:54
+200 Ok retornou aqui o corpo porque porque não informamos o ID aqui nós não
+47:59
+vamos informar mesmo já que estamos cadastrando e sai dia aqui vai ser automático daqui a pouco você vai ver ele vai Auto incrementar mas veja que
+48:06
+retornou aqui e veja que imprimimos aqui ó Chamamos o true string né para
+48:11
+imprimir fazendo um print aqui então quer dizer estamos recebendo todos os
+48:16
+dados agora normalmente agora a gente pode persistir né Essa Instância de
+48:22
+funcionário que temos nós podemos persistir no nosso banco de dados e nós já temos um banco de dados em memória
+48:28
+configurado no nosso projeto ele tá disponível sempre que aplicação levanta fica no ar esse banco de dados em
+48:35
+memória já está disponível tá bom para fazer os testes aqui é suficiente porém é importante você saber que sempre que a
+48:42
+gente reiniciar a aplicação os dados são apagados já que fica em memória né não armazenado isso em algum lugar que vai
+48:49
+permanecer por mais tempo então reiniciar aplicação a gente perde os dados mas para testes tá tudo certo
+48:55
+Claro se você usar depois um banco de dados mas robusto para produção você
+49:00
+sabe que os dados vão ficar persistidos mas a forma de desenvolver é a mesma beleza e nós vamos usar
+49:07
+não sei se você já ouviu falar do já carta persistence né já quer ter persistence é uma especificação que
+49:14
+fornece uma API de mapeamento objeto relacional até pouco tempo atrás ela era
+49:19
+chamada de Java persistence é muito conhecido como JPA já ouviu falar
+49:25
+basicamente ela ajuda a gente a mapear as tabelas de
+49:30
+um banco de dados relacionado para classes Java fazer tipo um depara sabe e ao fazer isso nós podemos fazer
+49:36
+operações no banco de dados usando apido já a carta persistence que deixa o nosso trabalho muito mais simples para fazer
+49:42
+consultas inclusões atualizações exclusões de registros no
+49:47
+banco de dados e O interessante é que nós já temos a dependência do jacarita
+49:52
+persistem se adicionado no nosso projeto sabia se a gente abrir aqui deixa eu ver a Sabrina mei vem aqui do lado direito
+49:59
+meio vem RH e pi que é o nosso projeto dependem aqui estão as dependências que
+50:04
+adicionamos o nosso projeto lembra delas ó banco de dados mas veja aqui ó springbut Starter JPA se a gente Abre
+50:11
+ela lembra que eu falei que o Starter é um pacote de outras dependências então
+50:16
+isso aqui já carrega junto com ela várias outras dependências E se a gente for aqui abrir acho que é aqui ó Spring
+50:23
+dele JPA Vamos ver que nós temos aqui algumas anotações
+50:30
+não sei a carta notation não tá bem aqui não espera aí deixa eu procurar aqui
+50:36
+aqui ó aqui achei hibernadecore e tem aqui o da carta persista então
+50:41
+basicamente é isso Ó nós temos aqui o jacaréter persistence é justamente essa tecnologia que eu te falei essa
+50:47
+especificação ela faz parte do jacaré não sei se você já ouviu falar de Java aí antigamente chamava já veio hoje a
+50:54
+carta aí então essa é uma especificação que faz parte do jacaré né chamada Jacarta persistence e a implementação
+51:02
+dela é o hypernatecore então basicamente como se o jacaré persistente fosse as
+51:08
+interfaces né claro pode ter classes também mas o conjunto de interfaces e quem implementa essas interfaces é o
+51:14
+hidete é o produto final é o Hide então nós estamos aqui com o nosso projeto já já
+51:19
+com configurado o jacaré persistence já tá configurado aqui o hardware Já temos
+51:25
+um banco de dados Então temos tudo que nós precisamos do projeto basta agora a
+51:30
+gente usar isso né e como que a gente usa aqui na nossa classe funcionário vamos dizer que essa classe aqui ela é a
+51:37
+nossa entidade do jacarita persistence então é uma entidade do Jacaré persistas tá
+51:45
+associada a uma tabela do banco de dados né então vou fazer o seguinte eu vou anotar essa classe aqui com @ent lá do
+51:53
+pacote de carta Ponto persistence beleza e aqui como a gente não está
+51:59
+especificando o nome de uma tabela o padrão é que esse mapeamento de classe
+52:06
+para tabela use como o nome de tabela o próprio nome de classe então nós estamos considerando que vamos ter uma classe
+52:13
+chamada aliás vamos ter uma tabela chamada funcionário no nosso banco de dados tá tem como configurar outro nome
+52:19
+de tabela também mas não vamos entrar nesse detalhe então agora vamos mapearmos já a classe
+52:25
+para tabela vamos fazer agora para os as variáveis de Instância as propriedades
+52:31
+então aqui no ID eu vou fazer uma anotação com a roupa
+52:37
+persistas também isso aqui vai definir que essa é a propriedade de identificação da entidade lá em pensar
+52:44
+em modelo relacional tabela do banco de dados é a chave primária da dessa tabela tá
+52:52
+e aqui eu vou anotar com arroba generatorvelo esse dineray a gente vai
+52:58
+definir a estratégia de geração da chave para usar a forma Nativa do banco de dados para auto incrementar e sair dia
+53:06
+então coloca assim eu defina a estratégia e coloco idêntico
+53:11
+isso aqui a gente diz que o próprio banco de dados Vai sim carregar de Alto incrementar esse ID então um dois três
+53:18
+quatro ele vai fazer isso para gente beleza e as outras propriedades a gente continua fazendo mapeamento por exemplo
+53:25
+com @colon do jacaré persistence dizendo qual que é o nome Qual que é o nome dessa coluna no banco
+53:35
+de dados relacional é nome porém se a gente tem uma variável de distância que
+53:41
+o nome é nome e a gente coloca a mesma coisa nome é redundante não precisa
+53:46
+disso a gente pode deixar só com a roupa porém também não precisamos do arroba Collor
+53:52
+porque automaticamente o jacaré da persista entende que todas as variáveis de Instância já estão automaticamente
+53:58
+uma piadas para uma tabela Então nem isso aqui nós precisamos já está mapeado na nossa classe simples assim e aqui nós
+54:06
+vamos ver agora os métodos icos lembra deles é importante a gente
+54:11
+tirar esses métodos também e com os anéis coaching vou usar esse aqui mesmo vamos selecionar apenas
+54:18
+o ID para ser usado como parâmetro para saber se dois objetos são iguais ou não
+54:25
+vamos usar apenas o ID Vamos marcar isso aqui
+54:30
+Ok gerou aqui o ícolas e o resto code certo
+54:37
+deixa eu ver uma coisa eu gerei corretamente
+54:42
+aqui tem uma hora que ele perguntou fez uma pergunta para mim
+54:49
+quero adicionar beleza não tá certo tudo certo agora
+54:55
+que nós fizemos isso a gente vai continuar aqui a implementação então o
+55:03
+que que nós precisamos precisamos acessar a api do jacarita persistence
+55:08
+para cadastrar uma Instância de funcionário para que o próprio já carta persistence
+55:15
+transforme isso em código SQL que vai acessar o banco de dados inserir fazer
+55:21
+um insert inserir os dados lá dentro do banco de dados já caso persistentes faz isso para a gente
+55:26
+então é possível fazer isso né sessão diretamente já carta persistas mas tem
+55:31
+um projeto no ecossistema Spring chamado Spring Day JPA que eu já falei esse nome aqui antes né ele já tá no nosso projeto
+55:38
+e ele é bem interessante né ele facilita ainda mais o nosso trabalho ele é um
+55:43
+projeto uma biblioteca que ajuda a gente a criar repositórios com já carta persistence que que é um repositório
+55:51
+basicamente um repositório é uma é uma classe tá que tem como responsabilidade
+55:57
+implementar métodos que fazem operações de persistência de dados cadastra
+56:03
+atualizar lista enfim faz essas operações Então vamos criar um nosso primeiro repositório aqui de funcionava
+56:10
+um repositório de funcionários que vai fazer esse meio de campo com o Jacarta
+56:15
+persistence que vai por fim fazer o acesso ao banco de dados que a gente tá
+56:21
+usando vou criar aqui um novo pacote Esse pacote eu vou chamar ele de
+56:26
+Story né para colocar Nossa repositório vou clicar botão direito aqui botão e
+56:31
+criar uma nova classe na verdade vai ser uma interface e eu vou chamar de funcionário repositório Beleza então
+56:38
+aqui a gente está definindo que é uma interface que vai ter é que vai ter como
+56:47
+responsabilidade definir aqui os métodos de O que é um repositório de funcionário
+56:52
+Beleza daqui a pouco você vai entender o porquê que eu tô colocando uma interface numa classe tá E aqui vamos podemos
+56:59
+definir métodos aqui porém ao invés de criar os métodos desse repositório manualmente na nossa interface depois
+57:06
+criar uma implementação implementando estes métodos da interface Como é o comum né lembra de interfaces que a
+57:12
+interface depois cria uma ou mais implementações que implementa essa interface ao invés disso nós vamos
+57:18
+herdar de uma outra interface chamada JPA
+57:25
+repository que essa aqui é uma interface do Spring da JPA e aqui a gente passa
+57:32
+dois tipos parametrizados entre sinal de menor e maior nós vamos passar Qual que
+57:38
+é o nome da entidade que esse repositório representa então é funcionária é uma história de
+57:44
+funcionário e vamos colocar a vírgula Qual é o tipo do id desse funcionário
+57:50
+lembra que o funcionário tem o long é o ID dele então vamos colocar aqui que é
+57:55
+long certo ao fazer isso essa interface funcionária repositório está entendendo
+58:01
+está herdando várias características aliás várias métodos né já definidos
+58:07
+aqui nessa interface JPA position Então ela já tem várias coisas aqui para gente Então apesar da gente não tá vendo nada
+58:15
+aqui é uma interface essa aqui é uma interface genérica
+58:21
+do Spring dele é JPA que tem diversas funcionalidades nesse repositório já tem
+58:27
+funcionalidades para consultar para cadastrar uma Instância de funcionário para fazer várias coisas com a entidade
+58:34
+funcionário basicamente isso E aí nós vamos adicionar uma anotação nessa interface aqui vou chamar ela de
+58:40
+repositório e tá essa aqui é uma notação que define que essa interface é um componente do Spring porém a gente dá
+58:47
+uma semântica aqui muito bem definida tá dizendo Olha é um repositório Tá o que que é um componente Spring É um tipo
+58:55
+onde as instâncias são gerenciadas pelo próprio container do Spring então o
+59:00
+próprio Spring vai silenciar um funcionário repositório e vai gerenciar isso internamente e quando a gente
+59:08
+precisar de um repositório de funcionário a gente pode dizer por spinning Olha eu preciso de um repositório de funcionário ele já fornece isso para a gente
+59:14
+E aí você pode estar ainda me perguntando Thiago Mas cadê a implementação desse repositório O legal
+59:19
+é que o Spring da JPA ele vai fornecer uma implementação desse repositório em
+59:25
+tempo de execução automaticamente para a gente eu gosto de falar automaticamente mas não existe nada demais tá é só a forma de
+59:31
+desenvolver que eles criaram uma coisa muito inteligente onde Nós criamos uma interface e automaticamente a
+59:38
+implementação vai ser fornecida para a gente em tempo de execução a gente não precisa necessariamente se a gente quiser a gente pode mas a gente não
+59:44
+precisa criar uma classe implementando essa interface a gente já tem os recursos principais aqui as funcionalidades principais Tá eu vou
+59:51
+fechar Então esse repositório aqui e agora nós vamos usar o repositório como que nós usamos um repositório aqui eu
+59:57
+vou declarar aqui uma variável de Instância chamada funcionário repositório vou
+1:00:04
+chamar aqui funcionário repositório e nós vamos usar um recurso chamado de injeção de dependência onde basicamente
+1:00:10
+o container ou seja o próprio Spring Framework ele vai
+1:00:18
+entender aqui a gente precisa de um funcionário repositório para essa classe controladora funcionar a gente precisa
+1:00:24
+para ele funcionar E aí ele vai fornecer uma Instância para a gente aqui automaticamente Opa a gente não vai
+1:00:31
+precisar fazer um New funcionar o repositório ou alguma implementação nada disso o próprio Spring vai fornecer uma
+1:00:37
+Instância automaticamente para a gente colocar aqui porém para colocar aqui nós vamos ter que gerar um Construtor
+1:00:43
+Existem algumas formas de a gente receber uma injeção chama de injeção né ou seja o Spring que vai colocar para a gente ou
+1:00:51
+seja vai injetar para a gente essa Instância Existem algumas formas a gente receber mas a mais usada mais
+1:00:58
+recomendada é através de construtores Então vou gerar que um Construtor recebendo funcionário repositório
+1:01:05
+recebemos ele e atribuímos a variáveis de distância certo posso colocar Deixa
+1:01:10
+assim mesmo então agora eu vou eu vou colocar tá deixa eu ver quem tá
+1:01:16
+falando aqui final nunca foi acessado tá é porque nunca foi acessado vamos usar
+1:01:22
+aqui essa variável distância agora e vai tirar esse amarelinho ali que que nós vamos fazer nós vamos agora usar Então
+1:01:31
+essa repositório o funcionário repositório ponto save Ué como assim Thiago tem
+1:01:39
+vários metas aqui ó tem seis ou tem vários métodos aqui dentro do
+1:01:47
+repositório Olha só quantos métodos já tem E lembra que o repositório funcionário a gente não declarou nada
+1:01:54
+porém como estendemos jpawberry esses métodos que estamos vendo aqui vem tudo
+1:01:59
+daquela interface que herdamos E lembrando que a implementação de tudo isso aqui já tá pronta já veio para a
+1:02:05
+gente automaticamente a gente é só usar então se eu quero salvar olha só é só chamar o ponto save passando aqui uma
+1:02:13
+Instância da entidade ele vai retornar A Entidade salva Já então vou passar assim ó funcionário e como ele retorna vou
+1:02:20
+fazer um returna aqui ó então chama o funcionário save funcionário agora ele tá dando Amarelinho aqui falando que
+1:02:25
+pode ser final vou clicar em make que final que que esse final diz que essa variável de instância é uma vez
+1:02:32
+atribuída a um objeto nela não pode ser atribuído novamente um novo objeto Mas é uma boa prática mesmo de colocar final
+1:02:38
+mas não teria nenhum problema se não colocasse tá basicamente a gente tá falando que isso aqui é uma constante né
+1:02:45
+não é uma variável mais né tipo assim uma vez recebido uma atribuição não pode atribuir mais outra vez Então é isso
+1:02:52
+deixamos ali para ele não ficar reclamando com a gente né beleza feito isso vou fazer um build
+1:02:58
+aqui que eu acho que já vai já vai conseguir fazer funcionar ó eu vou
+1:03:05
+Enviar novamente aqui esse post olha só que legal tá falando que foi cadastrado
+1:03:10
+inclusive deu um código um aqui ó 200 Ok então foi com sucesso cadastrou seu cadastrar novamente ó já é o dois tá
+1:03:16
+vendo tá cadastrando Então os funcionários na nossa base de dados H2 uma base de dados de memória né uma
+1:03:23
+coisa aqui se você notar esse 200 Ok não que ele está totalmente incorreto porque é um código de status que indica que deu
+1:03:31
+sucesso tudo que é 200 alguma coisa é sucesso porém existe um código de status
+1:03:38
+mais específico que indica que um recurso foi criado que é o 201 Então vamos retornar esses 2001 ao invés do
+1:03:43
+200 essa semântica dos Estados é muito importante o significado de cada um Tá então vamos retornar aqui como que a
+1:03:49
+gente faz isso a gente anota aqui ó esse esse método de cadastrar com resposta
+1:03:57
+s passamos aqui essa htp status que é uma
+1:04:02
+numeração ao fazer isso ele já vai retornar para a gente o código de status
+1:04:08
+agora não 200 mas 201 tá vendo ah voltou para o ID um porque lembra reiniciou a
+1:04:14
+aplicação perdemos todos os dados Já que é um banco de dados em memória tá bom ok agora fizemos isso vamos finalizar aqui
+1:04:20
+ó o método Vamos alterar esse aqui para implementar o método de listagem porque assim a gente vai conseguir ver os
+1:04:25
+cadastros que estamos fazendo Vou Chamar esse método aqui de listar e vai receber ao invés de uma string uma lista lá da
+1:04:32
+collections uma lista de funcionário que a nossa entidade e aqui nós
+1:04:39
+precisamos fazer um turn de pegar lá do repositório funcionar o repositório
+1:04:46
+faz mal que que retorna para a gente já é uma lista de funcionário de tudo que
+1:04:51
+tá cadastrado então fazer o build aqui beleza e vou fazer um cadastro aqui ó
+1:04:59
+das três um dois três Beleza vou aqui na listagem vou mandar um get em barra
+1:05:05
+funcionários e fez a listagem aqui ó de um dois três tá tudo com o mesmo nome no mesmo e-mail mas acho que dá para você
+1:05:11
+entender aqui que isso aqui é uma listagem esse colchete aqui representa uma lista e cada um desse aqui é um objeto que a gente acabou de cadastrar
+1:05:19
+através desse post grande Point chama meu post barra funcionários legal né
+1:05:25
+Beleza vamos implementar agora um outro para a gente obter duplicar aqui deixa
+1:05:33
+eu fazer assim ó para a gente obter aqui um recurso específico então chamar até
+1:05:40
+de obter obter tipo assim ó quero obter o funcionário de identificado por barra
+1:05:46
+funcionários/1 com código 1 quero buscar ele olha não tá implementado ainda tá
+1:05:52
+então nós não temos nenhum controlador que recebe esse padrão de URI aqui então
+1:05:59
+vamos implementar ele agora vou criar aqui um método esse método vai
+1:06:05
+retornar retornar um funcionário por enquanto é isso funcionário chamar de
+1:06:12
+buscar e nós vamos receber aqui funcionário ID então um método que busca
+1:06:19
+um funcionário retorna um funcionário a partir de um funcionário ID beleza vamos fazer mapeamento disso aqui ó
+1:06:27
+não é barra funcionárias que vai bater nesse método é barra funcionários/12 então eu vou colocar
+1:06:33
+aqui um GAP mapping e vou adicionar aqui um complemento da URI que é assim a
+1:06:41
+gente chama de variável de caminho ou Beth verbo Colocar assim barra e aqui é Wide como isso aqui é uma vai ser uma
+1:06:48
+variável de caminho então eu coloco entre Chaves assim e dou o nome funcionário Raid tá então isso aqui eu
+1:06:56
+tô fazendo um baile eu tô vou fazer um mais né Vou fazer vincular isso aqui com isso aqui para vincular essa variável de
+1:07:03
+caminho de variável com isso aqui para a gente receber o código certinho eu vou anotar com o pé verbal então agora sim
+1:07:10
+fizemos esse vínculo desse parâmetro aqui com o código que vier na URL Então
+1:07:16
+vai ser barra funcionários barra um código esse código vai ser atribuído nesse argumento funcionário então aqui
+1:07:23
+nós conseguimos pegar esse funcionário lá no repositório fazendo um find by ide que já vem
+1:07:31
+implementado Passamos um long aqui ó e veja que nós passamos um longo mas ele retorna um option no funcionário tá
+1:07:36
+lembra do óbvio né então ele vai retornar um ops não funcionário então se
+1:07:42
+eu fizer um eterno aqui a gente não vai conseguir Se eu fizer um get a gente corre o risco de não ter nada dentro
+1:07:48
+desse ódio não lembra disso E aí vai dar aquilo exceção se não me enganou
+1:07:54
+Então vamos trabalhar de uma forma mais inteligente aqui com esse óbvio não vou fazer o seguinte ao invés de retornar o
+1:08:01
+funcionário Vou retornar aqui responde de funcionário Então essa classe
+1:08:07
+Responde ela ajuda a gente a retornar uma resposta onde nós podemos não só
+1:08:13
+retornar uma Instância de funcionário mas retornar uma Instância de funcionário e também fazer algumas
+1:08:19
+configurações dessa resposta indicando Qual que é o código de status que a gente quer então é uma forma um pouco
+1:08:26
+mais dinâmica para a gente re tornar uma resposta e aí eu vou fazer a seguinte
+1:08:32
+fazer aqui um encadeamento chamado Mac lembra do Mac onde nós fazemos a
+1:08:37
+transformação de um tipo para o outro aqui do óptico então se nós temos um óptimo de funcionário eu vou
+1:08:44
+fazer aqui caso exista o funcionário nós queremos vou chamar
+1:08:50
+aqui de funcionário tá eu quero retornar um optnon de responsiente Então olha só façam responde sente é o nome dessa
+1:08:57
+classe aqui e vamos chamar esse método Ok ou ok aqui a gente está configurando
+1:09:02
+o código de status 200 Tá ok por exemplo tem o código status notedral 404 mas
+1:09:09
+aqui eu quero 200 eu posso passar um Bari Então qual que é o corpo é o próprio funcionário então basicamente
+1:09:15
+esse map aqui converte o óptimo de funcionário para um ópticons
+1:09:23
+paciente que nós retornamos aqui tem um funcionário dentro dele e a gente modificou o código para 200 aqui né
+1:09:30
+E aí caso não exista agora que a gente tá fazendo tudo isso aqui justamente para essa parte aqui caso não exista
+1:09:36
+elas lembra elas caso não exista nós temos que tornar
+1:09:43
+a gente faz um note e aí a gente precisa chamar um método chamado build que ele
+1:09:49
+constrói pra gente uma Instância de response em ti onde o código de status dele é not faça isso aquele tá falando
+1:09:56
+que eu posso usar o meta direta vou fazer um replace de
+1:10:02
+lâminas E aí fica assim tá então basicamente é isso deixa eu dar um
+1:10:08
+build aqui se a gente tentar acessar aqui não tem como fazer o Restart da aplicação nós
+1:10:16
+não temos nenhum funcionário então retornou o código 404 não existe um funcionário de código mas seu cadastro
+1:10:22
+aqui ó é da Play 2 funcionários e tento buscar aqui agora sim existe o código 200 Ok retorna O código 1 se eu falar
+1:10:29
+quero código 2 ele retorna eu quero o código 3 aí não existe porque eu não cadastrei ainda Beleza E agora mais uma
+1:10:37
+implementação aqui que a gente vai fazer é para atualizar um recurso então para
+1:10:43
+atualizar eu vou retornar aqui vou retornar também de funcionário um novo método aqui vou
+1:10:51
+chamar de atualizar nós vamos receber o funcionário
+1:10:58
+e o funcionário
+1:11:04
+por que isso vamos voltar aqui para o próximo e vamos criar exatamente o que nós queremos vou
+1:11:10
+duplicar esse cadastrar aqui vou chamar de
+1:11:16
+atualizar para atualizar nós vamos usar o método verbo httput tá então nós vamos
+1:11:22
+fazer isso Porém para atualizar Nós também vamos acessar o r/ funcionários/ E qual é o código que nós queremos
+1:11:29
+atualizar por exemplo se for um então quero atualizar o funcionário de código 1 então identificamos ele pelo r/
+1:11:35
+funcionários/1 e aqui nós passamos Quais são os novos dados que queremos atualizar Então vou colocar João de
+1:11:40
+Souza João João Souza e vamos dar o salário dele para 33 mil é deixar assim
+1:11:47
+tá mudamos três informações aqui porém claro isso aqui não existe ainda não foi implementado então vamos terminar a
+1:11:54
+implementação só quis te mostrar aqui que nós recebemos então o ID do funcionário aqui ó não ri E também o
+1:12:02
+payload dos dados então por isso aqui no código JAVA nesse método nós temos o id
+1:12:07
+e também isso aqui tá lembrando igual igualmente a gente fez aqui no cadastro
+1:12:13
+no cadastrar por Quest Bad também precisamos você reconhece o Bari aqui no funcionário beleza e da mesma forma que
+1:12:20
+nós temos o pf verbo aqui do long também vamos fazer o pf verbo e o mapeamento
+1:12:26
+aqui vai ser o mapping que é o verbo que nós vamos usar e vamos colocar aqui o verbo
+1:12:32
+funcionario para a gente receber esse código que vai ser atribuído a esse Opa
+1:12:39
+aqui ao funcionar do Band aqui o pf verbo beleza feito
+1:12:44
+isso OK agora nós podemos pegamos o funcionário que nós recebemos aqui
+1:12:51
+esse funcionário veja que quando a gente for atualizar ele a gente não vai passar o ID aqui dele no payload porque a gente
+1:12:57
+recebe na URI tá então a gente vai atribuir
+1:13:02
+para atribuir com aid que recebemos aqui no
+1:13:10
+na Ri tá funcionar aí de E Agora Nós pegamos o repositório e falamos salva aí
+1:13:16
+para mim o funcionário E aí O legal é que o próprio Jacarta persistente você vai verificar que se sair de como sair
+1:13:22
+de atribuímos aqui né como esse funcionário com esses dias existe no banco de dados ele não vai cadastrar ele
+1:13:28
+vai atualizar né porque você já existe não tem como cadastrar com o mês mais dia vai atualizar E aí a gente vai receber aqui um
+1:13:36
+funcionário atualizado beleza e vamos retornar aqui um esporte Ok passando aqui o
+1:13:45
+funcionário atualizado certo porém se a gente passar um ID que
+1:13:52
+não existe tipo imagina que a gente passa mais de que não existe não vai atualizar uma
+1:13:58
+idéia que não existe vai dar problema então a gente vai fazer uma verificação aqui ó a gente vai pegar fazer um if se
+1:14:04
+funcionário repositório e ponto existe já um método chamado existis byed Ou
+1:14:10
+seja eu posso verificar se existe o ID ou não se esse aí que eu recebi aqui ele
+1:14:15
+não existe então vou negar aqui tá se ao fazer essa consulta ele retornar que não
+1:14:22
+existe essa funcionário de a gente vai retornar aqui um esforço enche ponto not
+1:14:28
+sound build ou seja retorna de 404 então não existe retorna O código 404 o AIDS
+1:14:34
+atribui essa rede atualiza ele lá no banco de dados e retorna um código Ok
+1:14:40
+retornando a Instância que foi atualizada basicamente isso vou fazer um build aqui
+1:14:46
+novamente e vamos listar aqui a gente vê que não tem nada
+1:14:52
+por enquanto eu vou cadastrar aqui um novo funcionário beleza temos um agora e
+1:14:58
+agora eu vou atualizar aqui tá isso aqui né já atualizei agora Nossa
+1:15:07
+acho que eu já tinha atualizado bom vamos fazer de novo deixa eu ver se ele vai reiniciar que eu
+1:15:13
+não fiz nenhuma alteração vamos ver de novo que acho que eu cliquei um requisição errada tá deixa eu
+1:15:20
+reiniciar aqui a aplicação para ele limpar o banco de dados novamente para a gente começar a zerada aqui porque eu
+1:15:26
+cliquei errado ali vamos lá ó não tem nada beleza vou cadastrar um novo funcionário então
+1:15:34
+agora nós temos um funcionário eu quero alterado de João da Silva para João
+1:15:39
+Souza mudar o salário dele então vou tentar alterar aqui o código 2 o código 2 não existe
+1:15:45
+Olha só 404 Norte vou tentar alterar o código 1 E aí beleza foi alterado João
+1:15:53
+de Souza tá vendo e se eu fizer a listagem novamente ó veja que antes era João da Silva né e o salário é 31 mil se
+1:16:00
+eu fizer listagem novamente vejo que foi alterado o nome e-mail e o salário para 33 mil muito bem parabéns por ter
+1:16:07
+chegado até aqui agora você já conhece a epis importantes do Java e até sabe como desenvolver uma aplicação java com
+1:16:13
+Spring Mas ainda tem muito mais que você pode fazer tudo isso que você aprendeu
+1:16:19
+Apesar de muito valioso é só a ponta do iceberg já imaginou aprofundar ainda
+1:16:25
+mais explorando esses assuntos com ainda mais profundidade além de aprender
+1:16:30
+diversas outras coisas boas práticas e ferramentas para se tornar um programador de Elite especialista já
+1:16:38
+muito bom né Isso é o que eu chamo de seu próximo nível e se você quiser a
+1:16:44
+minha ajuda para alcançar o seu próximo nível Você pode ter interesse em conhecer mais sobre o nosso curso
+1:16:50
+imersivo e online especialista Java também conhecido como EJ muitas pessoas
+1:16:56
+estão me perguntando como funciona o curso Quando será a próxima turma e o que precisa fazer para participar Então
+1:17:03
+a próxima aula eu vou dedicar para falar mais sobre isso o EJ não é um curso
+1:17:08
+gratuito tá é um curso pago e não é muito baratinho não justamente porque é
+1:17:13
+um curso completo que investimos mais de um ano inteiro só para desenvolver e
+1:17:18
+gravar as aulas onde eu mesmo te ensino tudo que eu aprendi sobre esse assunto nos mais de 20 anos de experiência com
+1:17:26
+programação Java e não só isso mas eu acredito que chegamos no curso mais completo e avançado do mercado mas não
+1:17:34
+do mercado brasileiro do mercado mundial mesmo tá e eu falo isso não é da boca para fora não mas porque os nossos
+1:17:40
+alunos também confirmam para a gente então se você está realmente comprometido se tornar um especialista
+1:17:46
+Java você não pode perder o próximo vídeo para entender melhor o que é né
+1:17:52
+esse curso e como ele pode te ajudar a alcançar o seu próximo nível beleza e se
+1:17:58
+você não tiver interesse no curso prefere continuar sozinho tá tudo bem não tem nenhum problema mas assiste o
+1:18:05
+próximo vídeo mesmo assim pelo menos para você ter uma ideia do que você vai ter que pesquisar e estudar sozinho aí
+1:18:12
+tá bom se você não quer investir prefere gastar o seu tempo pesquisando descobrindo as coisas sozinho é um
+1:18:18
+caminho que também vai funcionar só que é mais demorado na verdade é bem mais demorado tem que ser sincero mas é
+1:18:24
+melhor do que não fazer nada concorda comigo além de todo o conhecimento que o EJ vai te dar o mais importante na minha
+1:18:31
+opinião é o tempo que ele vai economizar na sua vida é o salto gigantesco que
+1:18:37
+você pode dar para o próximo nível em um tempo bem menor Porque mesmo que você se
+1:18:43
+esforça bastante aprender sozinho embora seja possível Claro é muito desafiador
+1:18:49
+tem muitas armadilhas muitos pontos cegos que talvez você demore muitos anos para enxergar e para entender Além de
+1:18:56
+que se você não tem tanta experiência pode ser muito difícil até para começar porque você fica perdido não consegue
+1:19:02
+seguir uma linha de raciocínio não tem confiança se o que você tá fazendo realmente é a forma correta se não é
+1:19:09
+enfim tem muitas coisas né que pode te atrapalhar ah amanhã além de te mostrar
+1:19:15
+os detalhes sobre o especialista Java eu vou falar também de uma grande oportunidade que você vai ter para
+1:19:22
+entrar na próxima turma Então olha se você tem interesse realmente no EJ você
+1:19:28
+não pode perder a aula de amanhã de forma alguma beleza E para finalizar eu
+1:19:33
+quero te lembrar de fazer o seu marketing pessoal no Linkedin ou no Instagram publicando aí um post e
+1:19:39
+marcando o perfil da alga works tá bom e depois lembra aí a gente interagindo a nossa comunidade aqui embaixo Me fale se
+1:19:46
+você pretende entrar na próxima turma do Especialista Java tá eu tô deixando o link para você baixar o código fonte do
+1:19:53
+projeto dessa aula de hoje lá no grupo do WhatsApp tem um botão aqui embaixo inclusive para você entrar no grupo se
+1:19:59
+você ainda não está beleza então é isso Te vejo amanhã na próxima aula um grande
+1:20:05
+abraço
+
+

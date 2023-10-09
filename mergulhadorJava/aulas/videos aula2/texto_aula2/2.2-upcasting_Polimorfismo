@@ -1,0 +1,855 @@
+
+
+[Música]
+0:03
+agora vamos estudar sobre epcasting de
+0:05
+referências já ouviu falar sobre isso up
+0:08
+Casting é uma coerção ou seja um
+0:10
+mecanismo para entre aspas forçar para
+0:13
+moldar um objeto para ser enxergado como
+0:16
+uma super classe então up né coerção
+0:20
+para cima para cima né Casting coerção
+0:24
+para cima tá ou seja para um super tipo
+0:26
+tá então em outras palavras é uma forma
+0:30
+de você é atribuir um objeto de uma
+0:33
+referência a uma variável de um tipo de
+0:36
+super classe Então vamos lá variável de
+0:39
+um tipo de superclasse conta é a nossa
+0:41
+super classe vou chamar aqui de conta
+0:43
+Então temos aqui uma variável do tipo da
+0:45
+Super classe se eu quiser atribuir aqui
+0:48
+uma um objeto de uma referência de uma
+0:52
+subclasse por exemplo eu quero atribuir
+0:53
+aqui minha conta em conta eu posso fazer
+0:55
+a conversão posso fazer assim ó então
+0:57
+coloca entre parênteses coloca aqui
+1:00
+minha conta isso aqui é a forma então de
+1:02
+maldade de fazer essa correção para cima
+1:05
+eu tô dizendo que beleza eu tenho um
+1:07
+objeto minha conta mas eu quero enxergar
+1:09
+essa referência esse aqui como conta
+1:13
+você conta investimento se a gente pegar
+1:15
+aqui ó minha conta é do tipo conta
+1:18
+investimento né Tem um método creditar
+1:20
+rendimento certo veja que nós
+1:21
+conseguimos acessar esse método quando
+1:23
+eu faço isso aqui
+1:25
+dessa forma se eu pegar a conta veja que
+1:29
+eu não tenho acesso ao método creditar
+1:30
+eu tenho o depositar eu tenho sacar
+1:33
+coisas comuns de conta mas eu não tenho
+1:35
+acesso aqui ao método creditar
+1:40
+acreditar rendimentos porém é importante
+1:43
+você observar que aqui nós estamos
+1:45
+trabalhando apenas com as referências
+1:47
+são as variáveis porém um objeto
+1:49
+instanciado em memória é o mesmo certo ó
+1:53
+vou fazer um the bug para você
+1:55
+para você entender ó nesse ponto aqui
+1:57
+vou fazer um the bug nós vamos rodar
+1:59
+para você ver olha que já visualizer nós
+2:02
+temos aqui a minha conta vamos pegar
+2:03
+aqui a minha conta tá apontando para uma
+2:06
+Instância um objeto contra investimento
+2:08
+vamos rodar agora essa instrução aqui ó
+2:10
+vamos rodar para a gente ver minha conta
+2:13
+e conta estão apontando para o mesmo
+2:16
+exatamente o mesmo objeto então aqui nós
+2:20
+estamos falando apenas de variáveis de
+2:22
+referências porém um objeto na memória
+2:25
+Java da jvm é o mesmo concorda comigo
+2:29
+então por que que eu consigo chamar o
+2:32
+método creditar rendimento se eu acessar
+2:34
+através da referência minha conta né
+2:36
+lembra que ó só para ficar claro para
+2:38
+você ó minha conta ponto acreditar
+2:40
+rendimentos eu consigo acessar esse
+2:41
+método porém com uma variável conta eu
+2:44
+não consigo acessar esse método como é
+2:47
+possível isso eu não conseguia acessar o
+2:48
+método acreditar referência acreditar
+2:50
+rendimentos na conta se os dois apontam
+2:53
+para o mesmo objeto
+2:54
+isso é a forma que funciona a linguagem
+2:58
+orientada objeto aqui né equipado né
+3:00
+então você tem um objeto apesar do
+3:03
+objeto ser do tipo conta investimento
+3:05
+quando a gente faz essa coerção aqui e
+3:09
+atribui a uma variável do tipo conta a
+3:12
+gente está limitando
+3:14
+o a visão vamos dizer assim o acesso aos
+3:19
+membros a gente tá limitando para o que
+3:22
+conta fornece a classe conta fornece
+3:24
+Apesar de o objeto que está atribuída a
+3:27
+esta referência a ser contra
+3:28
+investimento a gente está limitada isso
+3:31
+aqui
+3:32
+a visualizar apenas os membros da classe
+3:35
+conta entendeu então beleza e aí você
+3:37
+pode estar pensando assim ué não faz
+3:39
+sentido nenhum eu fazer um tipo de
+3:42
+atribuição dessa forma aqui é realmente
+3:44
+pode não fazer nenhum sentido você
+3:47
+atribuir da forma que eu fiz aqui mas
+3:49
+daqui a pouquinho você vai ver que tem
+3:50
+um sentido entender essa essa atribuição
+3:54
+não Realmente eu não tô vendo sentido
+3:55
+mas já vou te mostrar aqui coisas que
+3:58
+fazem muito sentido Tá mas antes disso
+4:00
+só você entender também o que você pode
+4:02
+fazer o Up casting de forma implícita tá
+4:06
+em Java você não precisa quando você tá
+4:10
+fazendo então o Casting né webcasting
+4:12
+quer dizer que você tá pegando a
+4:14
+referência de um de uns subtipo como
+4:18
+conta investimento e tá atribuindo a uma
+4:21
+variável de um super tipo ou seja está
+4:24
+dentro da mesma hierarquia quanto
+4:26
+investimento é uma classe filha de conta
+4:29
+então você não precisa fazer esse
+4:31
+qualquer esses parentes aqui ó fazer
+4:34
+isso aqui de forma explícita Você pode
+4:35
+tirar e a linguagem compilador vai
+4:38
+aceitar naturalmente porque ele sabe que
+4:41
+conta investimento é um tipo de conta tá
+4:43
+então eu fiz aqui só para ficar didático
+4:45
+para você mas nesse caso de upcasting
+4:47
+você não precisa fazer isso tá bom
+4:49
+beleza
+4:50
+[Música]
+4:51
+isso quer dizer que
+4:54
+você pode apagar essa instrução aqui ó
+4:57
+você pode
+4:59
+declarar uma variável minha conta se
+5:02
+você achar que faz sentido aqui como
+5:05
+conta também na mesma instrução ó
+5:09
+distancia contra investimento e
+5:11
+atribui a conta não precisa fazer isso
+5:14
+em uma outra instrução não tá quando
+5:17
+você faz isso você começa a enxergar a
+5:19
+minha conta como uma como tipo conta tá
+5:22
+o objeto é o mesmo porque também é um
+5:25
+tipo quanto investimento Porém você
+5:26
+começa a enxergar como Conta aí é claro
+5:28
+você tem aquele
+5:31
+aquele vão dizer aquele problema de não
+5:34
+conseguir invocar membros métodos ou
+5:38
+qualquer outra coisa da classe que foi
+5:41
+definido que foi declarado dentro de
+5:43
+conta investimento que é o tipo real
+5:45
+mesmo desse objeto né você consegue
+5:47
+enxergar apenas os membros da classe
+5:50
+conta apesar do objeto você conta
+5:52
+investimento Olha só então vamos
+5:54
+acontece não vou voltar aqui tá e você
+5:56
+pode estar pensando tá Thiago Mas então
+5:58
+para que que você ensinou isso né Para
+6:00
+que fazer isso se você ao declarar a
+6:02
+variável com vamos dizer com um super
+6:05
+tipo como assim você tem esse problema
+6:08
+de não conseguir chamar os membros
+6:10
+declarados na subclasse conta
+6:13
+investimento para que então fazer isso
+6:15
+por que que você tá ensinando isso em
+6:17
+quais casos reais isso pode ser usado
+6:20
+vai ser importante ser usado bom a
+6:22
+resposta para essas perguntas é a
+6:24
+seguinte nós usamos muito isso isso aqui
+6:27
+é uma das coisas mais importantes da
+6:29
+orientação objetos inclusive no início
+6:31
+parece uma coisa de que não faz sentido
+6:34
+nenhum Mas é uma das coisas mais
+6:37
+importantes Como pode isso né porque
+6:39
+porque
+6:41
+esse aqui é um dos principais conceitos
+6:43
+da orientação objetos chamado de
+6:46
+polimorfismo é mesmo já ouviu falar de
+6:49
+polimorfismo
+6:51
+é a capacidade de um objeto ser
+6:54
+enxergado de diferentes formas por isso
+6:57
+esse termo né Poli né muitas morfismo
+6:59
+muitas formas né e isso é possível por
+7:02
+causa do mecanismo de herança então
+7:04
+quando a gente
+7:07
+estende uma classe A conta investimento
+7:11
+estendeu herdo a classe conta ela não
+7:15
+perde a compatibilidade com a classe
+7:17
+conta ou seja com a super classe se você
+7:20
+coloca então aqui ó declara como conta
+7:22
+você não perde a compatibilidade com a
+7:25
+classe e conta tá você começa a enxergar
+7:27
+essa referência como a classe conta
+7:29
+Porém você tem essa questão de não
+7:30
+conseguir chamar acessar os membros
+7:33
+diretamente da subclasse E aí que você
+7:36
+pode estar pensando ué mas não tô vendo
+7:37
+sentido ainda Thiago Tá bom eu vou te
+7:39
+mostrar um exemplo aqui ó um exemplo
+7:42
+legal imagina o seguinte nós queremos
+7:45
+implementar aqui uma classe que eu vou
+7:47
+chamar essa classe de caixa eletrônico
+7:51
+E aí essa classe caixa eletrônico vai
+7:55
+ter um método
+7:57
+imprimir saldo tá imagina não caixa
+8:00
+eletrônico Você pode imprimir o saldo
+8:01
+mas imprimir o saldo de quem de que tipo
+8:04
+de qual conta Vamos colocar aqui uma
+8:05
+conta investimento
+8:07
+uma conta investimento chamar de conta
+8:08
+tá então o primeiro sábado de uma conta
+8:11
+investimento Vamos colocar vários prints
+8:12
+aqui ó para imprimir o saldo da conta
+8:15
+pegar a agência tá bom
+8:18
+Mas é bem completinho aqui ó fica bem
+8:20
+legal vou pegar vou pegar o número dessa
+8:23
+conta aí vou imprimir também o titular
+8:26
+da conta
+8:28
+vou titular get nome vamos pegar também
+8:31
+o saldo dessa conta
+8:35
+e por último o saldo disponível
+8:41
+[Música]
+8:42
+saldo disponível Beleza então vamos lá ó
+8:46
+Creia aqui uma classe de caixa
+8:47
+eletrônico com o método imprimir saldo
+8:49
+que imprime o saldo de uma conta
+8:52
+de uma conta investimento aí aqui na
+8:54
+classe principal ó a gente vai usar mais
+8:56
+essas esses prints aqui não tá nós vamos
+8:59
+usar agora nosso caixa eletrônico para
+9:01
+usar o caixa eletrônico vamos precisar
+9:02
+em distanciar ele né Vamos distanciar
+9:04
+ele aqui ó
+9:06
+caixa eletrônico caixa eletrônico New
+9:09
+caixa eletrônico bem simples aqui um
+9:11
+caixa eletrônico eu vou pegar agora
+9:16
+caixa eletrônico ponto imprimir saldo
+9:20
+Temos que passar aqui uma Instância da
+9:21
+conta investimento da minha conta beleza
+9:24
+tudo bem até aqui vai funcionar né ó
+9:26
+primeiro que o saldo da minha conta tá
+9:28
+aí
+9:30
+o que nós fizemos aqui no caixa
+9:32
+eletrônico tá funcionando apenas para
+9:34
+conta investimento mas imagina que a
+9:36
+gente queira fazer agora ó chamar o
+9:38
+caixa eletrônico para imprimir o saldo
+9:40
+da conta especial vou pegar esse sua
+9:42
+conta que sua conta é o tipo conta
+9:43
+especial e aí não compila não compila
+9:46
+por quê Porque o argumento aqui é recebe
+9:48
+com investimento não é uma conta
+9:50
+especial e aí você pode pensar tudo bem
+9:52
+vou criar um novo método aqui e aí eu
+9:54
+crio aqui conta especial isso aqui por
+9:57
+sinal é o que a gente chama de
+9:59
+sobrecarga né então mesmo nomes de
+10:02
+métodos com argumentos diferentes certo
+10:04
+falamos sobre isso sobre a carga E aí
+10:06
+vai passar a funcionar claro vai passar
+10:08
+a funcionar temos aqui deixa eu dar um
+10:10
+print aqui no print line no meio para
+10:12
+ficar um espaço em branco a gente vê o
+10:14
+que que é cada conto ó a minha conta e
+10:16
+aqui tá a sua conta então funciona sim
+10:18
+funciona dessa forma Mas qual que é o
+10:20
+problema que nós temos aqui nós temos
+10:22
+duplicação de código E aí é onde o
+10:25
+polimorfismo pode ajudar a gente nós
+10:28
+podemos usar o polimorfismo pagar esse
+10:31
+método aqui deixar um só e colocar aqui
+10:34
+nesse argumento apenas ao invés de ter
+10:36
+conta investimento nós usamos um super
+10:38
+tipo super tipo conta então agora esse
+10:41
+método aqui ele aceita o super tipo
+10:44
+conta é claro que o que você vai passar
+10:46
+para o primeiro saldo vai ser pode ser
+10:49
+uma conta investimento pode ser uma
+10:51
+conta especial ou qualquer outro tipo de
+10:54
+conta que pode ser implementada no
+10:56
+futuro Porém você só vai acessar aqui os
+11:00
+membros visíveis na classe conta que
+11:02
+foram declaradas na classe conta e tá
+11:04
+sendo suficiente aqui para imprimir
+11:06
+saldo inclusive né então basicamente o
+11:09
+polimorfismo ele permite que referências
+11:11
+de um tipo mais genérico aqui ó conta
+11:15
+pode dizer que é um tipo mais genérico
+11:16
+né um super tipo que referências de um
+11:19
+tipo mais genérico apontem para objetos
+11:22
+de tipos mais específicos porque na
+11:25
+realidade nós vamos receber aqui ó Nessa
+11:28
+referência conta vamos receber objetos
+11:30
+tipos mais específicos nós vamos receber
+11:32
+aqui a conta investimento vamos receber
+11:35
+aqui a conta especial porém a referência
+11:37
+conta tá apontando para um tipo mais
+11:40
+genérico né de tal forma que os
+11:42
+comportamentos então possam ser
+11:44
+diferentes dependendo do objeto da
+11:47
+referência como por exemplo aqui quando
+11:48
+a gente chama o Gets saldo disponível
+11:50
+quando a gente chamar o get saudo
+11:52
+disponível se a o objeto
+11:55
+que foi atribuído a conta por conta
+11:59
+conta investimento ele vai pegar apenas
+12:01
+o saldo Mas se for uma conta especial
+12:03
+ele vai pegar o saldo mais limite então
+12:05
+isso fica dinâmico de acordo com o tipo
+12:09
+real do objeto que está sendo passado
+12:11
+aqui entendeu então agora olha só os
+12:14
+dois imprimir saldo tá chamando o mesmo
+12:16
+método usando aqui essa referência aqui
+12:21
+mas
+12:22
+genérica né isso aqui então é o
+12:25
+polimorfismo que a gente tá fazendo
+12:27
+Vamos divulgar isso aqui para a gente
+12:28
+ver funcionar Olha eu vou
+12:30
+colocar aqui
+12:32
+vamos derrubar
+12:35
+nós temos então
+12:39
+o quanto investimento aqui tá vendo essa
+12:41
+Instância quanto investimento essa
+12:42
+Instância que é conta especial né E nós
+12:45
+vamos agora chamar o método imprimir
+12:47
+saldo passando a minha conta só
+12:49
+lembrando a minha conta é uma conta
+12:51
+investimento fazer um step intro aqui
+12:54
+veja que chamou o método imprimersal
+12:57
+daqui tá o método imprimir saldo esse
+13:00
+argumento que é uma variável local conta
+13:03
+ela faz referência que ao tipo conta
+13:06
+olha não me conta e veja que esse conta
+13:09
+tá referenciando quem a própria conta
+13:12
+investimento ó lá no meio da classe
+13:14
+principal a minha conta aponta olha só
+13:16
+essa setinha aponta para esse objeto no
+13:19
+método imprimir saldo conta a conta é
+13:21
+para exatamente o mesmo objeto tá vendo
+13:23
+que na memória lá do Java o objeto é o
+13:26
+mesmo Porém Aqui a gente enxerga como
+13:30
+conta então esse essa referência conta a
+13:33
+gente vai enxergar como conta mas o
+13:34
+objeto é o mesmo só fica limitado aos
+13:36
+métodos que são visíveis mas o objeto no
+13:39
+final das contas é a mesma coisa
+13:41
+entendeu então agora vamos fazer um over
+13:44
+aqui ó vai imprimir vai imprimir a conta
+13:47
+titular o saldo agora vou fazer um step
+13:50
+500 vou fazer um stepheto para entrar
+13:51
+dentro desse saldo disponível se é uma
+13:54
+conta investimento quando eu faço o step
+13:56
+into ó investimento né eu faço step
+13:59
+Pinto
+14:00
+ele tá tentando entrar dentro deixa eu
+14:02
+ver onde que tá tentando entrar step
+14:03
+Pinto Ok entrou salvo disponível dentro
+14:07
+da classe conta então ele vai pegar o
+14:09
+saldo disponível da conta vou dar um CEP
+14:11
+ou ver aqui beleza vamos passar então
+14:15
+ele imprimiu aqui o saldo da minha conta
+14:18
+investimento agora eu vou continuar aqui
+14:20
+over vai voltar vai imprimir essa linha
+14:23
+em branco e agora vai imprimir o saldo
+14:26
+da sua conta Lembrando que a sua conta
+14:28
+ela é do tipo conta especial vamos pegar
+14:31
+sua conta aqui ó sua conta tá vendo a
+14:33
+setinha a ponta para esse objeto conta
+14:35
+especial
+14:36
+Então veja que aqui em cima tá falando
+14:38
+ele é do tipo quanto especial tá e
+14:41
+quando a gente fizer um step intro aqui
+14:43
+no primeiro saldo veja que essa variável
+14:46
+aqui que recebemos como argumento
+14:48
+chamada conta que no método
+14:51
+imerssauro a conta ela referencia quem
+14:53
+exatamente ó o mesmo objeto da sua conta
+14:57
+a sua conta lá no principal sua conta
+14:59
+aponta para cá e aqui no primeiro saldo
+15:01
+sua conta conta para cá então o objeto é
+15:04
+o mesmo apenas com referências
+15:06
+diferentes é muito importante entender
+15:08
+isso O que é objeto e o que é referência
+15:10
+e o que é classe entendendo isso é
+15:13
+a parte talvez mais importante para
+15:15
+entender a orientação objetos né as duas
+15:18
+coisas apontando para o mesmo objeto
+15:20
+então vamos fazer um step volver aqui
+15:22
+vai imprimir agência titular o saldo
+15:25
+agora para fazer um step quinto para
+15:26
+entrar dentro desse método Guedes estava
+15:28
+disponível apesar de a gente tá
+15:31
+enxergando aqui não em primeiro saldo o
+15:33
+tipo conta né olha só recebemos como
+15:36
+conta quando a gente chamar o Gueto
+15:38
+saldo disponível ele vai chamar aquele
+15:41
+método sobre escrito que a gente colocou
+15:43
+em conta em conta especial quer ver se
+15:45
+eu fizer um step Pinto agora Lembrando
+15:47
+que esse é um objeto do tipo conta
+15:49
+especial olha só que interessante eu
+15:51
+faço esse teto
+15:53
+Ele entrou dentro da classe conta
+15:56
+especial viu só então
+15:59
+na realidade na hora de executar o que
+16:02
+manda é o tipo real do objeto quando
+16:05
+você está programando você enxerga como
+16:07
+outra coisa você enxerga como um super
+16:09
+tipo mas o que vai mandar aqui para
+16:13
+saber qual é o método que vai ser
+16:14
+chamado é o
+16:16
+tipo real que você estaciou né que é o
+16:20
+tipo mais específico que você instaciou
+16:22
+o objeto entendeu então vou rodar aqui
+16:25
+para finalizar tá então
+16:29
+o polimorfismo Como eu disse é uma das
+16:32
+coisas mais maravilhosas assim que
+16:34
+existe na orientação objetos porque tem
+16:36
+muitas vantagens por exemplo aqui como
+16:39
+você viu uma única implementação aceita
+16:42
+diferentes tipos específicos de classe
+16:44
+né Nós não precisamos duplicar o código
+16:46
+para cada tipo de conta como você viu
+16:48
+aqui e Mais legal ainda é que se no
+16:51
+futuro
+16:52
+existia uma demanda para criar novos
+16:55
+tipos de contas além de conta
+16:56
+investimento e conta especial Beleza
+16:58
+você pode criar normalmente os novos
+17:01
+tipos de conta e o caixa eletrônico você
+17:03
+não tem que mexer nada ele já tá pronto
+17:05
+já tá com imprimir saldo suportando
+17:08
+aceitando aqui conta então qualquer
+17:11
+coisa que for conta vai funcionar
+17:13
+imprimir saldo legal demais né E se você
+17:16
+criar o hábito de programar usando super
+17:19
+tipos como nós fizemos aqui o seu código
+17:22
+fica muito mais flexível então é uma boa
+17:25
+prática você sempre programar pensando
+17:28
+nisso né pensando em trabalhar com super
+17:31
+tipos trabalhar com polimorfismo para
+17:33
+deixar o seu código mais flexível

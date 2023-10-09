@@ -1,0 +1,834 @@
+
+[Música]
+0:03
+agora deixa eu te mostrar uma forma de
+0:05
+fazer ordenação de elementos de uma
+0:07
+coleção eu já inclui aqui para a gente
+0:10
+não perder muito tempo uma classe eu
+0:13
+chamei essa classe de banco e ela tem
+0:15
+Veja uma lista de contas tá lista de
+0:18
+contas aqui no Construtor eu já
+0:20
+instanciei algumas contas e já adicionei
+0:23
+aqui na lista tá bom Já depositei também
+0:26
+alguns valores nessas contas e tem um
+0:28
+método que get contas tá Então veja é um
+0:31
+código simples não tem nenhum segredo
+0:33
+aqui você já aprendeu tudo isso tá bom E
+0:35
+aqui na classe Principal 3 Eu também
+0:37
+criei uma classe um método bem que
+0:39
+instancia um banco e a gente pega o
+0:42
+banco Gueto contas então ele vai
+0:43
+retornar aqui um list de contas vamos
+0:45
+literar e imprimir aqui a agência barra
+0:49
+número da conta se eu rodar você pode
+0:51
+ver que tá aqui todas as contas então
+0:53
+que temos dentro do nosso banco Note que
+0:57
+os números das contas Eles não estão
+1:00
+ordenados no medicamentos
+1:03
+ine que a gente queira fazer um tipo de
+1:05
+ordenação assim como que nós podemos
+1:07
+fazer bom podemos fazer da seguinte
+1:10
+forma eu vou pegar aqui a nossa lista lá
+1:13
+no banco então isso aqui retorna um list
+1:16
+de contas e eu vou chamar aqui um método
+1:20
+sorte ou seja ordenar veja que esse
+1:24
+método sorte ele recebe um comparator tá
+1:28
+vendo aqui um comparator então nós se
+1:31
+comparator é uma interface nós podemos
+1:33
+criar uma classe que implementa essa
+1:35
+interface ou ainda nós podemos usar uma
+1:38
+classe chamada comparator o próprio
+1:41
+comparator mesmo né interface comparator
+1:43
+ponto ele tem um método aqui que nós
+1:47
+podemos chamar o compary int esse método
+1:50
+aqui ele vai retornar para a gente uma
+1:52
+Instância de comparator então é como se
+1:54
+fosse um algo para simplificar para a
+1:56
+gente poder apenas fornecer aqui eles
+2:00
+compram fornece uma Instância de twenty
+2:04
+vamos ver o que é isso aqui ó com perryt
+2:06
+nós temos que passar agora uma Instância
+2:08
+de twenty essa instância
+2:11
+é uma interface e essa Instância dessa
+2:15
+interface de uma classe que implementa
+2:17
+essa interface tem que ter o algoritmo
+2:20
+para dizer
+2:21
+o que que é né para dizer qual que é o
+2:27
+número inteiro que nós vamos usar como
+2:31
+referência na ordenação da nossa conta
+2:33
+entendeu Então deixa eu abrir aqui para
+2:36
+você ó in funk
+2:41
+é uma interface muito simples o código
+2:43
+fonte dela é esse aqui ó é uma interface
+2:45
+Winter function que você tem que
+2:47
+implementar um método app é azeite então
+2:49
+dado um objeto qualquer você tem que
+2:52
+retornar um inteiro Olha só como que a
+2:55
+gente vai fazer eu vou então criar aqui
+2:57
+uma nova classe aqui mesmo tá vou criar
+3:00
+aqui número conta fanction nome assim
+3:05
+vou dar vou implementar aquele Two and
+3:08
+function Aqui nós temos que colocar um
+3:12
+tipo parametrizado para dizer que essa
+3:14
+aqui é uma classe que implemento twenty
+3:17
+Faction para conta parametrizado para o
+3:20
+tipo deixa eu importar aqui tá E agora
+3:23
+nós vamos fazer overware vamos
+3:25
+implementar aqueles link que está
+3:28
+retornando aqui o zero mas nós vamos
+3:30
+retornar aqui qual que é o número
+3:32
+inteiro que nós queremos usar como
+3:35
+referência para ordenação e eu vou
+3:39
+colocar assim ó tá vendo que a gente
+3:40
+recebeu já a conta aqui né vou até mudar
+3:41
+o nome para conta vamos colocar sem
+3:44
+conta ponto get número imagina que eu
+3:46
+queira então ordenar pelo número da
+3:48
+conta eu coloco conta ponto get número
+3:50
+basicamente isso tá vendo é uma classe
+3:52
+muito simples que implementamos a
+3:54
+interface fizemos a nossa
+3:56
+retornamos aqui propriedade muito
+3:58
+simples né
+4:00
+E aqui nós vamos passar uma Instância
+4:04
+agora
+4:05
+número conta fanction exatamente uma
+4:08
+Instância da classe que nós acabamos de
+4:10
+criar Beleza então dessa forma esse
+4:15
+método sorte ele no algoritmo dele de
+4:19
+ordenação ele vai ficar chamando
+4:22
+esse método aqui que nós implementamos
+4:25
+ele vai ficar chamando ele até conseguir
+4:28
+ordenar tudo e olha só vamos rodar aqui
+4:32
+a classe principal três veja que está
+4:34
+ordenado ó só para você ver vou comentar
+4:36
+a instrução de ordenação veja que não tá
+4:40
+ordenado a 999 a gente ordenou por
+4:42
+número de conta né então 9 8 5 1 2 não
+4:45
+tá ordenado né se eu faço sorte agora
+4:48
+nós temos as contas
+4:51
+pela ordem dos números
+4:54
+dessas contas certo beleza Qual que é o
+4:58
+problema disso aqui o problema é que
+5:00
+dessa forma o código acaba ficando mais
+5:04
+burocrático porque a gente tem que criar
+5:07
+uma classe apenas para fazer essa regra
+5:10
+nós temos depois que instanciar criar um
+5:13
+ninho objeto enfim tem uma forma a gente
+5:16
+simplificar isso aqui tá essa vou deixar
+5:19
+comentários aqui vou duplicar tá essa
+5:21
+classe
+5:23
+essa classe Two and function ela tem uma
+5:26
+característica peculiar note aqui que
+5:30
+ela é uma interface que declara apenas
+5:33
+um método abstrato esse método abstrato
+5:36
+ele não tem implementação concorda
+5:37
+comigo quando nós temos essa
+5:39
+característica uma interface que tem um
+5:42
+único método abstrato nós dizemos que é
+5:45
+uma interface Sam SM ou single abstract
+5:49
+né um único método abstrato e quando
+5:53
+temos uma interface Sam o único método
+5:58
+abstrato automaticamente essa interface
+6:01
+se torna uma interface funcional E por
+6:05
+que isso é importante saber que é uma
+6:07
+interface funcional porque quando nós
+6:09
+temos uma interface funcional que é esse
+6:12
+o caso aqui nós podemos tirar proveito
+6:15
+de uma funcionalidade chamada de
+6:18
+expressões lambda o que que é lambda
+6:21
+lambda é uma função anônima Ou seja que
+6:23
+não tem nome que nós podemos passar como
+6:26
+um argumento para um método ou até mesmo
+6:29
+receber como retorno de um método e a
+6:32
+linguagem Java permite que a gente crie
+6:34
+instâncias de uma interface funcional
+6:37
+usando lambda ou seja se aqui nós
+6:41
+recebemos esse argumento do comperingte
+6:45
+recebe
+6:46
+um argumento de uma interface funcional
+6:49
+que este é o caso né porque ele recebe o
+6:51
+tweet function nós então podemos criar
+6:54
+instâncias usando expressões lambda Tá
+6:59
+então vamos tentar fazer isso aqui ó
+7:01
+vamos fazer dessa forma assim ó vou
+7:03
+criar assim ó
+7:05
+vou fazer de uma forma mais vamos dizer
+7:09
+assim burocrática depois a gente vai
+7:10
+simplificando tá então vou declarar que
+7:12
+um twenty que é o que nós queremos
+7:14
+passar aqui tá é onde o Infante vamos
+7:18
+estipar ele passar o tipo parametrizado
+7:20
+Conta Fácil
+7:23
+inclusive deixa eu colocar aqui ó no UOL
+7:24
+e só para você ver que vai compilar
+7:26
+Phantom Olha só Então é isso que nós
+7:29
+precisamos passar um twent function aqui
+7:32
+porém isso aqui não funcionaria porque
+7:34
+nós precisamos passar uma Instância aqui
+7:36
+né de atribuir uma Instância aqui nessa
+7:38
+variável que eu chamei de Phantom E aí
+7:41
+que começa a brincadeira com expressões
+7:43
+lambda agora nós vamos escrever aqui uma
+7:46
+expressão lâmpada tá como que começa a
+7:49
+gente vai começar primeiro vamos dividir
+7:51
+em duas partes a parte da esquerda e a
+7:53
+parte da direita Começando aqui pela
+7:54
+parte da esquerda da expressão lambda a
+7:57
+gente começa com essa parte definindo os
+8:01
+parâmetros dessa expressão esses
+8:03
+parâmetros a gente coloca entre
+8:05
+parênteses Pode até ser vazio se não
+8:08
+tiver parâmetro algum mas aí se você
+8:10
+olhar aqui
+8:11
+o único método abstrato é esse método
+8:14
+que nós vamos implementar aqui com a
+8:16
+expressão lambda esse método dessa
+8:18
+interface
+8:19
+esse método aqui ele vai
+8:21
+ele vai receber a conta tá então ele vai
+8:27
+receber uma conta que nos coloca assim
+8:28
+ao tipo conta conta então nós temos o
+8:31
+parâmetro daquele método abstrato vai
+8:34
+receber o tipo conta e vamos chamar de
+8:36
+conta a variável que a gente vai receber
+8:39
+esse argumento beleza e aí a gente vai
+8:42
+seguir com um operador de flecha ever
+8:45
+operator que chama né operador Flash
+8:47
+tracinho sinal de maior então operador
+8:50
+de flecha essa operador vai dividir a
+8:53
+expressão lambda nas duas partes da
+8:55
+parte da esquerda que é as partes a
+8:57
+parte dos argumento
+9:00
+e a parte da direita aqui é a parte do
+9:04
+corpo é a parte onde nós vamos definir
+9:06
+as ações que devem ser executadas então
+9:08
+é basicamente é a implementação daquele
+9:11
+método abstrato eu vou dar assim ó abre
+9:14
+e fecha a chave
+9:17
+ontem vírgula aqui né eu vou agora
+9:19
+implementar aqui dentro que que eu vou
+9:22
+implementar exatamente o que nós fizemos
+9:23
+aqui ó retorna a conta getn número então
+9:26
+vou pegar e fazer dessa forma aqui
+9:28
+beleza então basicamente isso aqui
+9:32
+tem a mesma funcionalidade disso aqui só
+9:35
+que ao invés de criar uma classe
+9:37
+A parte como fizemos aqui nós podemos
+9:40
+usar a expressão lambda isso aqui a
+9:42
+expressão lambda ó tudo isso então de
+9:45
+novo a parte da esquerda
+9:46
+para definir os parâmetros
+9:48
+para dividir as partes e a parte do
+9:51
+corpo da implementação tá se tivesse
+9:53
+mais de um parâmetro fosse o caso que
+9:55
+não é o caso dessa Twitch Phantom que só
+9:57
+tem um parâmetro mas se tivesse mais de
+9:59
+um Você poderia colocar aqui vírgula e o
+10:01
+próximo por exemplo se fosse um Strings
+10:03
+tá ou se não tivesse nenhum parâmetro
+10:04
+Você poderia colocar só abre e fecha
+10:06
+parênteses mas nesse caso aqui é apenas
+10:08
+um parâmetro então é o quão é a conta tá
+10:10
+bom E aí vamos rodar agora para a gente
+10:14
+ver funcionando olha só tá ordenando
+10:17
+normalmente não de novo seu comentário
+10:20
+não tá ordenando só para você ter
+10:22
+certeza que é esse código que está
+10:24
+funcionando
+10:25
+não é muito mais interessante fazer aqui
+10:27
+já no seu próprio código você define
+10:30
+aqui
+10:31
+qual que é o
+10:34
+Qual que é a expressão lambda já com o
+10:36
+algoritmo Já que é tão simples né que
+10:37
+talvez não faça sentido você ter uma
+10:39
+classe separada né
+10:42
+lambda é conhecida em Java como cidadão
+10:48
+de primeira classe da linguagem Uau que
+10:51
+que é isso né inglês é conhecido como
+10:52
+first
+10:55
+porque esse nome porque
+10:58
+e são conceito né que permite que a
+11:02
+gente passe o objeto de uma função como
+11:06
+argumento para outro método você pensou
+11:08
+nisso você quer é um é uma função né a
+11:11
+gente está passando aqui uma função para
+11:14
+um método e aí esse método vai usar essa
+11:17
+função para mudar a lógica dele entendeu
+11:20
+então o que nós passarmos aqui nessa
+11:23
+função o comparynte aqui vai ter uma
+11:26
+lógica diferente vai ter um resultado
+11:28
+diferente então por isso que é chamado
+11:30
+de
+11:31
+Ford Class lagos de sirizen essa forma
+11:35
+de programar que a gente está fazendo
+11:37
+aqui nesse momento usando expressões
+11:40
+lâmina é conhecida como programação
+11:42
+funcional programação funcional é um
+11:44
+paradigma de programação declarativo ou
+11:47
+seja o programador apenas declara a
+11:50
+lógica do processamento para alcançar o
+11:52
+resultado desejado em uma função que tem
+11:55
+entrada e tem saída e passa como
+11:58
+argumento para um outro método como nós
+12:01
+fizemos aqui tá mas é uma boa prática a
+12:04
+gente deixar as expressões lambda mas
+12:07
+concisas mais enxutas então aqui você
+12:09
+pode achar que ela tá enxuta já que já
+12:12
+facilitou bastante mas tem como a gente
+12:13
+melhorar mais então vamos lá primeira
+12:16
+coisa
+12:17
+vamos ao invés de pegar a expressão
+12:20
+lambda e atribuir a uma variável aqui
+12:23
+que eu chamei de funk ao invés de fazer
+12:25
+isso nós vamos fazer a seguinte ó vou
+12:27
+comentar aqui e eu vou simplesmente
+12:29
+passar aqui dentro como argumento desse
+12:33
+método com Perry pinte dessa forma aqui
+12:35
+ó beleza então beleza demos uma enxugada
+12:38
+a mais aqui no nosso código né o ideal é
+12:42
+que a expressão lambda seja escrita em
+12:45
+apenas uma única linha de código tá
+12:47
+então quando for possível é sempre
+12:50
+Coloque uma linha de código aqui no caso
+12:52
+a gente abriu um bloco e fechou um bloco
+12:54
+aqui
+12:55
+mas não tem mais de uma instrução dentro
+12:58
+desse bloco só tem uma instrução se só
+13:00
+tem uma instrução Nós não precisamos
+13:01
+Abrir fechar o bloco nós podemos tirar o
+13:04
+bloco e tirar assim ó e aí você não vai
+13:08
+ter o ponto e vírgula aqui e você também
+13:10
+não vai ter o etern aqui ó já é padrão
+13:14
+que é o turn eu vou colocar numa outra
+13:17
+linha aqui porque senão não vai caber na
+13:19
+tela para você enxergar completo tá
+13:20
+então eu vou colocar aqui embaixo com
+13:23
+Perry int e você passa aqui a expressão
+13:25
+lambda aqui ó então é simplesmente isso
+13:28
+que eu selecionei a expressão lambda Tá
+13:29
+vendo como a gente conseguiu enxugar
+13:31
+essas três linhas em apenas alguns
+13:34
+caracteres aqui fica mais interessante
+13:37
+assim né quando você consegue fazer
+13:39
+dessa forma ela fica mais vamos dizer
+13:42
+mais alto explicativo a leitura fica
+13:45
+mais simples inclusive como boa prática
+13:47
+caso você tenha bloco igual aqui ó como
+13:50
+boa prática o ideal é que você permita
+13:52
+aí no máximo três linhas dentro do bloco
+13:54
+aqui
+13:55
+começar a passar disso ela pode tornar a
+13:58
+leitura do código confusa aí já é melhor
+14:00
+você encontrar outra forma de
+14:03
+simplificar tá bom e na maioria das
+14:06
+vezes o compilador vai conseguir
+14:09
+resolver os tipos dos parâmetros esses
+14:12
+parâmetro aqui ó poderia ter mais de um
+14:14
+dependendo da
+14:15
+interface funcional que você está
+14:17
+implementando com a expressão lambda
+14:19
+poderia ser mais de um né então a
+14:21
+maioria das vezes o computador vai
+14:22
+conseguir resolver esses tipos dos
+14:24
+parâmetros lambda fazendo uma inferência
+14:26
+de tipos Então dessa forma fica em
+14:29
+opcional você informar ou não o tipo do
+14:32
+parâmetro Olha só para deixar mais com
+14:35
+siso é mais legal se você puder omitir
+14:37
+esse tipo aqui ó ao invés de colocar
+14:38
+conta conta você já coloca só o nome da
+14:41
+variável conta mas como que ele vai
+14:43
+saber né que essa conta aqui é do tipo
+14:46
+conta bom ele vai saber porque você tá
+14:48
+usando essa expressão aqui dentro de um
+14:51
+compare que tá comparando para ordenar
+14:55
+uma lista de contas então ele já faz a
+14:58
+inferência e descobre que na verdade
+15:01
+esse tipo aqui é o tipo conta ele é
+15:03
+muito esperto né E tem mais sintaxe da
+15:08
+expressão lambda só exige esses
+15:10
+parênteses aqui que você tá vendo se
+15:12
+você tiver dois ou mais parâmetros então
+15:15
+se você tivesse um outro parâmetro sei
+15:16
+lá nome idade Aí sim você precisa do
+15:19
+parênteses mas quando você tem apenas um
+15:23
+parâmetro Como é o nosso caso aqui é
+15:26
+opcional você pode remover esses
+15:28
+parênteses aqui deixando ainda mais
+15:31
+enxuto o código e claro vai continuar
+15:36
+funcionando normalmente legal né E por
+15:40
+incrível que pareça você não vai
+15:42
+acreditar sim por incrível que pareça
+15:44
+nós podemos deixar nosso código ainda
+15:46
+mais com siso usando outra
+15:49
+funcionalidade chamada de metal de
+15:52
+referência em português seria referência
+15:54
+de mé como que a gente faz isso eu vou
+15:57
+comentar aqui vou duplicar a linha tá a
+16:01
+gente pode fazer da seguinte forma aqui
+16:03
+no compering int que nós temos que
+16:05
+passar uma Instância de funk Nós podemos
+16:08
+usar o metals da seguinte forma a gente
+16:13
+vai colocar aqui qual que é o tipo da
+16:16
+classe aí eu tô falando aqui da
+16:17
+implementação dessa implementação aqui
+16:19
+que a gente fez dessa aqui né Veja a
+16:22
+gente quer chamar o método get número na
+16:24
+classe conta simplesmente isso nós
+16:26
+precisamos chamar o método get número na
+16:28
+classe conta então você faz assim ó
+16:30
+referencia tá não é que você tá chamando
+16:32
+aqui você está referenciando Então vou
+16:35
+referenciar aqui ó lá na classe conta
+16:36
+você põe o tipo da classe você segue por
+16:39
+delimitador de dois pontos dois pontos
+16:41
+duas vezes e agora você referencia o
+16:44
+nome do método que você chamar aqui o
+16:47
+GAT número que é o método que nós
+16:49
+queremos usar para fazer a ordenação
+16:52
+nesse caso aqui né então getn número
+16:54
+veja eu não tô chamando get número aqui
+16:56
+eu estou referenciando ele tá
+17:00
+E aí
+17:04
+ele esse essa referência ela vai ser
+17:07
+convertida então para uma Instância da
+17:10
+interface funcional twint function tá
+17:13
+então a gente pode dizer que um método É
+17:16
+um tipo especial de expressão lambda tá
+17:19
+isso é feito em tempo de compilação e no
+17:21
+final das contas O resultado vai ser o
+17:23
+mesmo se a gente rodar aqui ó
+17:26
+Olha só resultado é o mesmo Continua
+17:28
+funcionando através do metade ficou
+17:31
+ainda mais enxuto do que antes né e
+17:34
+metas é uma excelente alternativa para
+17:37
+expressões lambda né quando são coisas
+17:39
+mais simples assim vai deixar o seu
+17:42
+código mais enxuto e você deve usar essa
+17:44
+funcionalidade se o código realmente
+17:47
+ficar mais curto e ficar realmente mais
+17:50
+legível agora se você achar que ao usar
+17:52
+isso aqui seu código tá ficando menos
+17:55
+legível aí você não deve usar você deve
+17:58
+usar expressões lâmpada normalmente
+18:00
+mesmo tá você só deve usar uma
+18:02
+funcionalidade Se você realmente ver que
+18:04
+ela tá te beneficiando
+
+

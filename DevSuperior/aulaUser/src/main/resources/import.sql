@@ -1,0 +1,10 @@
+INSERT INTO tb_user (name, password) VALUES ('Maria', '12763721371263821');
+INSERT INTO tb_user (name, password) VALUES ('Joao', '12763721371263821');
+INSERT INTO tb_user (name, password) VALUES ('Laura', '12763725371263821');
+INSERT INTO tb_user (name, password) VALUES ('Robson', '12763881371263821');
+INSERT INTO tb_user (name, password) VALUES ('Maura', '12734721371263821');
+INSERT INTO tb_user (name, password) VALUES ('Carlos', '12763721991263821');
+INSERT INTO tb_user (name, password) VALUES ('Adriana', '127639391371263821');
+INSERT INTO tb_user (name, password) VALUES ('Paulo', '12763721220063821');
+INSERT INTO tb_user (name, password) VALUES ('Yasmim', '23243721371263821');
+INSERT INTO tb_user (name, password) VALUES ('William', '12763721372345421');

@@ -1,0 +1,718 @@
+
+[Música] vamos mergulhar agora em um conceito muito importante da orientação a objetos
+0:08
+chamado de interfaces se você não entendeu Bem sobre polimorfismo primeiro
+0:13
+volta lá quando eu falei sobre polimorfismo entende primeiro porque é impossível entender interfaces sem antes
+0:20
+conhecer bem polimorfismo tá bom existem diversas situações na vida real que
+0:25
+precisamos definir contratos ou seja definir padrões de como as coisas devem
+0:31
+funcionar e os envolvidos assinam ou concordam em fabricar ou usar da forma
+0:38
+estabelecida nesses contratos Então são normas que duas ou mais partes precisam
+0:44
+seguir Pensa em um contrato que você assinou com outra pessoa imagina um
+0:49
+contrato de aluguel de um imóvel existe ali termos que ambos os lados devem
+0:56
+seguir né e uma vez assinado este contrato todas as partes se não seguir
+1:03
+uma regra desse contrato estaria quebrando Esse contrato então um contrato foi feito para ser seguido
+1:09
+certo tudo bem até aqui então imagina agora que você é motorista desse caminhão azul aí tá vamos tirar a
+1:17
+complexidade de ligar o caminhão de trocar as marchas você essa pessoa aqui que tá já em movimento dentro desse
+1:25
+caminhão e eu te pergunto você precisa agora frear esse caminhão rapidamente
+1:30
+porque tem um obstáculo na frente eu te pergunto qual dos pedais aqui qual que
+1:35
+você vai usar para frear esse caminhão são três aqui ó Qual que você vai usar para frear mesmo que você não seja um
+1:43
+motorista de caminhão Provavelmente você sabe que é o pedal do meio certo se eu
+1:49
+te perguntar qual é o pedal desses aqui que acelera Provavelmente você responderia que é o pedal da direita e
+1:55
+por que que você sabe disso se Teoricamente você imagina eu que não é um motorista de caminhão como que você
+2:01
+sabe disso bom porque esse é um contrato nosso da nossa sociedade é uma norma é
+2:08
+um padrão Mundial onde todos sabem o que cada pedal faz O legal é que existindo
+2:15
+Esse contrato na sociedade se você for motorista de um outro veículo Olha só
+2:21
+esse carro vermelho aqui e eu te perguntar agora qual é o pedal que você vai usar para frear esse carro veja não
+2:28
+é um caminhão é um carro comum qual que você vai usar Você vai falar também que
+2:33
+é o pedal do Meio Independente de qual é o tipo do veículo existe essa Norma
+2:39
+existe esse contrato então agora se coloca no lugar do fabricante de carros
+2:45
+tá se você é fabricante de carros você vai querer seguir esse contrato porque
+2:51
+você sabe que existe um acordo em comum entre várias entidades Entre várias
+2:56
+pessoas que adotaram esse contrato se você por exemplo não seguir o contrato
+3:03
+converter os pedais por exemplo os seus clientes vão reclamar de você você vai ter problemas isso é muito importante
+3:08
+porque tem tudo a ver com interfaces em orientação objetos essas normas essas
+3:15
+especificações ou como eu tô falando aqui esses Esses contratos eles são
+3:20
+chamados de interfaces então conceitualmente uma interface é um
+3:26
+contrato que especifica o que alguma coisa deve fazer ela não define não
+3:32
+especifica o como alguma coisa será feita mas apenas o que deve fazer veja
+3:38
+não é o pedal do meio aqui que faz o veículo parar ele apenas aciona o
+3:44
+sistema de frenagem do veículo Agora pensa nos diversos componentes do
+3:50
+mundo real que seguem interfaces outros exemplos Vamos pensar outra aqui ó por
+3:55
+exemplo a TVs e os seus componentes todas as TVs que a gente conhece e vai ter lá algum botão para você ligar a TV
+4:02
+para você desligar a TV certo faz parte de um contrato ou seja vai ter também
+4:07
+opção para você mudar de canal apertando um número ou próximo canal o
+4:13
+canal anterior toda TV tem isso no controle remoto por exemplo ou nela própria certo vai ter lá então também
+4:18
+para você aumentar o volume ou diminuir o volume e também ali toda TV vai ter um
+4:24
+fio para você ligar na tomada inclusive as tomadas seguem contratos também sabia
+4:29
+por exemplo no Brasil a norma ou seja o contrato é que os aparelhos eletrônicos
+4:35
+tenham aquele plug de três pinos desse jeito aqui e as fabricantes de tomadas
+4:41
+devem fabricá-las com os três pinos também seguindo o contrato porque assim
+4:46
+uma segue não segue você não consegue encaixar o plug aqui né na tomada se
+4:52
+você levar um aparelho eletrônico brasileiro ou seja de três pinos dessa forma que
+4:59
+para usar em um outro país talvez você não consiga conectar na tomada porque lá
+5:05
+nesse outro país Ele seguem um outro contrato diferente e por isso você vai acabar precisando de um adaptador de um
+5:13
+contrato para um outro contrato né Vamos pensar Quem mais um exemplo ó
+5:18
+computadores e as placas e acessórios que se encaixam perfeitamente independente do fabricante Talvez você
+5:25
+saiba mas muitos desses componentes podem ser substituídos por outros do
+5:31
+mercado paralelo existem peças não originais peças originais que basta que elas Sigam o contrato para funcionar um
+5:38
+exemplo clássico aqui é a memória RAM é muito comum você comprar um computador que tem um número X lá de memória RAM
+5:46
+por exemplo 8 g de memória RAM e de repente você quer fazer um upgrade dessa memória RAM que que você faz você tira
+5:52
+esses pentes aqui da memória RAM compra outros que pode ser inclusive de outra
+5:58
+marca não precisa ser da mesma marca Originalmente usada nesse computador você compra um outro e coloca aqui só
+6:04
+que para funcionar Essas outras placas de memória RAM precisa seguir o mesmo
+6:10
+contrato que eu quero dizer com isso precisa seguir a mesma especificação de tamanho da memória de
+6:17
+velocidade né enfim tem várias especificações de uma placa de memória
+6:23
+RAM aqui ou a placa mãe do computador segue Esse contrato com esses lote e a
+6:28
+placa da Memória também segue Esse contrato de forma que funcione se qualquer uma das de qualquer uma das
+6:34
+regras do contrato não forem seguidas simplesmente não vai nem encaixar ou se encaixar não vai funcionar certo isso
+6:42
+mais um exemplo então de contratos e outro exemplo são as pessoas que com
+6:47
+outras pessoas seguindo um padrão pré-estabelecido por uma instituição ou pela sociedade né Então existe um
+6:56
+contrato social por exemplo onde você cumprimenta outra pessoa pegando nas
+7:01
+mãos Já pensou nisso quando vai complementar alguém pega nas mãos né veja que se a gente pensar em orientação
+7:07
+objetos podemos dizer que dois objetos do tipo pessoa se cumprimentam interagem
+7:13
+entre si seguindo o contrato que é pegando nas mãos né então o mundo todo é
+7:18
+baseado em interfaces Vai pensando aí que você vai encontrar vários outros exemplos talvez na sua mesmo mesmo na
+7:25
+sua mesa Aí você vai encontrar várias coisas olha para o lado na sua casa onde você estiver assistindo isso aqui você vai encontrar vários exemplos de
+7:32
+contratos tá E interfaces é o recurso da orientação objetos que potencializa o
+7:39
+polimorfismo em nível máximo Então é fantástico que nós podemos fazer com a
+7:44
+combinação desses conceitos de interfaces com polimorfismo Então vamos para o código aqui nessa classe caixa
+7:51
+eletrônico nós vamos implementar aqui um novo método esse método ele vai ser
+7:57
+usado para efetuar pagamento de documentos aqueles documentos Thiago bom a gente não tem esses documentos ainda
+8:04
+mas vamos pensar aqui no método tá vai ser um método que eu vou chamar de pagar que ele vai pagar certos documentos bom
+8:11
+e vai pagar um documento eu não tenho o tipo documento colocar XXX aqui ó vai receber então como argumento um
+8:18
+documento e depois a conta de qual conta que vai sair o dinheiro para pagar esse documento certo sim até aqui um método
+8:25
+que recebe o documento a ser pago e qual que é a conta que vai efetivar esse pagamento do documento tá pode ser um
+8:32
+boleto pode ser um holerite pode ser vários tipos de documentos tá Qualquer coisa esse documento tem que ser
+8:38
+qualquer coisa que seja pagável ou seja que tenha capacidade de receber um
+8:43
+pagamento Tá bom se eu preciso de alguma coisa aqui que tem a capacidade de receber o pagamento Olha que
+8:50
+interessante eu vou criar uma interface Ah que legal vou criar uma interface mas
+8:55
+para criar essa interface que é um pacote antes tá vou criar um pacote para chamar de pagamento vamos começar a organizar um pouquinho melhor nas nossas
+9:01
+classes inclusive deixa eu organizar um pouquinho aqui também ó comentei aqui vou dentro de modelo eu vou criar um
+9:07
+novo pacote vou chamar de ATM a TM é são aquele os terminais né aqueles terminais de caixa eletrônico mesmo vou mover para
+9:14
+para cá ó para ficar bem organizadinho tá então dentro de modelo vai ter conta conta especial quanto investimento pessoa a TM tem caixa eletrônico e quem
+9:21
+pagamento eu vou criar Agora sim a nossa interface deixa eu descontar Isso aqui vai ser uma interface que
+9:28
+representa um documento que tenha capacidade de ser pago então eu vou
+9:34
+criar aqui o botão direito New aqui não tem nenhum interface Mas você pode clicar em new Java cless e aqui que você
+9:41
+vai selecionar a interface ó ao invés de Clésio você vai selecionar vai selecionar interface e vamos dar um nome
+9:47
+para essa interface eu vou chamar ela de documento pode ser só documento Poder pode mas é um especificar um pouquinho
+9:54
+mais é o que um documento pagável então eu tô colocando aqui um nome nessa
+9:59
+interface que atribui a ela uma capacidade de ser pago desse documento
+10:05
+ser pago documento pago né então é uma interface que dá essa capacidade é o
+10:10
+documento e aqui na interface nós vemos aqui declarar Então qual que é
+10:19
+o contrato não é o local aqui da interface a gente ficar fazendo implementação isso não vai implementar
+10:24
+um documento aqui a gente vai estabelecer uma Norma um contrato é a
+10:29
+nossa especificação de o que que um documento que pode ser pago ou seja um
+10:35
+documento pago deve ter né gente quais comportamentos que ele deve ter e aqui a
+10:40
+gente vai declarar esses comportamentos através dos métodos Então vamos criar aqui métodos abstratos
+10:47
+por exemplo um documento pagável ele tem que ter o valor total então a gente precisa de um método que Gueto valor
+10:54
+total a gente precisa de um método que retorna qual é o valor total desse documento que pode ser pago viu só então
+11:01
+colocamos aqui Total porém todos os métodos aqui é em geral dentro
+11:10
+de uma interface Eles já são públicos por padrão e eles já são abstratos por
+11:15
+padrão inclusive aqui tá falando olha que é redundante você colocar esse Public é redundante você colocar esse
+11:20
+abstract então nós podemos remover porque automaticamente de forma implícita o compilador já vai colocar
+11:27
+para a gente não tem problema nenhum se você quiser colocar mas não precisa deixa o código mais enxuto que eles já são públicos e abstratos e vamos colocar
+11:35
+aqui também um bolha retorna um bolha está pago esse está pago é um método que
+11:40
+você pode chamar para saber se esse documento Já tá pago ou não porque de repente O documento já foi pago antes né e um método para realizar a operação de
+11:49
+pagamento de Que tal o pagamento vou chamar aqui de quitar pagamento tá poderia ser só pagar o nome que você
+11:55
+acha melhor bom veja não temos corpo aqui ó não tem implementação nem compila
+12:01
+né não tem implementação dos métodos a gente define aqui o que é quais
+12:08
+comportamentos que um documento pagável deve ter Tá feito isso a gente não tem
+12:14
+implementação nenhuma de documento pagável não tem boleto não tem holerite não tem nada só tem uma especificação mas nós já podemos começar a trabalhar
+12:21
+com essa interface Olha que legal eu vou substituir aqui o XXX por documento pagável então agora o nosso método pagar
+12:28
+ele já pode ser implementado Porque nós já temos Qual é a interface aí pode dar
+12:35
+um nó na cabeça como assim eu vou começar a implementar uma coisa para pagar um documento mas eu não tenho
+12:41
+documento ainda é mas você já tem a interface né não é isso então
+12:47
+por exemplo vou pensar no exemplo aqui agora você vai começar a dirigir você
+12:52
+aprende a dirigir mas você não tem um carro ainda esse carro às vezes vai ser fabricado você vai comprar ele zero sei
+12:58
+lá você não precisa esperar o carro chegar para aprender a dirigir já pode já tem um contrato você já já sabe já
+13:03
+consegue aprender a estudar o que que é o que na hora de dirigir um carro né como fazer para dirigir um carro você
+13:10
+não precisa necessariamente ter a classe concreta de boleto de holerite para começar a
+13:17
+trabalhar com algo que pode ser pago olha só que interessante vamos fazer isso aqui ó vou fazer um if eu quero
+13:23
+aliás vamos pagar o documento ó vou pegar aqui ó documento que é esse aqui ó e vou chamar o método
+13:31
+quitar pagamento olha só que tem o pagamento e aí você pode pensar ué mas
+13:36
+isso vai funcionar porque não tem implementação aqui bom a compilação vai né porém a gente não vai não vai
+13:44
+conseguir Chamar esse método pagar depois a gente termina esse método tá só te mostrar
+13:49
+aqui que a gente não vai conseguir chamar o método pagar olha só no caixa principal aqui por exemplo nós já temos
+13:56
+o caixa eletrônico financiado Vamos tentar pagar um documento aqui ó vou pegar um Aliás não tem né um documento
+14:03
+nenhum como que eu vou fazer então vou pegar aqui a caixa ele ponto pagar tá
+14:08
+vou chamar o método pagar nós temos que passar aqui um documento pago depois da conta o documento pagável aqui e a conta
+14:15
+a conta nós temos a minha conta por exemplo Tá mas qual documento que eu vou passar aqui não tem não tem classe
+14:21
+boleto não tem classe holerite não tem nenhuma classe com silenciar para passar aqui bom nós podemos tentar em silenciar
+14:27
+a interface documentos pagável olha não conseguimos instanciar a interface justamente porque
+14:34
+ela não é uma classe concreta ela é apenas uma interface de novo vou repetir aqui ó uma interface é apenas um
+14:42
+contrato você não instancia uma interface e por isso não consegue fazer
+14:47
+o código funcionar e aí você pode pensar ué Thiago então não tô entendendo se você queria interface cria o método
+14:54
+chama o método quitar mas você não consegue chamar o método pagar porque você não tem uma Instância de documento
+14:59
+pagável e não consegue instanciar um objeto do tipo documento pago para que
+15:05
+que serve isso Calma calma aí que daqui a pouco nós vamos ter essa Instância tá
+15:10
+daqui a pouco a gente pode continuar aqui a implementação olha só é que eu
+15:16
+fiz aquitação no pagamento mas ainda Precisa fazer o saque da conta né vou pegar aqui a conta que é essa aqui né e
+15:21
+vou ó sacar eu vou sacar o que o valor que valor o valor que esse documento
+15:29
+possui Então vou pegar aqui ó passar como argumento ó documento ponto veja que ele tem o get valor total eu só a
+15:36
+gente não declarou aqui o get valor total então tô chamando get valor total e vamos fazer uma verificação também ó e
+15:43
+documento se esse documento já está pago também temos esse método está pago aqui ó esse documento já está pago a gente
+15:50
+não vai pagar ele novamente né então nós vamos lançar uma exceção mas legal de
+15:56
+repente Acho que pode ser né Colocar assim um documento já está pago tá então
+16:02
+agora sim temos uma implementação razoável aqui para o método pagar do caixa eletrônico porém continuamos
+16:10
+com aquele vamos dizer entre aspas aqui problema né que nós não temos uma Instância de documento pagável Então nós
+16:16
+não conseguimos chamar o método pagar então agora vamos resolver isso que que nós precisamos para ter uma Instância de
+16:23
+documento pagagável nós precisamos ter uma classe concreta que implementa esse contrato que implementa essa interface
+16:30
+Então vamos criar uma nova classe aqui dentro do pacote de pagamento e o Java cless Agora sim é uma classe ou seja uma
+16:37
+classe concreta eu vou chamar essa classe de boleto e essa classe boleto
+16:43
+ela vai implementar Olha só mais uma nova palavra chave aqui ó implementos ela vai implementar documento pagável
+16:51
+inclusive você vê o que aqui na interface a gente usou essa palavra chave interface né não é um Class aqui né é uma interface acho que eu não falei
+16:58
+isso mas você deve ter percebido que uma interface você declara é uma interface então agora se você quer uma classe
+17:04
+implementar essa interface você usa o implemente tá bom e veja não tá
+17:09
+compilando Por que será que não tá compilando porque quando uma classe implementa uma interface e essa
+17:15
+interface possui métodos abstratos como é o caso aqui que eu te falei todos esses métodos métodos são abstratos
+17:22
+Obrigatoriamente essa classe precisa implementar esses métodos abstratos então aqui a ideia tá falando olha você
+17:29
+precisa implementar alguns métodos aqui ó não pode deixar sem implementar não senão não vou compilar Ah beleza então
+17:34
+vamos clicar aqui implemente metas vamos suplementar todos já selecionado Ok veja
+17:39
+que já fez um over Ride aqui dos métodos então estamos implementando agora todos os métodos Por isso tá compilando claro
+17:45
+não colocamos nenhuma regra aqui nós vamos fazer isso aqui ainda tá mas antes vamos declarar aqui algumas variáveis de
+17:52
+Instância na nossa classe boleto Vou declarar aqui uma pessoa chamada de beneficiário qual quem é que se
+17:58
+beneficia desse pagamento do boleto né quem recebe esse dinheiro vamos colocar aqui um valor do boleto
+18:05
+e um boleano se esse Boleto Já tá pago ou não Tá e agora nós vamos implementar aqui ó get valor total Vou retornar o
+18:12
+valor certo que é esse aqui está pago ao invés de retornar fixo falso retornar
+18:17
+essa variável eu pago e quitar pagamento eu vou colocar pago é igual a true
+18:22
+Beleza então agora sim nós temos uma implementação uma classe que implementa
+18:28
+essa interface documento pagável sendo assim nós podemos
+18:34
+instanciar aqui o boleto né mas antes Espera aí deixa eu escolher um consultor também para esse Boleto ó vou gerar aqui
+18:39
+ó Generation Vamos criar esse Construtor passando esses parâmetros aqui gerei o
+18:44
+Construtor aqui recebendo esses três argumentos deixa eu colocar aqui agora vou colocar assim ó colocar aqui documento pagável boleto
+18:56
+Colocar assim Boleto boleto escola roleta escola viu boleto
+19:03
+passar aqui titular dois não vejo distanciar uma nova pessoa já tenho aqui tá vou só para andar mais rápido titular
+19:10
+dois colocar o valor aqui por exemplo sei lá 200 reais
+19:15
+e vou colocar que mais só isso né e tá dando errado aqui ah são três
+19:22
+argumentos Ah não pera aí o pago não vou colocar não ó vai só receber o
+19:27
+vai só receber o beneficiário e o valor porque eu pago por padrão vai ser falso
+19:32
+tá então beleza passei aqui a pessoa e o valor e aqui eu vou passar o Boleto
+19:39
+boleto escola tá na hora de declarar essa variável boleto escola eu coloquei
+19:44
+documento pagável mas eu poderia declarar ela como um boleto também tá é porque eu tô baseando aqui na interface né o
+19:51
+polimorfismo como boleto é um documento pago você pode declarar ele como
+19:57
+documento pagar deixa eu declarar como boleto aqui ó e na hora de fazer o pagamento esse método de pagar ele
+20:03
+recebe um documento pagável sendo boleto um documento pago naturalmente usando
+20:09
+aqui o benefício do poliomorfismo né aquela capacidade de você ter uma
+20:16
+de um objeto sem enxergado como um outra coisa desde que seja um super tipo né você consegue passar aqui porque porque
+20:23
+documento pagável é um super tipo de boleto né eu posso dizer que boleto é um documento pagável por isso eu consigo
+20:29
+passar o boleto aqui para o método pagar ele recebendo o documento pagável tá então agora deixa eu colocar agora um
+20:36
+print aqui ó Colocar assim boleto pago boleto escola ponto escapar eu quero
+20:43
+saber se esse Boleto Tá pago aqui no final vamos rodar esse código
+20:48
+se eu tiver saldo né Acho que tem né olha aqui boleto pago true tá vendo se eu colocar aqui antes ó se o boleto Tá
+20:55
+pago você vai ver que ele não tá pago antes de pagar tá Olha só antes de pagar esse Boleto ele
+21:01
+não estava pago depois ele se tornou pago e claro isso afetou o meu saldo também né porque o meu saldo era Deixa
+21:09
+eu tirar esse rendimento vai ficar mais fácil aqui a conta meu saldo era 14.000 na minha conta né eu passei minha conta
+21:14
+aqui para pagar minha conta então meu saldo é 14.000 15 menos mil aí depois eu
+21:20
+pago esses 200 pagar 800 aqui para ficar mais real né esse número então vai para
+21:25
+três e 200 tá vendo Então ele debitou os r$ 800 que nós pagamos deste boleto beleza bom feito isso olha que legal
+21:33
+agora nós já temos nosso código funcionando inclusive testando aqui o pagamento de um boleto e aí surgiu a
+21:41
+demanda de repente alguém chegou e falou assim agora Nosso Banco precisa
+21:46
+aceitar o pagamento de holerite no caixa eletrônico tá inventando exemplo aqui tá
+21:52
+no holerite do holerite beleza que que você tem que fazer
+21:58
+você tem que criar aqui a classe holerite que representa então Ó que é um
+22:04
+planeta um documento pago você vai implementar os métodos
+22:10
+abstratos daqui a pouco a gente termina eles vai declarar que as variáveis que
+22:16
+representam aqui nas características de um holerite por exemplo pessoa é o
+22:21
+funcionário aí vamos supor que tem que seja o valor a hora quantas horas foi trabalhada
+22:28
+vamos imaginar que seja pago por hora tá para ficar um pouquinho diferente do boleto está pago e aí você vai gerar
+22:35
+aqui o Construtor vou tirar o Construtor com funcionário com valor hora e
+22:41
+quantidade de horas vocês três argumentos beleza aqui o valor total Qual que é o valor total bom não tem um
+22:47
+valor total aqui eu preciso calcular Então vou pegar aqui valor hora vezes quantidade de horas
+22:55
+tá pago quero saber se tá pago então eu vou retornar eu pago e para quitar o
+23:04
+pagamento pago igual a true beleza altero aqui eu pago para tu Ok feito
+23:11
+isso o nosso sistema Já tá pronto para funcionar Note que nós não vamos precisar tocar no código caixa
+23:17
+eletrônico nós não vamos precisar tocar no código documento pagável basta e nem
+23:23
+na classe boleto obviamente basta a gente pagar um holerite aqui por exemplo
+23:29
+um distanciar que holerite Salário funcionário
+23:40
+meu holerite Vou colocar aqui O titular dois também tá titular dois vamos
+23:47
+colocar aqui um valor de 100 reais a hora e trabalhou 160 horas tá na 16 mil
+23:53
+reais certo e aqui nós vamos pagar o boleto e vamos pagar o boleto e vamos pagar
+24:01
+aqui o holerite o salário do funcionário que é um tipo holerite e eu vou colocar
+24:06
+aqui holerite
+24:12
+holerite é salário eu tô chamando aqui né chamar de salário aqui ó documento é holerite
+24:20
+né mas é referente ao salário então o salário pago quero saber se eu paguei ou não acho que não vai ter saldo agora vou rodar Olha só Saldo insuficiente aqui na
+24:28
+classe principal na hora de pagar o salário do funcionário Vamos fazer um depósito maior então fazer um depósito
+24:34
+de 30 mil opa não é não é sua conta na minha conta
+24:41
+né fazer um depósito de 30 mil na minha conta que aí a gente consegue pagar esse holerite Olha só boleto pago salário
+24:47
+pago nosso saldo aí só 30 mil menos mil dá 29 aí tiramos aqui os 800 tiramos
+24:53
+mais os 16 mil sobrou 12.200 tá então conseguimos pagar nota aqui
+25:00
+nós estamos usando polimorfismo aqui então em dois locais esse método pagar
+25:06
+tanto aqui em documento pagável como aqui né porque a conta lembra que ela é uma classe abstrata Pois é estamos
+25:12
+usando polimorfismo aqui nesses dois argumentos e nesse ponto eu não sei se você já percebeu os benefícios de
+25:19
+trabalhar com interfaces né porque ela possibilita a gente trabalhar com polimorfismo né mas eu vou tentar te
+25:26
+explicar aqui caso você não tenha entendido ainda acho que vale a pena reforçar tá nota que a interface
+25:33
+documento pagável ela apenas Define um tipo né Ou seja é um contrato que diz
+25:39
+que para um documento tem a possibilidade de ser pago pelo sistema ela precisa implementar alguns métodos
+25:45
+não é isso as classes Que desejam ter essa habilidade tem um pré-requisito esse pré-requisito aqui né desses
+25:52
+métodos para implementar até aqui tudo certo beleza se você tiver o hábito de
+25:57
+usar as interfaces para definir os tipos como a gente fez aqui o seu código vai
+26:05
+ficar muito mais flexível sempre que a gente quiser criar um novo tipo de documento que pode ser pago assim que
+26:11
+nós como Nós criamos o boleto e depois Nós criamos holerite Pode surgir novas
+26:16
+demandas do nosso banco para criar novos tipos de documentos se acontece isso basta criar uma nova classe que
+26:24
+implementa a interface a gente não precisa alterar a gente não precisa tocar em mais nada do resto do sistema
+26:29
+Isso é o que nós chamamos de baixo acoplamento Então se a gente notar que a
+26:36
+Caixa eletr não depende ó não tem nem porte aqui não depende da classe
+26:41
+holerite essa classe não depende da classe boleto ela nem sabe da existência dessas classes tá essa classe aqui ela
+26:48
+conhece apenas a interface documento pagável né então desenvolver código com
+26:53
+baixo acoplamento é algo que você deve buscar sempre que possível tá bom
+26:59
+e talvez você pode estar perguntando Mas Tiago não poderia usar uma classe
+27:04
+abstrata no lugar da interface ao invés de criar uma interface aqui poderia criar uma taça de extrato e chegaria no
+27:10
+mesmo resultado usando polimorfismo não é você pensou isso é excelente poderia sim tá nesse exemplo aqui funcionaria
+27:16
+também mas interfaces é um nível de abstração ainda Maior Que classes
+27:21
+abstratas porque elas foram inventadas vamos dizer assim para não ter qualquer implementação mas só para definir um
+27:28
+contrato mesmo uma classe abstrata pode também ter implementação né Apesar que hoje em dia é possível também ter
+27:35
+implementação de métodos em interfaces tem algumas diferenças tá antigamente
+27:41
+não era possível hoje já é mas tem algumas diferenças existem outras
+27:46
+diferenças também tá entre classes abstratas e interfaces e uma dessas diferenças é que no Java você pode ir
+27:54
+dar uma única classe lembra disso só que quando você usa interfaces você pode
+28:00
+implementar várias interfaces então uma classe não precisa implementar só uma se
+28:06
+tiver mais interfaces para implementar é possível também quer ver Imagine Imagine que um documento
+28:14
+holerite um boleto enfim algum documento pagável alguns deles podem ser deixa eu
+28:19
+fechar todos aqui alguns desses documentos podem ser depois de pago pode
+28:25
+ser estornado esse pagamento beleza não são todos os documentos que podem acontecer isso alguns deles podem ter
+28:31
+essa essa capacidade de ser estornado então você poderia simplesmente criar uma nova interface aqui
+28:37
+uma nova interface vou chamar de documento estor estornável poderia ser documento com
+28:45
+pagamentos Tornado enfim chamar documentos tornavel mesmo tá e aqui você declara aqui esse documento tem o get
+28:52
+valor total que é o valor inclusive desse documento vai ser estornado né está pago para saber se esse documento
+28:57
+tá pago porque se não tiver pago não pode se tornar né e o estornar pagamento
+29:03
+que é o método para operação do estorno tá E aí aqui na classe caixa eletrônico
+29:10
+você poderia criar um método aqui chamar de estornar pagamento você vai informar
+29:18
+que como um parâmetro do Qual que é o documento se tornavel chamado documento e a conta para qual você vai se tornar
+29:25
+esse dinheiro tá e Vamos tornar Então vou pegar aqui o documento chamar e se tornar se tornar pagamento
+29:33
+vou pegar também a conta e vou depositar então se não pagar a gente saca ao estornar a gente vai depositar o valor
+29:41
+Total beleza e vou pegar e fazer assim ó se vou fazer uma verificação se o
+29:47
+documento não estiver pago a gente não pode se tornar um documento que não foi pago ainda aí eu vou lançar uma liga
+29:53
+state Exception vou falar assim documento não está pago tá Então veja
+30:02
+nós implementamos aqui esse método de estorno porém nesse momento nós não podemos estornar olha só aqui na classe
+30:09
+principal Se eu tentar estornar aqui ó vou pegar o salário aqui e pegar o boleto tá estou
+30:16
+na caixa eletrônico se tornar pagamento boleto escola conta não consigo ver
+30:23
+minha conta né não consigo olha não compila porque porque aqui esse argumento ele espera um
+30:30
+documento se tornado porém eu tô passando um boleto e boleto não é um documento estornado Porque nós não falamos que que ele é um documento se
+30:38
+tornável tá mas se a gente quiser que o boleto seja
+30:43
+estornável basta a gente entrar aqui na classe boleto e adicionar essa interface
+30:49
+nova que a gente acabou de criar coloca uma vírgula aqui coloca documento se tornado certo e aí obviamente tem
+30:57
+métodos nessa interface do documento se tornava o que precisam ser implementados valor total eu está pago já foram
+31:03
+implementadas porque eles esses nomes coincidem com o métodos que tem na interface documento pagável também O que
+31:11
+diferencia é que nós temos aqui um estornar pagamento que vamos precisar implementar aqui na classe boleto Então vamos falar assim tu é menta Então esse
+31:18
+método aqui para se tornar pagamento beleza e eu vou
+31:25
+colocar assim pago lembro que a gente tem que estar aqui ó que é pago o truco Vamos colocar
+31:30
+pago igual a falsa para estornar o pagamento a gente vai simplesmente falar que ele tá falsa no Boleto né Beleza até
+31:37
+aqui e vou aqui na casa principal já começa a funcionar porque agora um
+31:42
+boleto além de ser um documento pagável também um documento se tornado Então vamos rodar aqui para a gente ver que
+31:50
+olha só o boleto Tá pago não boleto não tá pago justamente porque a gente se
+31:55
+tornou ele ó e o saldo tá 13 mil ó não tá mais 12.200 lembra que antes a gente
+32:00
+não se tornar o saldo fica 12 200 ó 200 Mas como eu tornei fica 13.000 porque o
+32:07
+boleto voltou o dinheiro para conta tá vendo Então agora nosso boleto tem essas
+32:13
+duas características dessas duas capacidades né enquanto que o holerite o salário do funcionário aqui
+32:21
+que é um tipo holerite e não possa estornar porque eu não dei essa capacidade para ele Claro se eu quiser
+32:26
+eu posso basta implementar a interface mas eu não fiz isso então não vai funcionar não vou conseguir certo agora
+32:32
+é o seguinte nota aqui que nessa interface documento estornável nós repetimos vários métodos né que a gente
+32:40
+colocou aqui que já estão aqui no documento pagável que são esses dois métodos aqui né valor total está pago se
+32:48
+repetem aqui certo considerando que para estornar um
+32:54
+pagamento de um documento esse documento tem que ser pagável né porque não tem como eu se tornar o pagamento de um
+33:00
+documento se antes eu não conseguir pagar esse documento então eu posso dizer que um documento extorrável tem a
+33:06
+relação de é um com documento pagável ou seja um documento estornável é um
+33:11
+documento pagável sendo assim eu posso fazer o seguinte eu posso fazer um
+33:17
+extende aqui ó interface tá posso fazer um extens de documento pagável Então
+33:22
+agora eu digo que o documentos tornável é um documento pagável e aí eu não preciso colocar novamente esses métodos
+33:30
+abstratos porque eles como eu estou herdando eu estou herdando também esses esses métodos abstratos aqui para cá
+33:38
+certo e então quero te mostrar aqui que existe herança de interface também olha
+33:44
+só que legal né E Agora continua funcionando normalmente aqui ó vou fazer
+33:52
+o pagamento do estorno veja que continua funcionando agora imagina o seguinte
+33:58
+Surgiu uma demanda para a gente adicionar um novo método para imprimir um recibo de pagamento desses pagamentos
+34:05
+aqui ó do documento pago né se a gente chegar aqui na
+34:10
+nessa interface e adicionar um método para imprimir para sei lá um método
+34:16
+chamado imprimir imprimir recibo por exemplo né Cada implementação de um
+34:22
+documento pagável no nosso caso aqui boleto holerite e futuramente pode ter outros cada implementação vai ter que
+34:28
+implementar esse método Obrigatoriamente né Então imagina eu colocar aqui ó colocar para você ver aqui ó imprimir
+34:34
+recibo tá então se eu faço isso para de compilar aqui porque é obrigado
+34:41
+implementar esse método então não compila mais certo e às vezes isso não é
+34:47
+desejado essa quebra na compilação não é desejada porque podem existir implementações fora do nosso controle
+34:53
+por exemplo imagina que é uma interface mais antiga e outros desenvolvedores na empresa ou até mesmo terceiros já estão
+35:00
+usando essa interface e talvez até outros projetos né E aí se você Altera a
+35:05
+interface a compatibilidade dessa interface tudo para de tudo para de
+35:11
+compilar tudo que usa essa interface né pode parar de compilar porque você tá mudando as regras do contrato no meio do
+35:16
+jogo certo não que isso seja um problema sempre mas pode acontecer isso se essa é
+35:21
+uma interface muito usada por exemplo por muitas pessoas ou até mesmo por você em vários lugares tá outro problema ao
+35:28
+fazer isso é que dependendo do que esse método faz esse primeiro recibo você
+35:34
+pode acabar com uma implementação duplicada nas classes que implementam essa interface porque pode não ter
+35:40
+diferença nenhuma por exemplo imprimir um recibo de um holerite e de um boleto talvez não tô dizendo que é sempre assim
+35:46
+no mundo real Tá mas no nosso caso aqui vamos dizer que eles não têm diferença nenhuma então
+35:51
+se a gente a gente teria duplicação de código né tanto em boleto holerite o
+35:57
+mesmo código para imprimir o recibo tá e qual que é a solução a solução é usar um
+36:03
+defull metas das interfaces em português método padrão o que que é isso é uma
+36:09
+solução eficiente para resolver esses problemas que eu citei tá esse recurso
+36:14
+Ele possibilita que a gente Adicione um novo método na interface com uma
+36:20
+implementação padrão Ou seja as classes que implementam a interface elas não vão ser obrigadas a implementar esse método
+36:26
+porque esse método já vai ter uma implementação então para fazer isso a gente
+36:32
+vale apenas colocar essa palavra aqui ó defu aqui na frente do método E logicamente se a gente coloca que é uma
+36:40
+implementação padrão a gente não vai terminar com ponto e vírgula a gente vai abrir um bloco de código e vai colocar
+36:45
+aqui a nossa implementação padrão E aí eu vou fazer o print aqui por exemplo vou colocar recibo
+36:52
+Vou colocar aqui valor total aí eu vou pegar o valor total
+37:01
+colocar aqui se tá pago ou não está pago Vou chamar o escapado viu só feito isso
+37:08
+basta a gente aqui na classe principal basta a gente
+37:15
+comentar isso aqui vou pegar aqui o Boleto boleto escola ponto imprimir recibo se
+37:22
+eu pegar o holerite salário né salário ponto imprimir recibo também tem olha só
+37:28
+vou rodar e temos aqui o recibo no caso do boleto ele foi estornado né Por esta pago falso
+37:35
+e no caso do holerite ele não foi estornado ele foi pago Então tá pago o true aqui tá agora cuidado com os
+37:42
+exagerado de defuma metalts se você ficar fazendo isso aqui demais
+37:47
+você pode ser considerado uma má prática tá o ideal é que você evite ficar criando defume metade logo de cara assim
+37:54
+e só use mesmo para driblar os problemas que eu citei anteriormente aqui para
+37:59
+manter a compatibilidade da interface com as novas funcionalidades beleza

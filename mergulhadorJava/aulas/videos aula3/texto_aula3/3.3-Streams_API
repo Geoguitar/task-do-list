@@ -1,0 +1,605 @@
+
+
+[Música] quando nós trabalhamos com coleções em
+0:06
+Java é muito comum a gente precisar executar algumas operações nessas coleções como por exemplo filtrar
+0:12
+elementos por uma determinada condição transformar em uma nova coleção de um
+0:18
+novo tipo ou ainda calcular os valores de todos os elementos e etc né em
+0:24
+versões mais antigas da linguagem Java a gente precisava fazer essas operações com Loops manipulando os dados de forma
+0:32
+manual com um código imperativo ou seja com o código passo a passo certo agora
+0:39
+atualmente na linguagem Java com o suporte da programação funcional existe
+0:45
+uma API para trabalhar com operações em massa em uma sequência de elementos chamada de streams
+0:54
+basicamente uma stream é uma sequência de elementos criada a partir de uma
+0:59
+fonte de dados que pode ser uma estrutura de Collection como Liste ou set por exemplo ou qualquer coisa que
+1:06
+possa fornecer elementos em uma sequência e com essa epi nós podemos
+1:12
+executar operações de forma mais enxuta de forma declarativa tornando o código
+1:17
+mais simples de lei e entender também o objetivo é que o programador Não se
+1:23
+preocupe mais com o algoritmo de alguns comportamentos e deixa o controle do fluxo e interações sobre
+1:30
+responsabilidade dessa aí da Strings então eu criei aqui uma classe principal
+1:36
+quatro que nós já temos aqui uma variável com uma Instância do banco e a
+1:42
+partir desse banco nós vamos chamar o get contas o get contas ele retorna um list de conta e na interface Collection
+1:50
+E lembrando que Liste é uma interface que é da Collection né então na interface Collection nós temos um método
+1:57
+chamado de stream e esse método stream ele vai retornar um stream da conta
+2:02
+então o que que é um stream ele Ó vou até atribuir aqui ó stream de
+2:08
+conta para ficar mais fácil para você o que que seria esse streaming ele é um
+2:14
+objeto que representa a sequência de elementos de uma fonte de
+2:21
+dados Qual que é a fonte de dados é a coleção de contas né então nós temos a coleção de contas e obtivemos aqui o
+2:28
+stream de conta que representa essa sequência para um fluxo de trabalho entendeu vamos
+2:36
+lá então fazer isso na prática aqui ó agora que eu tenho essa Strange conta eu
+2:41
+posso pegar a stream e falar e fazer várias coisas vamos fazer um exemplo mais simples possível aqui tá eu posso
+2:48
+fazer o seguinte eu quero inteirar eu quero percorrer nessa
+2:53
+sequência nesse fluxo ou seja nesse stream então eu vou usar um método for
+2:59
+it e esse método for it vai receber como argumento um consumer E por sinal essa
+3:05
+esse consumo é uma interface funcional inclusive você
+3:11
+vai bem javas funcionais Elas têm essa anotação aqui ó funcional Interface para
+3:17
+dizer que ela é uma interface funcional tá então ela é uma interface funcional que tem apenas um método abstrato Olha
+3:23
+só você já aprendeu como que são interfaces funcionais você aprendeu também como que a gente se beneficia
+3:31
+disso usando as expressões dúvida não é pois é então nós podemos aqui usar uma
+3:36
+expressão lambda posso colocar aqui ó para cada então fora it a para cada né quem está inteirando o que aqui dentro
+3:42
+dessa streaming esse aqui é um stream é um fluxo sequencial de elementos de qual
+3:48
+tipo é do tipo de conta né certo então nós vamos colocar assim para cada conta
+3:53
+olha só o lado esquerdo da stream Vamos colocar aqui a operador de flecha e
+3:58
+vamos abrir um bloco aqui ó um bloco um bloco de código se você quiser que fizer uma linha só pode também mas abrir um
+4:04
+bloco aqui vou fazer o que que nós queremos fazer Ah eu quero depositar nessa conta quero depositar
+4:12
+r$ 10 e quero não aliás eu quero imprimir aqui
+4:19
+conta.guete agência ou com cateter com
+4:26
+conta.guete número e
+4:32
+igual a conta.guete saldo Então vou imprimir o número da conta agência em número e o
+4:39
+saldo então nós estamos aqui usando o Que Nós aprendemos de interfaces
+4:45
+funcionais de programação funcional né usando expressões lambda para percorrer essa esse stream aqui depositar r$ 10 em
+4:53
+todas as contas e imprimir vou rodar agora essa classe principal 4 e vamos
+4:59
+ver qual que vai ser o resultado Olha só depoisitamos 10 reais em todas as contas imprimimos o saldo delas certo
+5:06
+os streams é importante você saber que quando você obtém um stream a partir de uma fonte ou
+5:13
+seja nesse caso aqui a partir de uma coleção é esse stream aqui esse objeto
+5:19
+aqui referenciado por essa variável stream não armazena os elementos ele não
+5:24
+duplica a coleção não tá bom a coleção é apenas a fonte de dados eles são apenas
+5:30
+processados por Demanda através dessa fonte de dados Beleza então não é uma
+5:36
+duplicação da que não a correção continua existindo ali e o stream é apenas vamos dizer assim é uma camada
+5:43
+por cima onde você usa essa camada para poder acessar essa fonte de dados usando
+5:49
+api do stream Beleza então tá bom funciona aqui mas você pode estar
+5:54
+falando assim tá Thiago funcionou mas eu não vi vantagem usar isso aqui não porque dá para fazer exatamente esse
+6:00
+mesmo código que você fez aqui usando um look simples usando
+6:06
+o que nós já aprendemos da linguagem Java e eu concordo com você se você pensou nisso beleza Tá certo realmente
+6:13
+porém usar stream só para inteirar nos elementos como nós fizemos aqui pode
+6:18
+realmente ser um tipo de exagero não tem necessidade mesmo de usar Swing Só para fazer algo tão simples assim tá bom
+6:25
+Então nesse ponto você tá certo mas calma aí porque dá para fazer muitas
+6:30
+coisas com streaming isso aqui é só a coisa mais simples que a gente poderia fazer dá para a gente melhorar é fazer
+6:37
+mais operações que aí começa a ter realmente benefício de usar stream Epa
+6:42
+quer ver vamos incrementar esse exemplo aqui vou fazer o seguinte eu vou apenas inteirar aqui não vou fazer o depósito
+6:48
+de r$ 10 não simplificar o exemplo Tá mas eu quero te mostrar agora aqui uma
+6:54
+operação que a gente pode usar em stream para fazer filtragem de elementos nesse
+7:01
+fluxo então a stream a interface né Isso aqui é uma interface stream ela possui
+7:07
+vários métodos para trabalhar com esses elementos da stream nós usamos aqui apenas um forte eu vou fazer o seguinte
+7:13
+nós já temos aqui essa stream eu vou criar uma nova stream chamar a conta aqui vou chamar de streaming 2 tá bom
+7:20
+e aqui eu vou referenciar esse link que nós já temos que essa aqui é uma stream que
+7:25
+representa o fluxo de todos os elementos da fonte de dados ou seja da coleção de conta certo porém agora eu tô usando
+7:32
+essa stream aqui ó para fazer uma filtragem Então vou usar o método Filter e veja que esse filtro ele recebe um
+7:38
+predcast esse predcate também é uma interface funcional predcast também é uma interface
+7:45
+funcional que vai que tem um método abstrato que faz um teste você vai receber um argumento E vai retornar um
+7:51
+boleando para dizer se é verdadeiro ou falso dependendo
+7:57
+determinada condição que você quer no caso aqui para fazer a filtragem então
+8:02
+eu vou receber aqui a conta como argumento e vou dizer o seguinte vamos
+8:08
+imaginar que nós queremos filtrar apenas contas deste banco que possuem um saldo
+8:15
+maior que 100 reais por exemplo eu nem sei vamos dar uma olhada Quais são os saldos aqui para pegar um ó vamos pegar
+8:22
+maior que maior que 130 porque vai pegar essas três aqui tá
+8:29
+aí não vai pegar essa nem essa então saldo maior que 130 vamos fazer essa filtragem ó então eu coloco aqui então
+8:35
+nessa expressão ainda né conta ponto GAP saldo
+8:44
+130 tem que ser maior do que zero tá então fizemos a comparação aqui ó como
+8:50
+ficou grande aqui numa linha só eu vou colocar a linha aqui só para ficar mais fácil para enxergar tá bom
+8:58
+O que que tá faltando aqui compete acho que tá faltando parentes aqui isso aqui
+9:04
+não tem isso Então olha só aqui nós temos uma expressão lambda para realizar
+9:11
+implementação daquele projeto né então isso aqui ó retorna um boleando concorda
+9:16
+uma expressão boreana lembra que o predcast tem que retornar um boleando então aqui nós estamos fornecendo essa
+9:22
+implementação através da expressão lambda e isso aqui então vai retornar um
+9:29
+stream que vai ser filtrado apenas os elementos que
+9:35
+passarem por essa condição dessa expressão lambda que nós passamos aqui e aí ao invés de fazer um forense agora no
+9:42
+stream vou fazer um floresta no streaming 2 que é o stream aplicado o filtro e agora vamos dar uma olhada
+9:48
+somente contas com saldo acima de r$ 130 foram
+9:56
+interadas aqui entendeu então agora começa a ficar mais interessante o uso
+10:01
+de stream concorda comigo e O legal é que dá para você criar uma cadeia de
+10:06
+operações que formam um fluxo de processamento como que seria isso né Por
+10:12
+exemplo criamos o stream aqui aí aplicamos um filtro e que ele criou um novo stream né então vou criar aqui mais
+10:20
+um string agora vou criar mais um stream chamar de stream 3 aí eu vou pegar o stream 2
+10:26
+Então vou encadeando tá vendo aí vou fazer um novo filtro imagina que eu quero além do saldo Eu quero um novo
+10:32
+filtro eu quero apenas eu não vi aqui deixa eu ver
+10:38
+um dois três vamos pegar
+10:43
+um dois três dois eu quero fazer um filtro por agência Imagina eu quero fazer um filtro
+10:50
+por agência ou na verdade vamos fazer assim vamos fazer um filtro por por conta por número de conta apenas contas
+10:56
+que o número é maior que 300 tá porque aí não vai pegar essa pegar só ss é boa
+11:02
+acho que vai dar certo fazer assim ó apenas contas conta ponto get número for
+11:09
+maior que 300 Então conta com o número menor que 300 não vai filtrar e aqui eu
+11:16
+faço um florete do stream 3 olha só tá vendo Então fizemos mais um filtro
+11:22
+aplicando mais um filtro criando esse encadeamento Isso é o que nós chamamos
+11:27
+de pipeline ou seja a pipeline é um conjunto de operações
+11:33
+configuradas em sequência que vai ser executado na stream Em algum momento e
+11:39
+por que que eu disse em algum momento porque quando você aplica aqui um Filter em um stream não vai fazer que a
+11:46
+pipeline seja executada nesse momento aqui não é que o filtro vai ser executado no momento que você chamou o
+11:52
+Filter não isso aqui você tá apenas fazendo uma configuração da parte Line tá porque porque o Filter
+12:01
+é o que nós chamamos de operação intermediária que que isso quer dizer quer dizer que no momento que nós
+12:07
+invocamos esse método Filter né como eu disse ele vai apenas configurar pipeline ele não vai executar nenhuma operação
+12:14
+para filtrar os elementos nesse momento tá é porque é uma operação que chamamos de preguiçosa ou inglês Chamamos ela de
+12:22
+uma operação laser tá esse tipo de operação ela só é avaliada e executada
+12:27
+quando uma operação é chamada no stream Enquanto isso não
+12:33
+acontecer nós não temos a execução da pipeline então para executar de fato as
+12:41
+operações da nossa pipeline nós precisamos de um tipo de operação especial que nós chamamos de operação
+12:48
+terminal uma operação terminal executa então todo pipeline que nós pré
+12:53
+configuramos antes e o método aqui ó ele é um tipo de
+12:59
+operação terminal que intera em cada elemento do stream e executa as ações programadas essa forma que stream foi
+13:06
+Projetada permite que a cadeia de operações seja processada de forma mais performática
+13:13
+porque pós-terga o processamento até que o resultado seja necessário através da
+13:19
+operação terminal então resumindo aqui nós estamos configurando a pipeline não é realizado nenhuma
+13:26
+filtragem por exemplo já que nós configuramos filters aqui no executado nada apenas configurado porque filtro
+13:33
+são operação é uma operação intermediária quando nós falamos assim tá bom agora intera nessa nesse stream
+13:41
+nesses elementos aí não tem jeito aí tem que executar toda a pipeline Porque nós já queremos executar ações em cima dos
+13:46
+elementos dessa stream né E nesse ponto você pode estar pensando eu tô achando muito complicado é muito código para
+13:52
+fazer pouca coisa concordo com você se você pensou isso novamente tá porém eu
+13:58
+tô fazendo aqui de uma forma mais didática dá para enxugar mais o código tá usando a interface fluente da EPI
+14:04
+encadeando chamadas das operações da stream Vamos divulgar esse código aqui por exemplo quando a gente pega
+14:11
+esse stream aqui nossa Nós não precisamos atribuir em uma variável do tipo stream conta não não precisamos
+14:17
+Como assim não precisamos te mostrar a gente pode fazer isso aqui e sabendo que isso aqui retorna retorna um instrumento
+14:23
+de conta sabendo que isso retorna esse trem de conta a gente quer fazer um encadeamento de chamadas basta a gente ó
+14:28
+chamar o filtro Colocar assim faz o Filter e aqui eu vou
+14:36
+tirar esse ponto e vírgula e vamos encadear novamente ó esse outro Filter então o retorno disso aqui a gente já
+14:44
+pega esse retorno e chama um Filter com o retorno disso aqui a gente achamos outro Filter e com o retorno disso aqui
+14:50
+a gente já chama uma operação terminal forete fizemos um encadeamento aqui ó
+14:56
+de chamadas tá beleza OK
+15:04
+para cá beleza viu então a gente pode fazer dessa forma aqui deixa o código
+15:11
+mais enxuto mas não só isso deixa ele mais legível também né Agora depois
+15:17
+dessa operação você não consegue fazer um encadeamento tá porque porque o forense ele retorna void ele é uma
+15:23
+operação terminal certo então você não consegue depois disso continuar encadeando mais coisas
+15:29
+vamos ver aqui agora esse aqui tá retornando tá retornando duas contas né Eu queria
+15:36
+retornar mais deixa eu colocar aqui acima de 50 esse aqui acima de 200 quero retornar
+15:42
+mais contas beleza por que que eu tô retornando mais contas aqui porque vamos trabalhar agora com ordenação Imagina
+15:49
+você tem aqui tá usando o stream para executar uma
+15:55
+ação nos elementos desse stream Mas você quer fazer executar essa ação
+16:00
+com esses elementos ordenados por exemplo ordenado pelo número da conta
+16:06
+aqui não tá ordenado né Tá vendo esse aqui é o número da conta não tá ordenado
+16:11
+numa ordem natural dos números né então nós queremos ordenar primeiro antes de executar esse foguete aqui como que nós
+16:18
+podemos fazer nós podemos aqui encadear que mais uma chamada usando o
+16:26
+método software esse método software ele vai receber um comparator lembra disso
+16:32
+como que a gente fornece um comprovator nós vamos usar aqui o comparator ponto nós queremos comparar inteiros então
+16:38
+podemos usar isso com perring que vai receber um twenty E aí eu acredito que
+16:44
+você lembra disso nós podemos passar inclusive aqui um meta de rapper então vou passar aqui um conta
+16:49
+get número igual nós vimos anteriormente né quando falamos de metas então Aqui
+16:57
+nós fizemos esse encadeamento aqui para adicionar mais uma operação
+17:02
+intermediária aqui sorte para poder ordenar os elementos desse stream mas é
+17:09
+importante você entender que essa ordenação não altera a ordem dos
+17:14
+elementos da lista que é a fonte de dados vai apenas ordenar o fluxo de
+17:20
+execução do stream quando a gente fizer oformite vai executar esse forwid com os
+17:25
+elementos ordenados mas a fonte de dados ela permanece intacta não é alterado Então olha eu vou rodar aqui agora
+17:32
+e tá ordenado viu quando você começa a usar os recursos da string e começa a
+17:38
+fazer sentido torna a os nossos códigos muito mais
+17:44
+enxutos legíveis então é bem interessante tá então vamos apenas aqui
+17:49
+relembrar a estrutura do código tá agora aqui né que eu acredito que você vai
+17:55
+entender melhor né Se caso tiver alguma dúvida ainda tá a stream ela possui três
+18:01
+partes né ela tem a fonte de dados tá a quantidade é que fornece os elementos para toda pipeline que nós configuramos
+18:08
+no nosso caso aqui qual que é a fonte de dados é a coleção né a lista de contas beleza aí ela possui aqui
+18:16
+ou nenhuma ou várias operações intermediárias no caso Aqui nós temos três operações intermediárias que elas
+18:23
+podem transformar ou filtrar os elementos e depois por fim nós temos
+18:28
+pode ter nenhuma né ou pode você ter uma operação no terminal sabendo que se você
+18:34
+não tiver nenhuma operação terminal as operações não vão ser executadas a
+18:39
+operação terminal faz executar toda pipeline e gera o resultado final bem
+18:45
+simples né agora imagine que você tem aqui então a fonte de dados que é uma
+18:51
+lista de contas Porém você quer executar ações não na lista de contas você quer
+18:57
+executar ações nos titulares dessas contas como que nós fazemos isso
+19:03
+primeiro eu vou duplicar esse código aqui e deixar ele comentado
+19:08
+e vamos trabalhar aqui nesse código agora tá então de novo nós não queremos trabalhar nós não queremos trabalhar na
+19:17
+nos elementos do tipo conta queremos trabalhar nos titulares dessas contas ou
+19:23
+seja nas pessoas né dessas contas que são as proprietárias dessas contas os filtros aqui vai ficar com seus mesmos
+19:29
+tá vamos manter os mesmos Porém Aqui no forit não vai ser conta vai ser o titular tá você poderia pensar assim
+19:37
+basta eu fazer por exemplo print basta pegar aqui ó conta.guete titular vamos
+19:43
+supor que eu quero imprimir os titulares das contas Beleza vai funcionar pegou todos os titulares Inclusive tem contas
+19:50
+duas contas Maria das Covas duas contas do João né Beleza mas nós podemos fazer
+19:55
+outra coisa aqui Deixa eu tirar esse sorte aqui tá vou fazer outra coisa que é usar aplicar
+20:02
+transformações na stream é tem um método aqui chamado de Map que ele recebe um
+20:08
+function aqui e o método map é uma operação intermediária que transforma
+20:13
+cada elemento da stream nós temos aqui nesse ponto nós temos uma Strange conta
+20:19
+né já clicar nesses filtros Então vai vai esse método aqui vai realizar a
+20:25
+transformação de cada elemento do stream em um novo elemento de um novo stream então basicamente nós passamos aqui uma
+20:32
+function como argumento para esse método map que vai definir como nós queremos fazer essa
+20:39
+transformação e ela vai ser aplicada em cada elemento destruindo durante o processamento Podemos até dar uma olhada
+20:45
+aqui infantil
+20:51
+já úteis Pera aí que eu tô
+20:58
+Java útil stream.hantom não ficou pacote que é o
+21:04
+funk agora que eu não Beleza então esse aqui ó veja que ele
+21:10
+tem um método abstrato são sinal tem um método abstrato que recebe um argumento e retorna um argumento então basicamente
+21:16
+nós vamos passar uma uma expressão lambda para retornar o que que nós queremos então por exemplo a gente
+21:22
+recebe a conta e nós queremos retornar ponto get titular dessa forma Então esse
+21:28
+método aqui vai retornar uma nova stream mas uma nova stream de qual tipo uma
+21:34
+nova stream do tipo título é pessoa então ele vai retornar se a gente quiser se atribuir assim ó
+21:41
+isso aqui ó isso aqui funciona então quando fizemos
+21:49
+um map aqui ele vai retornar uma nova string de pessoa e aí nós podemos usar
+21:54
+esse streaming de pessoa para fazer o que a gente quiser mas vamos deixar o código mais enxuto aqui então fiz isso só para ficar didático para você aqui
+22:00
+nós podemos usar inclusive um metals a ideia de até sugerindo aqui vamos mudar para o metals e aqui quando a gente vai
+22:07
+fazer esse firete não é mais um farite de conta porque porque fizemos a transformação aqui é um foryite de
+22:13
+titular de pessoa titular Então posso imprimir aqui O titular Tá
+22:19
+mas eu posso transformar isso aqui também no Messenger o objeto titular posso transformar isso
+22:26
+no metade também dessa forma assim ó então vou rodar agora para você ver
+22:32
+Olha só temos exatamente aquele mesmo resultado porém agora aplicando a
+22:38
+transformação usando o método map tá e se você tem aqui se você tá trabalhando
+22:44
+nos titulares das contas Porém você quer que esse titulares não se repitam você
+22:51
+quer eles distintos você pode aplicar aqui depois do Map aqui você pode aplicar
+22:58
+um chamando um método distinct esse distint ele vai
+23:04
+retornar um string com elementos distintos ou seja sem duplicações
+23:10
+logicamente para isso aqui funcionar você vai ter que implementar corretamente o método icous aqui na
+23:17
+classe pessoa ó Então tem que implementar corretamente a gente tá implementando através do número do
+23:23
+documento aqui tá então se eu faço isso agora rodo aqui só temos o João da Silva
+23:30
+Por que que São João da Silva Maria não Provavelmente aqui nós usamos Ah aqui ó
+23:35
+usamos o mesmo número de documento e aí é como se os dois fossem as mesmas
+23:40
+pessoas Vamos mudar o número de documento da Maria aqui para ficar diferente tá agora sim ó vai
+23:48
+retornar os dois viu só então é através do método que esse distintivo vai
+23:54
+funcionar né é uma operação intermediária também que retorna um string de elementos únicos né então
+24:01
+beleza agora vamos estudar sobre operações de redução imagina que a gente
+24:06
+queira saber o saldo total de todas as contas
+24:11
+que esse banco possui então ó banco ponto get contas
+24:18
+.stream nós queremos somar tá todas as contas poderíamos pensar vamos criar uma
+24:23
+variável aqui de forma variável externa e a gente faz um Ford Vai tentando
+24:29
+somar em cima dessa dessa variável aqui ó saldo total
+24:35
+você poderia pensar alguma coisa assim ó né que que você acha a gente faz um
+24:41
+forete aqui e aqui dentro desse firete nós vamos incrementando nesse salto total no final nós temos o valor total
+24:47
+poder pensar alguma coisa assim mas não é o jeito vamos dizer correto de usar é
+24:53
+de trabalhar com programação funcional quando a gente tá usando streams IPI né que é muito ligado a isso você vai fazer
+24:59
+da seguinte forma você vai usar operações de redução operações de redução produzem um resultado final a
+25:06
+partir da sequência de elementos do stream como por exemplo total do valor somado a média de valores e etc então
+25:14
+que nós vamos fazer é o seguinte nós vamos pegar o stream normalmente aí eu
+25:19
+vou fazer um map que você já aprendeu que que é o map né eu vou mapear GAP
+25:24
+Saúdo aqui ó então no final das contas nós vamos ter aqui um stream de Big destino
+25:31
+então quando a gente faz um map a gente vai retornar um stream de Big décimo E
+25:37
+aí agora nós vamos aplicar aqui uma
+25:42
+aplicar aqui uma função Deixa eu só organizar
+25:49
+uma função de redast é uma função de redução que nós exatamente vamos executar essa operação então para a
+25:56
+gente pegar o valor total essa esse método versus ele tem algumas opções de
+26:03
+sobrecarga Tá mas nós vamos usar um aqui onde nós vamos passar primeiro parâmetro é chamado de identity que é um elemento
+26:10
+considerado como valor inicial para essa operação de redução como nós queremos
+26:15
+uma soma começa sempre no zero então Big décimo ponto zero tá e o segundo
+26:21
+parâmetro é chamado de acumulator acumulador é uma função que executa a
+26:27
+operação de acúmulo do resultado parcial né que é o subtotal com o
+26:32
+próximo elemento do stream então ele vai pegando Qual que é o sub total mais o próximo Aí você tem que retornar então
+26:39
+dado dois argumentos você tem que retornar um algo com o seu cálculo no caso a soma
+26:45
+Então vamos lá o dado dois argumentos que é o subtotal e o valor você deve
+26:51
+retornar a soma disso sobre Total ponto é valor então aqui é a função de
+26:57
+acumulator certo Porém você já pode ver que é própria ideia Já tá nos ajudando aqui ó porque
+27:05
+ao invés de fazer isso aqui nós podemos usar o mestre [Música]
+27:10
+já vai fazer exatamente aquilo ele vai retornar para a gente o Big
+27:17
+décimo diretão para a gente ó então Big decimal Vou colocar aqui saldo total
+27:23
+olha só que tanto fica mais simples fazendo dessa forma né então como a gente tá trabalhando com Big décimo aqui
+27:29
+dentro ele já retorna para a gente um único valor já reduzido então ele reduz o stream em um único valor único objeto
+27:38
+vamos dizer assim né e agora eu posso fazer o print aqui por exemplo do saldo Total aqui nós vamos ter o saldo total
+27:44
+de todas as contas deste banco olha só que é 12.770 certo se quiser se aplicar
+27:52
+filtros aqui ó você poderia aplicar filtros poderia fazer que você quiser se operações intermediárias aqui sem
+27:58
+problema algum tá aqui no caso estamos apenas fazendo mapeamento e depois do
+28:04
+certo e é legal trabalhar com streams e processar os elementos com as operações
+28:10
+que nós estudamos aqui né tá gostando eu gosto muito disso mas às vezes nós precisamos
+28:16
+a gente pode precisar sim reduzir os elementos né do stream em uma nova
+28:22
+coleção de elementos ou seja converter todo o fluxo do stream em uma nova lista
+28:28
+ou uma um novo conjunto por exemplo né Então imagina que que nós queremos é a
+28:35
+partir desse banco ponto get contas a partir desse stream aqui nós queremos
+28:40
+até fazer um mapeamento já aqui ó conta get titular então isso aqui retorna um stream de pessoa né que são os titulares
+28:48
+vou até fazer o distintos que a gente aprendeu também isso aqui retorna um stream de pessoa concorda beleza ok nós
+28:56
+retornamos esse tipo de pessoas nós podemos executar uma operação terminal aqui Como por exemplo o four it
+29:02
+poderíamos usar o educe aqui também mas não é isso que nós queremos nós queremos transformar isso aqui de volta para uma
+29:09
+lista por exemplo uma lista de pessoa que são os titulares e aí como que nós
+29:14
+fazemos então ao invés de usar porque
+29:19
+esse aqui é uma operação terminal de redução também ao invés de usar o ponto nós
+29:26
+é mais apropriado para agregar o stream em um resultado final né em um único
+29:31
+resultado final mas ao invés disso nós vamos usar aqui o método collect esse collect aqui ele é usado para acumular
+29:39
+elementos do stream em um container como por exemplo em coleções Então vamos usar
+29:45
+esse colete e veja que tem sobrecarga aqui mas nós vamos usar esse aqui que
+29:50
+recebe um colector e o que que é esse coletor nosso podemos pegar uma Instância de colector A partir dessa
+29:57
+dessa classe colector ponto e aí tem vários coletores já fabricados aqui que
+30:04
+você pode usar mas nós queremos Então nós vamos passar uma Instância de um coletor que retorna uma lista E aí
+30:11
+Aqui nós temos ó uma lista de pessoa que são os titulares
+30:17
+certo temos aqui uma lista de pessoas que são
+30:22
+os titulares e aí nós podemos trabalhar com essa lista normalmente de repente passar como argumento por algum método
+30:28
+se você precisar ou até mesmo criar um string disso aqui se quiser fazer alguma
+30:34
+coisa enfim você pode trabalhar com essa lista de pessoas da forma que você precisar o que você vai imprimir aqui ó
+30:40
+tá a lista de titulares para a gente ver que olha aqui ele realmente criou uma
+30:46
+lista de titulares únicos né porque a gente fez o distinto aqui né Eu só porém
+30:52
+a própria ideia aqui ela tava ajudando já mas já parou aqui acho que era isso que ela tava tentando me dizer a própria
+31:00
+ideia Já às vezes ajuda aqui ela existe um método de conveniência aqui a partir
+31:05
+do Java 16 a gente pode gerar uma lista dos elementos do stream de uma forma
+31:10
+ainda mais fácil mais enxuta aqui usando diretamente o método list então o
+31:16
+próprio stream já tem agora esse método uma lista do tipo específico desse sonho
+31:22
+no caso aqui um tipo pessoa né Então olha só é uma outra forma também a gente
+31:28
+conseguir ter uma lista de pessoas
+
+

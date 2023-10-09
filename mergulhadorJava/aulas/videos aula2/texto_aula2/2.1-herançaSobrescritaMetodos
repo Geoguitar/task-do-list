@@ -1,0 +1,736 @@
+
+[Música] fala mergulhador aqui é Thiago Faria da alga works seja bem-vindo a segunda aula
+0:09
+do mergulho Java durante essa semana eu estou publicando aulas para você aprender java do zero e criar sua
+0:15
+primeira aplicação de back end na aula passada eu ensinei os fundamentos essenciais da plataforma Java da
+0:22
+linguagem Java e orientação objetos se você ainda não assistiu a primeira aula volte lá primeiro e assista porque o que
+0:29
+eu mostrei nela é essencial para que você entenda o que eu vou te ensinar hoje Hoje a aula terá foco em conceitos
+0:36
+avançados da orientação objetos como herança sobre a escrita de métodos polimorfismo classes abstratas
+0:42
+interfaces exceções e etc mas antes de começar eu quero agradecer aos vários
+0:49
+comentários que recebemos na primeira aula minha equipe eu Estamos lendo todos os comentários e tentando responder um
+0:56
+por um é muito gratificante ver a criação dessa comunidade de estudantes e
+1:01
+desenvolvedores realmente em mergulhar no desenvolvimento de aplicações de AVA isso me dá muita
+1:08
+motivação para continuar nosso trabalho imagina que nesse projeto aqui do nosso banco surgiu a demanda de separar dois
+1:15
+tipos de contas nós temos aqui apenas uma conta né Que tipo de conta é essa uma conta de investimento é uma conta
+1:22
+especial uma conta salário enfim não tem essa especificidade aqui nessa classe
+1:27
+conta né é uma conta comum mas vamos imaginar que surgiu então a demanda de a
+1:32
+gente criar essa separação onde uma conta investimento por exemplo ela tem a
+1:39
+funcionalidade de acreditar rendimentos baseado no saldo em conta desse desse
+1:44
+titular da conta já uma conta especial ela tem como característica um tem um limite de
+1:51
+cheque especial que o cliente pode usar né para ele pode ficar negativo no saldo dele porque ele tem um cheque especial
+1:58
+Então vamos imaginar nessas dois cenários onde a gente tem uma conta investimento e uma conta especial nós
+2:04
+poderíamos resolver isso colocando tudo aqui dentro dessa mesma classe conta
+2:10
+criando aqui variáveis de Instância para discriminar criar uma variável aqui para discriminar por exemplo Qual que é o
+2:16
+tipo da conta Onde vamos supor que sim o número zero é uma
+2:22
+conta de investimento número um é a conta do especial e aí a gente criaria
+2:27
+que vários métodos nessa nessa classe dentro
+2:32
+desses métodos da gente poderia incluir condições para executar as regras de negócio de acordo com o tipo da conta
+2:38
+fazendo isso sabe verificando o seu tipo é o zero faz isso faz isso e criando
+2:44
+também aqui de repente uma va de Instância o limite do cheque especial enfim é possível fazer isso e funciona
+2:52
+assim é possível e funciona porém se a gente fizer isso a tendência é que esse
+2:57
+código aqui ele fique muito engessado muito complexo também para dar
+3:03
+manutenção nisso não é definitivamente uma boa prática quando a gente está
+3:08
+trabalhando principalmente com orientação objetos com orientação objetos a gente pode deixar as nossas
+3:15
+classes mais reutilizáveis usando um conceito muito conhecido chamado de herança que que é
+3:22
+herança era essa é uma funcionalidade um recurso da orientação objetos que adiciona a
+3:30
+capacidade de uma classe herdar as propriedades e comportamentos de uma
+3:35
+outra classe Vamos ver isso na prática Então olha só vamos começar aqui criando uma classe que vai representar a conta
+3:43
+de investimento aqui dentro do pacote cabelo vou clicar com o botão direito neutros vou chamar ela de conta em
+3:50
+investimento então uma conta de investimento é aquela que tem como característica
+3:57
+rendimentos né ela faz um rendimentos do saldo tá então conta investimento até
+4:02
+aqui ela é uma classe normal como qualquer outra porém nós queremos ir dar
+4:08
+as propriedades e comportamentos da classe conta nós queremos dizer que conta investimento é um tipo de conta e
+4:14
+para isso depois do nome da classe nós colocamos a palavra chave extende significa estende né então que é a
+4:22
+palavra chave da herança esse extenso e colocamos Qual que é a classe base que
+4:27
+nós queremos herdar E aí nós colocamos conta aqui então dá para a gente dizer
+4:33
+que conta investimento é uma classe que herda a classe conta e
+4:39
+ao fazer isso sempre que a gente instanciar objetos do tipo conta e
+4:45
+investimento esses objetos eles vão ter todas as propriedades e todos os
+4:50
+comportamentos definidos também na classe conta tá porque conta investimento herdou conta e claro essa
+4:57
+classe conta investimento ela vai poder ter os seus próprios seus próprios
+5:03
+variáveis de distância os seus próprios métodos porém além de tudo que nós colocarmos aqui ela vai ter também todo
+5:09
+todas essas variáveis e métodos todos esses membros da classe contra também por isso é a herança é interessante você
+5:17
+notar aqui que existem alguns conceitos algumas nomenclaturas aqui que você pode
+5:23
+ouvir falar por aí tá nós podemos dizer aqui que essa classe conta investimento
+5:28
+é uma subclasse de conta podemos dizer que ela é uma classe filha de conta
+5:34
+podemos dizer também que isso aqui é uma especialização Ou seja é um tipo
+5:40
+específico é mais especializado do que conta podemos dizer que conta investimento é um ou é uma conta tá
+5:48
+então conta investimento é uma conta tá porque quanto investimento tá herdando
+5:54
+conta né por outro lado Podemos dizer que a classe conta é uma classe pai ou
+6:00
+uma classe mãe de conta investimento podemos dizer também que a classe conta é uma super clássica então aqui é a
+6:07
+subclasse muito investimento e a classe conta é super classe tá enfim Existem várias formas que nós podemos dizer uma
+6:14
+coisa muito importante um conceito muito importante Quando você vai usar a herança é você não usar de forma
+6:21
+incorreta no sentido de você não criar herança apenas para aproveitar tudo que
+6:27
+foi escrito de código na super clássica no caso aqui na classe conta é sempre
+6:33
+você perguntar fazer descrever da seguinte forma contra investimento é uma conta se a resposta
+6:41
+for sim beleza mas se não aí não por exemplo se você criar aqui uma classe que não tem nada a ver colocar um
+6:48
+cliente e você fala que o cliente e você precisa de você precisa de algum método não sei se é algum exemplo bom não mas
+6:54
+você precisa de algum método nessa nova classe que você vai criar algum método alguma variável de Instância que tem
+7:01
+aqui declarado aqui então é para reaproveitar código você vai lá e você cria o extende criar herança aí já seria
+7:08
+um uso incorreto a herança o uso correto dela é sempre quando a resposta para a
+7:15
+subclasse é umas super clássicas essa conta investimento é uma conta sempre
+7:20
+quando a resposta for sim essa resposta for não aí tá errado tá quer ver um outro exemplo eu não vou escrever em
+7:26
+código mas eu vou só te explicar imagina que você criou uma classe e aí eu vou por um exemplo mais didático tá aqui
+7:32
+talvez você não necessariamente iria programar isso um dia na sua vida mas imagina que você criou uma classe
+7:38
+chamada cachorro e o cachorro tem esse comportamentos Ele Pode Ele anda ele late né e entre outras coisas aí você
+7:46
+quer criar a classe gato bom a classe gato Ela também anda né ou seja também
+7:53
+tem um comportamento de andar porém gato não late né ele vai miar Então mas você
+7:58
+fala assim tá mas eu não quero escrever novamente o comportamento de andar então eu vou fazer o gato da cachorro porque
+8:04
+assim eu aproveito o comportamento de andar e aquele comportamento de latir é
+8:10
+só eu não usar ele porque tá tudo bem Eu implemento na casa de gato estaria errado isso porque você tem que
+8:16
+perguntar gato é um cachorro não um gato não é um cachorro então estaria errado
+8:21
+esse uso de herança Claro você poderia reajustar isso e falar que gato e cachorro
+8:27
+herdam animal em um animal anda aí tudo bem mas você falar que gato é um
+8:32
+cachorro conceitualmente está incorreto no nosso mundo real e também aqui na orientação a objetos certo então toma
+8:39
+muito cuidado ao usar herança para não usar da forma incorreta tá agora vamos continuar aqui a nossa implementação
+8:46
+Vamos criar aqui vamos criar aqui um Construtor tá vou
+8:52
+criar aqui o Construtor que conta investimento né então consultor
+8:58
+quanto investimento e aqui no nosso Construtor nós queremos receber vamos dar uma olhada aqui na classe conta nós
+9:04
+queremos receber também o titular agência e o número vou até copiar aqui ó vou colocar aqui como argumento tá E aí
+9:11
+que que nós vamos fazer nesse Construtor nós Será que nós precisamos fazer essa atribuição aqui novamente ó tudo
+9:18
+novamente bom primeiro que você não vai conseguir fazer isso porque essas variáveis de distância aqui
+9:24
+ó titular a agência e número elas estão Private modificador de acesso Private Então quem consegue acessar essas
+9:30
+variáveis é apenas a classe conta mesmo fazendo herança que você não consegue acessar se tiver Private aqui tá A não
+9:39
+ser que tivesse aqui um modificador de acesso deixa eu ver que o titular modificador acesso chamado protected bom
+9:45
+esse modificador de acesso Protect ele começa a permitir aqui a classe contra
+9:51
+investimento o acesso o que que esse modificador de Protect ele
+9:57
+deixa privado apenas por acesso à própria classe porém ele deixa também o
+10:02
+acesso para classes que herdam a classe conta aqui no caso tá então ele é um
+10:07
+pouco mais liberal vamos dizer assim do que o Private as classes que herdam sim consegue ter acesso porém nós não vamos
+10:15
+colocar esse Protect eu vou colocar o Pride aqui porque nós não precisamos duplicar código aqui se a gente quer
+10:20
+fazer só essa atribuição Inclusive tem aqui também essa validação em cima né a gente quer só fazer isso nós podemos
+10:26
+invocar esse Construtora aqui durante a construção de uma conta investimento
+10:31
+um construtor da classe da Super classe sempre vai ser chamado por padrão se
+10:37
+você não informa nada o compilador ele adiciona para você uma instrução chamada
+10:43
+super aqui bem na primeira instrução tá se você não colocar nada isso aqui o
+10:48
+controlador já vai colocar para você de forma implícita ou seja automaticamente e o que que esse super aqui é uma
+10:53
+palavra-chave que vai chamar nesse caso aqui chamar o Construtor da Super classe eu vou clicar nele aqui ó segura contra
+10:59
+o Command e clica nele você vê que ele vai chamar esse Construtor aqui tá vendo Então automaticamente quando você não
+11:05
+coloca nada ele chama o Construtor padrão aquele Construtor sem argumento porém não é esse Construtor que nós
+11:10
+queremos chamar Nós queremos chamar esse Construtor aqui com esses três argumentos e por isso nós vamos colocar
+11:16
+o super titular agência e número então a partir de agora olha só ao construir uma
+11:24
+conta de investimento nós vamos chamar aqui o Construtor da Super classe com
+11:29
+esses três argumentos esses consultores é obrigatório Você Chamar algum Construtor ou você não coloca nada e ele
+11:36
+vai chamar aquele Construtor sem argumento ou você coloca só super sem argumento nenhum e também ele vai chamar o mesmo ou você coloca um Construtor
+11:43
+diferente se você quiser mas Obrigatoriamente quando você instancia uma classe que é da outra todos os
+11:49
+construtores da hierarquia serão chamados tá então beleza feito isso agora nós vamos adicionar um
+11:56
+comportamento aqui que é específico de uma conta de investimento que é no caso
+12:01
+o crédito de rendimentos né Vamos criar aqui um método que não retorna nada vou
+12:06
+chamar de acreditar rendimentos vamos receber aqui como um argumento deste método percentual de
+12:13
+juros tá e nós temos que pegar o saldo que está disponível na o saldo da conta
+12:20
+e calcular o valor dos rendimentos Tá mas veja essa conta investimento ela tem
+12:26
+saldo Note que a gente não tem uma variável de Instância aqui não tem métodos de saldo não tem nada
+12:31
+relacionado a saldo porém lembra que essa aqui é uma subclasse de conta né
+12:36
+então a gente tá herdando a classe conta é a classe conta tem sim o saldo mas que
+12:42
+a gente não tem acesso porque ele tá Private porém nós temos aqui um método get saldo que dá acesso ao saldo para a
+12:48
+gente somente leitura né ele retorna um dobro para a gente aqui então eu vou pegar aqui ó declarar uma variável valor
+12:55
+rendimentos e vou pegar o get saldo veja que esse GAP saldo ele não tá declarado
+13:00
+nessa classe mas eu vou clicar nele aqui para você ver ó que ele vai lá para classe e conta ó então na realidade aqui
+13:05
+nós estamos chamando o get saldo da classe conta tá vou multiplicar aqui pelo percentual de
+13:13
+juros dividido por 100 aqui nós pegamos fazendo matemática básica aqui para calcular o percentual aqui né Se for 10%
+13:21
+ele tem r$ 1000 É 100 reais de rendimento tá E aqui ao calcular esses
+13:26
+rendimentos nós queremos depositar nós queremos acreditar esse valor dos rendimentos nessa conta como que a gente
+13:33
+faz o crédito numa conta a gente tem um método depositar Olha que interessante ó depositar ué mas como assim a gente pode
+13:40
+chamar o depositar podemos Porque o método depositar Vou colocar aqui o valor rendimentos é um método que foi
+13:45
+declarado lá na classe conta e conta investimento é uma conta logo nós temos acesso aos membros da classe conta a
+13:53
+partir daqui ó depositar tá vendo vai acessar normalmente certo legal né Agora
+13:59
+vamos testar vamos entrar aqui na classe principal e ao invés da minha conta
+14:05
+agora ser do tipo conta apenas vou falar que ela é uma conta investimento e vamos
+14:10
+distanciar aqui uma conta investimento certo veja que o resto continua funcionando normalmente
+14:18
+mas aqui na minha conta eu vou deixa eu colocar esse sacar aqui normal 15 mil
+14:24
+vou sacar r$ 1000 e vou acreditar olha só que interessante acreditar
+14:30
+rendimentos 0.8 viu que interessante ó eu estanciei
+14:35
+conta investimento né um objeto tipo quanto investimento eu consigo chamar o
+14:40
+método depositar o método sacar e o método creditar rendimentos esse método querer editar rendimento foi o que nós
+14:47
+declaramos aqui na classe conta o investimentos porém esses métodos sacarem depositar Olha só vou clicar
+14:53
+nele ele foi declarado na classe conta né mas lembra que herança é um tipo de
+14:59
+relacionamento entre classes então quando nós instanciamos um objeto de uma classe que herda de outra classe como
+15:07
+por exemplo aqui conta investimento que é da classe conta nós temos um único objeto então o objeto referenciado por
+15:14
+essa variável minha conta ele é um único objeto Porém esse direto ele tem todas as características e todos os
+15:20
+comportamentos da classe contra investimento seguindo toda a sua
+15:26
+hierarquia eu quero dizer com hierarquia quanto investimento herda conta então isso faz parte da hierarquia né extens
+15:32
+Aqui nós estamos criando hierarquia é um que é filho do outro né conta investimento é filha de conta então o
+15:39
+objeto referenciado por minha conta é um único objeto que tem características e
+15:44
+comportamentos de conta e investimento e Claro conta também por isso nós conseguimos chamar tudo isso diferente
+15:50
+se fosse só uma conta se fosse só um objeto do tipo conta nós podemos ainda
+15:56
+assim chamar depositar e sacar mas nós não podemos chamar acreditar rendimentos porque esse método que foi declarado na
+16:02
+conta investimento e um objeto do tipo conta não é uma conta investimento claramente certo então vou voltar aqui
+16:09
+dizer que é uma conta investimento mesmo e vamos fazer esse cálculo tá vamos ver agora deixa eu comentar isso
+16:16
+aqui que eu quero ver só a minha conta tá então trabalhar só com a minha conta eu quero saber qual que é o saldo dela
+16:21
+depositamos 15 mil sacamos mil depois os juros Olha só 15 menos 1000 deu 14 mil
+16:30
+mas o 0.8% foi 112 né então 14 foi o
+16:35
+saldo final Então tá funcionando né e agora vamos fazer um the bug ó vou colocar aqui um breakpoint aqui
+16:43
+vamos rodar aqui modo de Buck olha só que interessante estamos aqui
+16:50
+vamos saciar agora esse Construtor contra investimento eu vou fazer um step into para entrar dentro do Construtor
+16:56
+para ficar claro para você ó entramos dentro do Construtor de conta
+17:01
+investimento a um instancial um objeto do tipo contra investimento certo Agora vai chamar o super vou fazer um step
+17:08
+into novamente ele vai para onde vai pensando comigo o super vai chamar qual construtor de qual classe vamos ver olha
+17:15
+só o Construtor da classe conta tá vendo agora vou fazer um step houver aqui vamos rodar tudo isso aqui normalmente e
+17:22
+vai sair agora do Construtor da classe conta vai voltar lá para o Construtor da conta investimento olha voltou para o
+17:28
+Construtor da conta investimento Então nesse momento nós já temos um objeto vamos ver já nesse momento nós já temos
+17:35
+um objeto do tipo conta investimento E olha que interessante o objeto do tipo quanto investimento foi instanciado
+17:42
+com a agência com número com saldo exatamente com aquelas propriedades que definimos na classe conta porque conta
+17:49
+investimento eu vou repetir várias vezes porque a ficha precisa cair tá bom porque conta investimento é uma conta e
+17:55
+por isso a conta investimento tem todas essas propriedades tá vendo que legal então vamos voltar para cá
+18:03
+e vamos dar um step over novamente aí ele vai voltar para classe principal né aqui na classe principal fazer step over
+18:10
+vamos silenciar isso aqui que a gente nem tá usando agora aqui agora nós vamos chamar o método depositar Olha só minha
+18:16
+conta ponto depositar né minha conta se você vê que a variável minha conta é
+18:24
+do tipo conta investimento quando a gente chamar o mestre depositar existe um método depositar lá na classe contra
+18:30
+investimento nela mesma não existe existe na classe conta que conta investimento é da conta então quando a
+18:35
+gente fizer um step into aqui olha só vai entrou dentro da classe conta ó
+18:40
+depositar E aí vai pegar e fazer essa checagem aqui e vai alterar o saldo e aí
+18:46
+eu te pergunto esse saldo aqui que saldo é esse né é da conta investimento é da conta bom é do objeto você tem que
+18:51
+pensar aqui nesse caso de objeto ó porque nesse caso aqui quando a gente tá depositando Olha só vias aqui ó Visa
+18:59
+aponta para esse objeto aqui esse objeto ele é ele tem um saldo Zerado ele é do
+19:04
+tipo conta investimento ó Então quando você alterar aqui esse saldo vou dar o step over para você ver dá uma olhada no
+19:10
+saldo aqui tá vendo quando a gente fizer um step over ele alterou o saldo para 15 mil Às vezes a confusão que algumas
+19:18
+pessoas ficam nesse nesse ponto quando tá aprendendo orientação objetos é que não entendem porque pera aí eu tô
+19:24
+alterando o saldo da conta mas tá alterando aqui um saldo da conta investimento tá vendo que é um tipo esse
+19:29
+objeto que é do tipo conta investimento tá vendo o que não entende é a diferença aqui que tem que ficar muito claro para
+19:35
+você é a diferença de classe e objeto lembra que classe é apenas o molde é apenas a estrutura e objeto é aquilo que
+19:43
+existe de verdade na memória do Java então Aqui nós temos um único objeto do
+19:48
+tipo contra investimento que também é o tipo conta então tudo todas as
+19:54
+características de conta investimento desse objeto aqui é de conta e quanto
+19:59
+investimento estão nesses objeto aqui tá então quando a gente chama o depositar aqui ele altera o saldo da nossa conta
+20:06
+de investimento né e eu vou fazer aqui um step Lover novamente ó vamos chamar o sacar agora vai chamar o sacar da minha
+20:14
+conta Lembrando aqui que é minha conta aqui ó a minha conta é esse objeto aqui que é do tipo conta investimento Vamos
+20:21
+lá fazer um step Pinto fizemos step intro veja que entramos aqui dentro do método sacar da classe conta vamos fazer
+20:30
+só checagem olha agora nós vamos debitar o saldo esse saldo de 15 mil aqui ó tá
+20:36
+vendo a gente está no método Sakai aqui nesse quadradinho azul não sacar fiz a
+20:41
+ponta para o saldo Então esse saldo aqui é como se tivesse assim ó 3 saldo tá é a
+20:47
+mesma coisa não é obrigatório colocar o vírus aqui mas é obesa então este objeto
+20:52
+aqui vai ser debitado esse saldo Vamos fazer um step over Olha só foi para 14 mil tá vendo Então
+20:58
+vamos fazer o step Uber novamente Beleza agora vamos chamar o creditar rendimentos acreditar rendimentos também
+21:05
+da minha conta vamos fazer um stepinho para ver onde ele vai ele foi lá para o método creditar rendimentos da conta
+21:11
+investimento que foi onde foi declarado e vamos fazer essa conta aqui aí agora
+21:17
+nós vamos acreditar né depositar o valor dos rendimentos quando a gente chama o
+21:22
+depositar ele vai chamar esse método da onde ó lá do conta da conta
+21:29
+Então olha só o método depositar a ponta para o mesmo objeto quando está lá no
+21:34
+método creditar rendimentos da classe contra investimento ele tá apontando para esse objeto vou depositar também tá
+21:40
+apontando para o mesmo objeto é um tá vendo que o código vai para uma classe volta para outra classe mas o objeto que
+21:47
+está sendo impactado que a gente tá alterando o saldo é o mesmo é sempre o mesmo Olha só lá no método bem na classe
+21:55
+principal a minha conta aponta para esse objeto aqui o método creditar rendimentos que tá na classe conta
+22:02
+investimentos aponta para isso objeto aqui o mesmo e quando chamam depositar da classe conta o Visa aponta para o
+22:10
+mesmo objeto é um único objeto que tá sendo impactado nessas operações
+22:16
+vou fazer um step over aqui Vamos alterar acreditar agora os rendimentos veja o saldo que tá 14 mil vai ser
+22:22
+alterado alterou tá vendo e aí volta para a classe principal eu vou continuar
+22:29
+a execução viu só então quis te mostrar isso passo a passo para você entender
+22:34
+porque talvez essa parte de objetos e classes quando entra em herança dá um nó
+22:41
+na cabeça acaba que o que você tinha aprendido você vamos dizer desaprende aqui quando entra herança Porque eu sei
+22:48
+que é difícil mesmo para quem tá vendo isso é a primeira vez por isso eu tô tentando fazer a forma mais paciente possível para você entender isso aqui tá
+22:54
+bom então beleza agora nós vamos criar um outro tipo de conta aqui uma nova
+23:00
+classe e essa classe vai ser a conta especial e uma conta especial também é do tipo
+23:07
+conta é uma subclasse de conta então a super classe é conta subclasse conta especial uma conta especial ela tem um
+23:15
+valor de limite de cheque especial Então vou criar uma variável de Instância aqui vou chamar de valor limite Poderia
+23:22
+chamar de valor cheque especial é o nome que você achar melhor que você tá acostumado num domínio do seu problema
+23:28
+resolver o seu problema e vamos criar aqui o Construtor um Construtor que recebe esses os mesmos argumentos vou te
+23:36
+mostrar agora ao invés de digitar você pode clicar com o botão aqui ó ficar em generate colocar aqui Construtora e aqui
+23:44
+eu vou selecionar que eu quero chamar esse Construtor eu quero chamar o Construtor da Super clássico
+23:51
+qual Construtora super clássico você quer chamar quer chamar esse aqui tá vou dar um ok e aqui ele tá perguntando se
+23:57
+você quer inicializar algum algum variável de Instância chama aqui de fio
+24:03
+de né uma propriedade dessa classe eu vou falar vou selecionar o valor limite que aí ele já vai olha só que legal ele
+24:12
+já vai receber titular a agência e número e ele adicionou um argumento a mais aqui que é o valor do limite então
+24:17
+ele chama o super para chamar o Construtor né para inicializar essas esse essas propriedades e já depois
+24:25
+atribui o valor do limite tá só uma coisa importante isso aqui tem que ser nessa ordem tá o super não pode ser a
+24:32
+segunda instrução tá bom super sempre tem que ser a primeira instrução porque nesse momento aqui o objeto ainda está
+24:37
+em construção então o super Obrigatoriamente precisa ser a primeira instrução eu vou gerar aqui também os
+24:44
+gases sérias desse valor limite tá vou gerar aqui ó valor limite para a gente poder
+24:52
+ler esse valor ou também alterar se a gente quiser através do sete valor limite tá bom beleza feito isso agora
+24:59
+vamos para cá esse principal vamos usar agora uma conta especial olha só eu vou
+25:05
+deixa eu pegar deixa eu ver aqui eu vou bom deixa aqui eu vou pegar sua conta tá
+25:12
+eu vou comentar aqui vou descontar aqui e vou pegar a sua conta vai ser conta
+25:18
+especial sua conta conta especial e aqui eu preciso passar mais um argumento que
+25:23
+é o valor de limite tá bom valor de limite vou colocar mil reais
+25:30
+ok aqui na minha conta vou comentar aqui por enquanto aqui na sua conta eu vou
+25:36
+descontar Então vamos apesar de estar instalação da minha conta aqui nós vamos realizar operações aqui não tem problema
+25:41
+realizar isso também não né tá funcionando Vou deixar comentários vamos realizar como operações só na sua conta
+25:47
+e a sua conta é uma conta especial Ela não é uma conta de investimento Tá bom sua conta especial no nosso cenário aqui
+25:54
+ela tem um limite de cheque especial mas ela não tem rendimentos tá porque conta especial
+26:00
+extenso conta se você falar assim ah mas conta especial pode herdar e contra investimento pode se você achar que
+26:06
+conta especial deve ser um tipo de conta investimento que também é uma conta pode
+26:12
+você cria hierarquia tá então aqui você teria alguns níveis né hierarquia quanto especial é uma conta investimento quanto
+26:18
+investimento é uma conta tá mas não é o caso aqui do meu exemplo Vou colocar você fazer dessa forma aqui especial é
+26:24
+uma conta não é uma conta investimento E aí saciamos aqui certinho o valor do limite r$ 1.000 vamos depositar vou
+26:31
+depositar 15 mil aqui tá e vou pegar aqui a minha conta sacar e
+26:37
+vamos sacar 15 mil e 500 Teoricamente tem que funcionar
+26:44
+porque se nós temos 15 mil de saldo que eu depositei e eu tento sacar 15.500 mas
+26:50
+eu tenho um cheque especial de r$ 1000 eu posso eu posso ficar r$ 500 negativo né então deve funcionar isso aqui certo
+26:57
+mas se eu rodar nós temos a exceção Saldo insuficiente que foi lançado na
+27:03
+classe conta porque ó porque conta especial é uma conta então quando a gente chama o método sacar aqui na
+27:09
+classe principal na realidade nós estamos chamando Olha esse método foi definido na classe conta então tá
+27:17
+dando aqui que saldo é insuficiente E por que que tá dando salto insuficiente porque nós verificamos aqui a variável
+27:24
+de Instância saldo ele ficamos se ela se essa variável menos o valor que tá
+27:29
+tentando sacar se for menor que zero o saldo daria insuficiente Então não vamos nem prosseguir com essa operação tá
+27:36
+certo aqui né para classe conta se for pensar tá certo o problema é que a conta especial tem um com levemente diferente
+27:42
+não pode considerar o saldo que tem na conta tem que considerar o saldo que tem na conta mais o valor de cheque especial
+27:49
+para poder saber se pode ou se não pode sacar e aí será que a gente mexe alguma
+27:54
+coisa aqui será que a gente altera alguma coisa aqui a gente reescreve esse método aqui na classe conta especial é
+28:00
+seria até uma alternativa você reescrever ele daqui a pouco a gente vai falar sobre a escrita de métodos seria
+28:06
+uma alternativa Mas você ficaria com muito código duplicado aqui nesse caso vou te mostrar uma outra alternativa uma
+28:14
+outra solução para esse aqui que é o seguinte eu vou criar aqui na classe conta um outro método colocar aqui ó vou criar
+28:22
+um método Double que vai retornar que ela vai chamar get saldo disponível sendo que o saldo disponível ele ele é o
+28:32
+GAP saldo tá então saldo disponível de uma conta que está na casa conta né uma
+28:38
+calçada disponível na conta é o saldo bom como tô só delegando a chamada para
+28:44
+outro método É sim por enquanto sim mas eu vou usar esse get saldo ao invés de usar aqui ó na hora de sacar na hora de
+28:52
+fazer essa checagem usar o saldo menos valor menos pior que zero vou usar esse métodos Gets saldo disponível tá e se eu
+28:59
+fizer só isso aqui vai continuar dando exceção Saldo insuficiente logicamente porque o get saudo Disponível só tá
+29:06
+chamando Gets saldo que por consequência tá pegando o saldo então não muda nada né Teoricamente assim na prática não vai
+29:13
+mudar nada na verdade né só mudamos as chamadas aqui mas tá pegando o saldo no final das contas Mas por que que eu fiz
+29:19
+essa alteração porque agora a subclasse uma classe que ia dar conta pode
+29:26
+sobrescrever métodos então subclasses podem sobre escrever métodos de super
+29:32
+classes que que é sobre escrever métodos também é um conceito da orientação objeto muito importante chamada sobre a
+29:38
+escrita de métodos em inglês é chamado de overwatch à disposição de métodos e nós usamos quando nós queremos sobrepor
+29:45
+substituir especializar alguma funcionalidade da Super classe aqui na
+29:52
+subclasse e o que que eu vou fazer aqui eu vou nessa classe conta especial eu
+29:58
+vou sobrescrever esse método da classe conta Gets saldo disponível ou seja
+30:04
+oferecer uma get saldo disponível a ideia já vai me ajudar disponível e nós
+30:09
+vamos aqui sobre escrever tá vou te pagar isso aqui esse método aqui que nós declaramos na classe conta ele está
+30:16
+sobre escrevendo este método aqui na conta especial né da classe conta
+30:22
+inclusive você pode ver aqui que tem aqui em cima de um método tem um negócio que a gente chama de anotação
+30:32
+[Música] na linguagem já existe um recurso né
+30:39
+chamar de anotação ou anota inglês que permite que a gente adicione meta dados
+30:44
+em classes em membros de uma classe enfim funciona como uma marcação
+30:49
+funciona como um rótulo né ou como eu disse como meta dados que nós colocamos em elementos para que eles sejam
+30:56
+tratados de alguma forma especial pelo compilador Java ou também por ferramentas de desenvolvimento por
+31:02
+bibliotecas Então esse override aqui veja que aí na própria ideia Já colocou para a gente ele indica que a Declaração
+31:09
+desse método aqui tem a intenção de sobrescrever um método da Super classe e
+31:15
+quando o método tem essa notação o compilador Vai checar se realmente da sobrevivendo Então deixa eu retornar
+31:21
+aqui um valor zero por exemplo não deu erro nenhum porém se eu colocar
+31:30
+já dá erro de compilação compilador fala assim ué Como assim você tá tentando sobre escrever esse método getshow
+31:36
+disponível 2 mas ele não existe na super classe aí isso que ele tá dizendo aqui ó um método não não sobre as greve um
+31:44
+método da superclasse Claro porque eu terei o nome do método aqui ó é o nome o nome correto é esse não vou copiar eu
+31:50
+vou colar aqui aí beleza então é uma anotação que te Garante essa segurança de que você realmente está sobre
+31:56
+escrevendo um método da sua super classe já que a sua intenção é realmente sobre escrever esse método tá bom bom mas o
+32:03
+que que mais importa para a gente aqui é que áudio substituir aí ó sobre escrever esse método get saldo disponível agora a
+32:10
+gente pode implementar aqui uma lógica diferente para dizer o que que é um saldo
+32:16
+disponível e note que em uma conta comum o saldo disponível é o próprio saldo tá
+32:22
+é o saldo que tem em conta em uma conta de investimento também o saldo disponível é o próprio saldo que tem em
+32:30
+conta até por isso a Gente Nem precisou sobre escrever aqui deixa eu usar essa implementação mesmo já que conta
+32:36
+investimento é da conta Porém na conta especial é diferente essa regra o saldo disponível é o próprio saldo mas o valor
+32:44
+do limite então eu vou fazer assim saldo mas get valor limite né o get saldo é da
+32:51
+Super classe é um método da Super classe o get valor limite é um método da própria classe conta especial Então nós
+32:57
+vamos somar as duas coisas e aí O legal é que ao fazer o
+33:03
+saque aqui né no comportamento do método sacar da classe conta ele vai chamar o método getsudo disponível E aí você pode
+33:10
+pensar assim ué mas na hora de chamar esse Gueto saldo disponível ele vai chamar esse aqui ele vai estar retornando o saldo não vai ser o saldo
+33:16
+mais limite e se você vê pela ideia aqui ó se eu clicar no comando contra ou clicar veja que realmente ele vai estar
+33:23
+chamando aqui ele tá referenciando esse método Guedes certo do saldo Porém na
+33:30
+da execução nós temos que lembrar que nós vamos ter um objeto do tipo contra especial e esse objeto do tipo conta
+33:36
+especial essa classe conta especial sobre escrever o método saldo disponível então
+33:42
+é como se fosse mágica e não é mágica é simplesmente orientação objetos funcionando
+33:48
+quando chegar aqui ao chamar o método get saldo disponível ele não vai chamar
+33:53
+esse aqui não quando for um objeto tipo conta especial Tá bom ele não vai chamar isso aqui de baixo não ele vai chamar o
+33:59
+método sobre a escrita duvida vamos ver funcionando isso aqui é muito interessante essa parte aqui ó Então
+34:05
+vamos lá só lembrando que não tava funcionando agora se eu rodar novamente
+34:10
+Ainda não tá funcionando Porque será que eu teria alguma coisa conta
+34:16
+bom eu te mostrei tudo aqui fazendo com minha conta né eu tinha que ter mostrado aqui ó deixa eu comentar aqui porque eu
+34:23
+errei aqui na hora de te mostrar eu fiz sua conta e minha conta na verdade a sua e sua tá tava minha conta aqui embaixo
+34:28
+então ó só para você ver que o saldo tá indisponível para sua conta tá mas se eu
+34:35
+fizer a sobre a escrita agora do mestre do Gueto saldo disponível Aí sim ó agora sim você vai ver que funciona Ó ficou
+34:42
+menos r$ 500 isso porque é uma conta especial tá a conta especial pode ficar
+34:48
+menos r$ 500 Se eu colocar aqui 16.500 aí não vai porque nosso limite de cheque
+34:53
+especial é só r$ 1000 aí não pode ó tá vendo mas 15.500 até até mil reais de
+34:59
+limite é permitido tá vendo Então ficou negativo agora vamos fazer aqui
+35:06
+o the bug tá eu quero te mostrar a chamada daqueles daquele método sarcar
+35:12
+do getsuda disponível eu acho que vai ser bem interessante a gente vê isso no the bug para ficar mais claro Olha só
+35:18
+vamos chamar o método sacar vou fazer um step intro Só lembrando sua conta olha aqui no jarvisual quem é sua conta a sua
+35:27
+conta tá apontando para um objeto do tipo conta especial beleza e tem olha só
+35:33
+o saldo de 15 mil reais e o valor limite r$ 1000 tá Agora vamos fazer um aqui
+35:39
+para entrar dentro do método sacar tá bom entrou dentro do método sacar vai fazer essa checagem aqui tudo bem eu vou
+35:45
+passar ela step over Agora sim olha vai fazer essa checagem aqui que ela é chave
+35:52
+aqui nessa aula né que eu tô te mostrando agora vamos verificar se o
+35:58
+saldo disponível tem saldo disponível Não mas esse saldo disponível veja que nós estamos na classe conta esse saldo
+36:03
+disponível esse método ele foi declarado aqui na classe conta então se ele Chamar
+36:08
+esse método aqui ele vai retornar o saldo ele não vai retornar o saldo mais limite porém nota que nesse ponto nesse
+36:16
+contexto que tá sendo executado a gente tá aqui no método sacar o vírus ou seja
+36:21
+esse objeto do contexto que está sendo executado ele aponta para este objeto
+36:27
+aqui ó essa referências né aponta para esse objeto que conta especial e essa a
+36:33
+classe conta especial sobre escrever o método Gueto saldo disponível por ela ter sobre escrito método saldo
+36:40
+disponível ao fazer o step into aqui você vai ver que não vai ser esse método aqui que vai ser chamado vai ser o
+36:46
+método que foi sobre escrito quer ver ó step Pinto foi lá para classe conta especial dentro do método getsau
+36:53
+disponível aquele método do lado classe conta não foi chamado porque aqui foi sobre a escrita e aqui sim tá fazendo a
+36:58
+soma das duas coisas ó Então vai somar vai retornar para casa e conta e vai ter
+37:05
+saldo suficiente porque agora esse get saldo disponível retornou
+37:11
+retornou o valor com limite né então vou fazer um over aqui agora vai debitar o
+37:19
+saldo normalmente ó vai limitar aqui você vai ver o saldo aqui ó que tá 15 mil né vai ficar menos
+37:26
+500 tá vendo menos 500 foi permitido porque tem um valor limite de mil reais se fosse uma outra conta por exemplo se
+37:33
+fosse uma conta investimento isso não seria possível porque o get saiu disponível não foi sobre escrito né não
+37:39
+tem valor limite Tá e agora continuamos a execução certo viu só que interessante
+37:45
+Então é isso Lembrando que que você pode então ter uma hierarquia de classes
+37:51
+maior como eu já citei aqui anteriormente né Por exemplo poderia falar com investimento é da conta
+37:57
+especial é da conta investimento que é da conta você pode criar uma hierarquia maior se você quiser também em Java não
+38:04
+existe herança múltipla Ou seja que eu quero dizer com isso uma classe não pode herdar mais de uma só pode olhar uma
+38:11
+única classe não existe como você fazer você tem desconta e também Entendes outra coisa que não tem como fazer isso
+38:18
+em Java tá é só uma herança uma outra classe benefícios de você usar
+38:26
+herança é reuso de código tá tomando muito cuidado como eu já disse é um
+38:32
+recurso muito poderoso da orientação objetos mas você deve usar com muito cuidado né você não deve usar apenas
+38:38
+para reutilizar código para reaproveitar código fazer usar herança para isso é errado tá então você sempre tem que
+38:45
+pensar em herança fazendo aquela análise né então é um né responde se é um com o
+38:52
+crescimento é uma conta se sim ok tá e outra coisa te beneficia muito com o uso
+39:00
+de polimorfismo Nossa que palavra maluca é essa né você vai estudar vai aprender ela mais à frente tá bom que como
+39:06
+funciona isso na orientação objetos

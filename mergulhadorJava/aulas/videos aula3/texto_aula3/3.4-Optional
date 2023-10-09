@@ -1,0 +1,794 @@
+
+[Música]
+0:03
+agora deixa eu te mostrar como se
+0:05
+proteger de uma temível Exception
+0:08
+chamada no Pointer Exception bom vou
+0:11
+criar aqui um método nessa classe banco
+0:14
+para a gente estimular esse problema tá
+0:15
+bom vou criar um método que retorna uma
+0:18
+conta eu vou chamar de buscar
+0:20
+basicamente esse método deve receber
+0:23
+dois argumentos o número da agência e o
+0:26
+número da conta e dado esses argumentos
+0:29
+a gente deve localizar a conta com essa
+0:32
+agência e esse número na lista de contas
+0:34
+e retornar essa conta então vou fazer um
+0:37
+forte tradicional mesmo um ranço de fora
+0:40
+na verdade né aqui ó te conta e vamos
+0:44
+tentar localizar a conta se a conta
+0:47
+get agência for igual a agência e
+0:52
+o número foi igual a número da conta
+0:55
+então nós vamos retornar
+0:59
+a conta agora se a gente interou em todo
+1:03
+esse loop aqui não encontrou a conta aí
+1:05
+nós vamos retornar no Beleza deixa eu
+1:08
+quebrar isso aqui para ficar mais
+1:10
+visível aqui para você então o código
+1:12
+muito simples aqui para buscar uma conta
+1:15
+através de uma agência e o número de
+1:17
+conta agora aqui eu criei uma classe
+1:19
+com o método Man para a gente exercitar
+1:22
+tá já tem instanciado aqui o banco e
+1:25
+vamos tentar buscar aqui pegar o banco
+1:28
+ponto buscar tentar buscar aqui uma
+1:30
+conta um dois três vírgula 222 deixa eu
+1:34
+ver se existe essa conta aqui
+1:36
+Deixa eu procurar aqui que a gente já
+1:38
+instaurou a agência um dois três um
+1:41
+número dois dois dois então existe essa
+1:44
+conta no banco tá ele vai retornar aqui
+1:46
+uma conta uma
+1:49
+contada beleza
+1:51
+ok importei aqui beleza e agora eu vou
+1:55
+imprimir o saldo imagina que a gente
+1:57
+quer buscar essa conta para imprimir o
+1:58
+saldo conta
+2:00
+encontrada.guete saldo
+2:03
+vamos rodar essa classe aqui para a
+2:06
+gente ver olha só encontrou a conta e
+2:09
+retornou imprimiu aqui na saída o saldo
+2:12
+Agora se a gente tentar colocar uma
+2:15
+conta que não existe deixa eu ver uma
+2:17
+conta que não existe aqui acho que é 333
+2:19
+não existe é uma conta de código 333 não
+2:22
+existe então eu vou procurar aqui agora
+2:24
+333 que que vai acontecer esse método
+2:28
+buscar não vai encontrar essa conta de
+2:30
+número 333 E vai retornar no ou seja nós
+2:34
+vamos atribuir no e no é
+2:38
+referenciando tá dizendo que a variável
+2:40
+não tem nenhuma referência a um objeto
+2:43
+não aponta para nenhum objeto na memória
+2:45
+então vai ficar assim ó como se tivesse
+2:48
+assim sabe
+2:51
+E aí quando a gente for buscar o saldo
+2:53
+aqui ó dá um get saldo na conta
+2:55
+encontrada na verdade a conta encontrada
+2:58
+Tá nula e a gente tentar fazer uma
+3:00
+chamada de um método em uma referência
+3:02
+nula não vai dar certo vai acontecer
+3:04
+exatamente a no Pointer Exception Então
+3:08
+essa aqui é uma exceção que acontece
+3:10
+sempre quando nós tentamos acessar algum
+3:13
+membro de uma referência que não está
+3:16
+apontando para um objeto na memória e
+3:19
+qual é a forma a gente se proteger disso
+3:22
+né bom tem um jeito tradicional vou te
+3:25
+mostrar o jeito tradicional é sempre
+3:27
+fazer um if antes sempre verificar se
+3:30
+essa o que você quer ver quer
+3:34
+referenciar aqui né para pegar chamar o
+3:36
+método sempre verificar se não é nulo
+3:39
+se você faz isso para de dar Exception
+3:43
+né simplesmente a gente não imprime
+3:44
+poderia fazer um Elvis se você quiser
+3:46
+também enfim você faz o tratamento com
+3:48
+uma condição para verificar se essa
+3:52
+referência aqui não é nula Beleza se
+3:54
+essa variável aqui não não tá nula agora
+3:57
+existe uma alternativa que é retornar
+4:01
+esse método buscar aqui ele retornar
+4:04
+quando sempre retornar um óptico Não
+4:07
+nunca retornar um nuo ele vai retornar
+4:10
+um objeto do tipo opcional que que é
+4:14
+esse óptico é um objeto é opcional em
+4:17
+português né é um objeto que funciona
+4:19
+como um container que pode ter alguma
+4:22
+coisa lá dentro dele ou pode não ter
+4:24
+alguma coisa dentro dele pensa Sei lá
+4:26
+uma caixinha Pensa numa caixinha se eu
+4:29
+te mostro uma caixinha fechada você sabe
+4:31
+que tem dentro dela
+4:33
+pode ter alguma coisa ou pode não ter
+4:36
+vamos imaginar que seja uma caixa que eu
+4:38
+te fale assim ó essa caixa aqui é uma
+4:40
+caixa que eu guardo uma moeda pode ter
+4:44
+uma moeda lá dentro ou pode não ter
+4:46
+nenhuma moeda lá dentro ela pode estar
+4:48
+vazia também então eu já te informo o
+4:50
+que que eu guardo nesta caixa e você
+4:51
+sabe que pode ter ou pode não ter aquele
+4:54
+tipo de coisa que eu guardo na caixa
+4:55
+então é basicamente isso aqui na
+4:58
+classe banco nesse método buscar nós
+5:01
+podemos fazer isso eu vou eu vou até
+5:04
+comentar esse método aqui vamos criar
+5:06
+ele novamente agora esse método vai
+5:08
+retornar opcional
+5:11
+e o óbvio não você coloca o tipo
+5:13
+parametrizado aqui o que que pode ter
+5:15
+dentro dessa caixinha desse container eu
+5:17
+falo conta então ou tem uma conta dentro
+5:20
+do óbito não dentro do objeto ou não tem
+5:22
+nada e eu vou fazer aqui ó buscar na
+5:26
+verdade são as mesmas argumentos tá tudo
+5:28
+igual aqui o resto
+5:30
+porém ao invés de retornar a conta a
+5:32
+gente vai retornar um óptima de contas
+5:33
+retorna uma caixinha que tá dentro dela
+5:35
+pode ter ou não pode não ter a conta
+5:37
+certo então quando você usa esse óptico
+5:41
+é uma regra você nunca vai retornar nu é
+5:43
+possível Tecnicamente é possível você
+5:46
+retornar no mas esse aqui está errado
+5:48
+porque quando a gente usa o órfão A
+5:50
+ideia é que você nunca Trabalhe com Não
+5:53
+retorne nu mais
+5:55
+quando o retorno é um off não beleza
+5:59
+então agora como que a gente vai
+6:01
+implementar deixa eu vou até vou copiar
+6:03
+isso aqui tá que a lógica é muito
+6:06
+parecida ó vou descontar aqui só que
+6:08
+agora ao invés de retornar conta quando
+6:10
+existe encontramos a conta ao invés de
+6:13
+retornar a própria conta nós vamos
+6:15
+instanciar um óbvio não e para
+6:17
+instanciar a gente vai fazer assim ó o
+6:19
+ótional ponto Chamar esse método off e
+6:22
+esse método Óbvio ele vai passar um
+6:25
+valor lá dentro dele o que é o que a
+6:27
+gente passar lá dentro dele ele vai ser
+6:30
+um óptimo daquilo tipo assim se eu
+6:31
+passar uma conta ele é um óptico não de
+6:33
+conta então vou passar a conta
+6:35
+Justamente por isso a gente retorna um
+6:37
+óptimo de conta tá vendo Então nesse
+6:40
+caso aqui eu estou instanciando um ótimo
+6:42
+aquela caixinha com uma conta lá dentro
+6:44
+dela agora se não encontrar nada a gente
+6:47
+não pode como eu disse retornar no
+6:51
+E aí a gente vai retornar aqui um óptico
+6:56
+instanciando aqui ó Então nós vamos
+6:59
+retornar uma Isso aqui vai influenciar
+7:01
+um objeto do tipo óbito não porém dentro
+7:05
+desse ódio dentro dessa caixinha vai
+7:07
+estar vazio simplesmente isso E aí agora
+7:13
+a gente precisa trabalhar com optnon né
+7:16
+não posso atribuir o resultado do método
+7:19
+buscar em uma conta diretamente eu
+7:22
+preciso atribuir aqui um óbvio
+7:25
+de conta dessa forma aqui ó Então vou
+7:28
+chamar aqui conta
+7:30
+conta conta encontrada tinha mais de
+7:33
+conta encontrada ou conta óptima para
+7:36
+ficar só para você ficar ciente que isso
+7:38
+aqui é um óptico não tá bom eu vou
+7:39
+apagar esse aqui
+7:41
+E
+7:42
+aí como que a gente faz a gente
+7:47
+como como a conta pode estar dentro
+7:50
+desse óptimo que eu disse é o container
+7:52
+né a caixinha a gente vai precisar abrir
+7:55
+essa caixinha e pegar o que tem lá
+7:57
+dentro dessa caixinha e para a gente
+7:58
+fazer isso uma forma de fazer é chamando
+8:01
+o método get o get é obter né então fala
+8:04
+assim ó Abra a caixa e pega o que tem lá
+8:05
+dentro e veja com o método get vai
+8:07
+retornar a própria conta então vou
+8:09
+chamar aqui ó conta encontrada e vou
+8:12
+imprimir aqui
+8:15
+conta
+8:17
+encontrada.guete saldo beleza vamos
+8:19
+colocar uma conta que existe a 2 2 2 e
+8:22
+eu vou rodar aqui
+8:24
+olha retornou o saldo normalmente Então
+8:26
+beleza agora se eu colocar o 333
+8:32
+opa não existe o get aqui ó deu um
+8:35
+problema uma exceção no gueto tá vendo e
+8:38
+lançou a exceção
+8:40
+no set Element Exception uma exceção que
+8:42
+não encontrou um elemento ou seja não
+8:44
+existe um elemento dentro desse óptico
+8:46
+não você tá tentando pegar alguma coisa
+8:47
+lá dentro mas não existe né
+8:49
+aí você pode pensar Ué então Tiago não
+8:52
+resolveu continua com problema só mudou
+8:55
+o nome da exceção sem antes era no
+8:57
+pointerception agora o noset Exception
+8:59
+já que não tem né então acabou que até a
+9:03
+gente escreveu mais um pouquinho de
+9:04
+código para ter o mesmo resultado
+9:06
+concordo com você aí a gente pode
+9:08
+trabalhando aqui ó a gente para evitar
+9:11
+isso nós poderíamos fazer um if conta
+9:13
+óptimo
+9:16
+vai retornar um boleando indicando
+9:19
+dentro dessa caixinha dentro desse
+9:21
+container tem alguma coisa lá dentro se
+9:23
+tiver beleza continua aí vou fazer o
+9:26
+print aqui dentro ó se não tiver aí não
+9:28
+faz nada se você quiser faria um Elsa
+9:30
+Enfim então a gente pode verificar se
+9:33
+tem alguma coisa dentro ou não E aí eu
+9:36
+vou rodar e olha o 333 não existe então
+9:39
+a gente não executa essas instruções o
+9:42
+222 existe aí vai entrar dentro desse
+9:46
+bloco e vai executar essas instruções
+9:47
+certo e aí eu sei eu sei você pode estar
+9:51
+pensando assim
+9:52
+não entendi Tiago qual que é a vantagem
+9:55
+disso porque retornando
+9:57
+a conta o método buscar retorno da conta
+10:00
+ou nu eu também tinha que fazer esse
+10:02
+então no final das contas parece que não
+10:05
+mudou muita coisa você pode ter pensado
+10:08
+isso e faz sentido esse pensamento seu
+10:09
+se foi isso que você pensou mesmo é
+10:13
+porém eu quero te chamar atenção Para
+10:16
+uma coisa quando um método buscar
+10:19
+retorna um tipo conta pode acontecer
+10:23
+muitas vezes você achar que é garantido
+10:26
+que ele vai te retornar um objeto do
+10:28
+tipo conta você pode não achar que ele
+10:30
+vai te retornar um nu e aí você sem
+10:33
+querer trabalha o seu código aqui sem
+10:36
+fazer o if Entendeu agora quando esse
+10:39
+método retorna um ótimo isso deixa bem
+10:42
+expressivo no código é uma coisa que
+10:45
+grita no código sabe indicando que Opa
+10:48
+toma cuidado porque eu tô te retornando
+10:50
+aqui uma caixinha aqui é opcional pode
+10:53
+ter e pode não ter então como isso grita
+10:56
+para você no código você automaticamente
+10:59
+vai te chamar atenção Para realmente
+11:03
+fazer esse if aqui então essa é uma
+11:06
+primeira vantagem que mesmo fazendo
+11:09
+dessa forma aqui o uso do of não pode
+11:12
+ter esse benefício tá
+11:14
+agora o melhor é que não para por aí o
+11:17
+óculos não ele tem uma API com várias
+11:20
+formas de para você trabalhar com ele
+11:22
+então eu vou comentar isso aqui e vou
+11:25
+trabalhar de outra forma por exemplo eu
+11:28
+posso pegar aqui conta óptica e posso
+11:30
+chamar um
+11:32
+present esse presente ele recebe um
+11:36
+consumer que é uma interface funcional e
+11:39
+você sabe que a gente pode usar então
+11:41
+expressões lambda para implementar essa
+11:43
+interface funcional Então vou colocar
+11:45
+assim ó o que que tem dentro de um óbvio
+11:47
+não é uma conta né então vou colocar
+11:48
+assim uma conta
+11:50
+e vou imprimir aqui
+11:52
+conta.guete saldo que que isso aqui vai
+11:54
+fazer vai verificar se tiver presente ou
+11:57
+seja se tiver alguma coisa dentro desse
+11:59
+ódio não vai executar isso aqui se não
+12:03
+tiver não executa simplesmente isso olha
+12:06
+só como tem executou se não tem
+12:11
+não executa viu fica bem mais enxuto o
+12:15
+código bem legal né Então
+12:18
+essa já é uma uma grande vantagem certo
+12:21
+Além disso você pode
+12:24
+encadear as chamadas você pode fazer
+12:26
+assim ó não precisa declarar comentar
+12:29
+essa linha tá você não precisa declarar
+12:31
+uma variável atribuir você pode chamar o
+12:33
+banco ponto buscar encadear
+12:37
+o resultado Você já faz um wif present é
+12:40
+a mesma coisa então você economiza aí
+12:42
+não ter que atribuir a uma variável
+12:45
+deixa economia quer dizer deixa o código
+12:47
+mais enxuto né não em questão de memória
+12:49
+não muda nada só quero dizer que você
+12:51
+deixa o código mais fluente mais fácil
+12:54
+de leitura né
+12:56
+E tem uma outra coisa que você pode
+12:59
+fazer deixa eu comentar aqui ó não quero
+13:02
+que você perca essa referência aqui vou
+13:04
+fazer aqui ó
+13:06
+Na verdade eu vou fazer
+13:08
+se eu fazer assim eu vou fazer aqui
+13:10
+embaixo beleza vamos fazer aqui o banco
+13:13
+ponto buscar beleza buscamos isso aqui
+13:15
+retorna um óptico e você pode fazer
+13:17
+assim ó chamar orels trouble por exemplo
+13:20
+então quer dizer o seguinte
+13:22
+você esse método aqui vai é tipo um
+13:25
+atalho tá ele vai testar se tem algum
+13:28
+valor dentro do optimão Se tiver ele vai
+13:32
+lá e pega caso contrário ele já lança
+13:35
+uma exceção então ao invés de você fazer
+13:37
+um if e fazer toda essa regra você usa
+13:40
+como se fosse esse atalho aqui e ele
+13:42
+recebe um Supply que também é uma
+13:44
+interface funcional Então esse troll ele
+13:48
+vai te retornar
+13:50
+ele vai te retornar a conta mas se ele
+13:53
+não encontrar ele vai lançar uma exceção
+13:55
+ó vou colocar assim e aí não vou receber
+13:58
+nenhum argumento Então coloca abre e
+14:00
+fecha parênteses e vou instanciar uma
+14:03
+runtime Exception que você quiser tá
+14:05
+Lançar aqui vou colocar assim conta não
+14:08
+encontrada eu vou atribuir aqui para a
+14:11
+conta
+14:13
+encontrada
+14:15
+vou imprimir aqui ó conta encontrada
+14:18
+ponto GAP saldo Então se essa conta foi
+14:21
+encontrada esse troll vai simplesmente
+14:25
+retornar a própria conta a gente vai
+14:27
+atribuir aqui tá E que é o caso aqui o
+14:31
+222 existe está vendo agora se eu
+14:33
+colocar uma conta que não existe
+14:34
+aílsea vai verificar que opa não tem
+14:37
+nada dentro do opt não então eu vou
+14:38
+lançar essa exceção aqui aí vai lançar
+14:41
+exceção e nem chega aqui olha aqui ó
+14:44
+pessoal e lançamos a sessão One Time
+14:46
+conta não encontrada é legal né muito
+14:49
+bom isso aqui a peido ótimo é um epi
+14:52
+excelente uma classe pequena né que você
+14:56
+resolve um problema muito importante
+14:58
+Agora imagina que você queira fazer
+15:01
+diferente ó deixa eu copiar essa parte
+15:03
+aqui imagina que você queira pegar o
+15:07
+saldo e atribuir a um big dessa não
+15:08
+quero pegar o saldo de uma conta então
+15:10
+você vai lá e busca a conta só que isso
+15:12
+aqui vai retornar um óptima aula de
+15:13
+conta né E aí que que você pode fazer
+15:15
+bom o opcional tem um método chamado map
+15:18
+esse map aqui ele vai fazer uma
+15:20
+transformação do option ou de conta para
+15:23
+um óptimo de alguma coisa por exemplo se
+15:26
+eu tenho uma conta eu pego a conta ponto
+15:28
+get saldo então ele vai ele vai
+15:31
+transformar em um óptica de
+15:34
+de Big decimal e aqui a gente pode até
+15:37
+usar o Metal Gear conta get saldo tá
+15:42
+dando erro aqui porque isso aqui retorna
+15:44
+um option de Big 10 então teria que
+15:47
+colocar assim ó Option
+15:50
+óptimo certo porém eu não quero óptico
+15:53
+eu já quero o próprio Big décimo do
+15:56
+saldo aí eu tenho que usar por exemplo
+15:58
+posso usar o posso usar o get né só que
+16:01
+você sabe que se usar alguém pode não
+16:04
+ter nada e vai lançar uma exceção você
+16:06
+pode usar
+16:07
+você acaba lançando uma exceção se não
+16:10
+tiver nada mas se você não quer lançar
+16:12
+exceção você fala assim tudo bem se eu
+16:14
+não encontrar se não existir a conta
+16:16
+para eu pegar esse saldo eu quero apenas
+16:19
+que devolva aqui um valor fixo um valor
+16:23
+zero por exemplo aí você pode fazer
+16:25
+assim ó alce que que é você ele vai
+16:29
+retornar ele vai abrir a caixinha do
+16:31
+óbito ele vai pegar o óculos e falar
+16:33
+assim se tiver alguma coisa lá dentro
+16:34
+retorna que tem lá dentro se não tiver
+16:36
+nada lá dentro retorna O que eu te
+16:38
+fornecer aqui como argumento E aí eu
+16:40
+posso permanecer por exemplo do décimo
+16:41
+ponto zero então se não tiver nada ele
+16:44
+vai atribuir o zero
+16:46
+vou imprimir o saldo aqui certo então
+16:48
+aqui ó nunca vai dar exceção tá ou
+16:51
+retorna ao próprio saldo da conta ou
+16:53
+retorna zero Vou colocar aqui uma conta
+16:55
+que existe veja que ele vai retornar o
+16:58
+saldo Se eu colocar uma conta que não
+17:00
+existe veja que ele vai retornar 0
+17:03
+Justamente esse zero aqui que eu passei
+17:05
+como argumento por para o método
+
+

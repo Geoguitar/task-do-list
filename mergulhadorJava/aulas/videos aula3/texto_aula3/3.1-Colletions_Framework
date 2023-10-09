@@ -1,0 +1,858 @@
+
+[Música] fala mergulhador aqui é o Thiago Faria da alga works seja bem-vindo a terceira
+0:07
+aula do mergulho Java durante essa semana eu estou publicando aulas para você aprender java do zero e criar sua
+0:15
+primeira aplicação de back end e nessa aula Nós vamos mergulhar em algumas epis importantes do Java como a collections
+0:22
+frameworking das expressões lambda e ainda vamos
+0:28
+desenvolver uma aplicação de um serviço web com Spring Sem dúvida essa aula será
+0:34
+uma das mais importantes desse curso porque ela vai te ajudar se diferenciar de outros programadores que infelizmente
+0:40
+ainda não sabem o que eu vou te ensinar aqui enfim essa vai ser uma aula muito
+0:46
+densa e você vai sair dela com uma bagagem muito importante então eu recomendo que você vá para um lugar
+0:52
+calmo pede para ninguém te interromper fecha o WhatsApp foca aqui comigo no conteúdo Tá bom mas se você ainda não
+0:59
+assistiu as duas primeiras aulas eu recomendo que faça isso primeiro porque você pode ficar perdido Se começar
+1:05
+direto aqui sem seguir a sequência correta vamos mergulhar agora em collections Framework que é uma API da
+1:12
+linguagem Java composta por várias interfaces várias classes para os mais diversos tipos de estruturas de dados
+1:19
+usar essa epi tem vários benefícios Como reduzir o esforço de programação e
+1:25
+melhorar a velocidade e qualidade do código mas que são essas tal de
+1:30
+collections né ou em português coleções que faz parte aí do nome dessa pi né collections bom quando falamos em
+1:39
+coleções logo pensamos em vários objetos de um determinado tipo agrupados né podemos colecionar por exemplo livros
+1:46
+figurinhas e até carros né e é justamente essa a ideia da API de
+1:52
+coleções do Java agrupar elementos em uma única unidade as coleções são usadas
+1:58
+para armazenar para recuperar e para manipular objetos as dessa api são
+2:05
+divididas em dois grupos então Aqui nós temos um diagrama onde nós mostramos
+2:10
+visualmente aqui as interfaces nós temos aqui a interface Collection que é a raiz
+2:16
+das coleções tá então dentro dessa epi essa interface Collection ela representa um tipo
+2:23
+mais um dizer mais genérico de coleção é a raiz das coleções a plataforma Java no
+2:29
+fornece nenhuma implementação direta dessa interface ou seja não existe nenhuma classe na peida collections que
+2:37
+implementa diretamente essa interface normalmente ela é usada
+2:43
+uma outra interface vai dar essa interface Collection E aí sim a classe
+2:48
+vai implementar essa outra interface tá então normalmente ela é usada quando nós queremos obter o máximo de generalização
+2:56
+possível e existem dois tipos aqui que herdam Collection duas interfaces na
+3:03
+leste que é uma representa uma lista tá e a interface 7 que representa aqui um
+3:09
+conjunto E também dentro da EPI de collections que nós temos os mapas a
+3:15
+interface map embora o map Esteja dentro da collections uma interface map não é
+3:22
+um subtipo de Collection tá então essa interface Collection interface map não
+3:28
+herda a interface Collection e a collections Framework fornece
+3:33
+implementações para todas essas interfaces existem outras interfaces também tá mas aqui tá mais resumido
+3:40
+Então as classe Existem várias classes várias implementações nessa epi que implementam essas interfaces aqui tá bom
+3:47
+e vamos agora falar de listas então né que eu acabei te mostrando ali né que leste uma lista é um tipo de Collection
+3:55
+e listas são que são coleções de objetos ordenados em uma sequência normalmente a
+4:02
+sequência é a inserção dos elementos na lista tá E também as listas aceitam
+4:09
+elementos duplicados cada objeto numa lista recebe um índice ou seja um
+4:16
+inteiro para por posição então nota aqui nessa nessa ilustração aqui de uma lista
+4:22
+que você pode ter então uma lista com índice 0 1 2 e 3 então aqui tá o índice
+4:29
+nessa coluna de cá nessa coluna à direita tem o próprio elemento o objeto Então temos imagina que um cliente João
+4:35
+com idade 21 vai ter outro cliente a Maria o Sebastião E como eu disse você pode ter elementos duplicados então aqui
+4:41
+o índice zero e 23 Imagine que ele possa estar com o mesmo exatamente o mesmo
+4:49
+objeto cliente João com idade 21 tá vendo Então as listas permitem duplicados
+4:56
+existem três implementações de listas dentro da collections Collection
+5:03
+que vai te mostrei na interface list que é uma interface que é da Collection Pois é existem três implementações ou seja
+5:10
+três classes na Collection Framework que implementa a interface list que é a
+5:17
+realist link deles e Vector e cada implementação de Leste cada classe dessa
+5:22
+possui características específicas em seu funcionamento aqui no caso a raylist a implementação
+5:29
+de lista mais usada Então vamos colocar a mão na massa aqui trabalhar com listas
+5:35
+da Collection Framework deixa eu criar uma nova classe aqui ó uma nova classe aqui nesse pacote app eu vou chamar de
+5:40
+principal 2 e vou criar aqui um método man beleza eu vou ensinar aqui vamos
+5:47
+criar uma lista de pessoas tá então vou instanciar aqui uma nova pessoa vou chamar de pessoa um mesmo meu pessoa e
+5:55
+eu vou criar um Construtor para essa classe pessoa para a gente poder instanciar um novo objeto do tipo pessoa
+6:02
+de uma forma mais simples Então vou gerar aqui um novo Construtor passando o
+6:07
+nome e o documento apenas Beleza eu vou criar também o Construtor padrão
+6:13
+consultor padrão para criar uma sobrecarga continuar dando essa opção de
+6:19
+aqui na classe principal a gente está sendo pessoa sem passar nenhum argumento eu não quero mexer nesse código aqui
+6:25
+então eu vou criar o Construtor sem argumentos também tá temos uma sobrecarga de construtores Beleza então
+6:32
+aqui eu vou colocar aqui nome João da Silva e o documento dele
+6:40
+um número qualquer beleza vamos imprimir fazer um print aqui ó nesse nessa pessoa
+6:46
+pessoa um bom você sabe que para a gente fazer um print a gente pode pegar assim ó pessoa pegar o nome né Mas e se eu der
+6:53
+um print apenas no objeto pessoa o que que vai acontecer deixa eu rodar aqui
+6:58
+para você ver tá demorando um pouquinho Ok veja que
+7:04
+ele apareceu um código meio maluco aqui tá vamos resolver isso aqui porque vamos fazer essa preparação para daqui a
+7:10
+pouquinho a gente vai criar nossa lista tá então para fazer essa preparação simplificar na hora de a gente depurar o
+7:18
+nosso código vamos dizer assim né com as listas vamos resolver isso aqui que que é isso aqui isso aqui é o que a gente
+7:24
+chama de True string é string que representa esse objeto quando a gente faz um print assim em uma referência de
+7:33
+um objeto esse print line Ele vai chamar esse
+7:38
+método aqui ó string ele vai chamar esse método da classe pessoa se a gente
+7:45
+entrar naquelas pessoas note que não existe esse método aqui mas ele está
+7:50
+disponível aqui pra gente por que que esse método tá disponível Porque toda classe quando ela não herda uma outra
+7:57
+classe ela na verdade tem uma herança implícita é esse aqui ó extrendisol objetivo
+8:05
+no singular e essa classe o objetivo que tem aquele método true string isso aqui
+8:10
+não é necessário você fazer sixteen de objetivo Porém quando você não faz de forma implícita ele já existe e existe
+8:17
+esse método true string que você pode chamar aí o que que você pode fazer você pode usar aquela aquele conceito da
+8:24
+orientação objeto chamado sobre a escrita de métodos para fazer uma sobre a escrita desse método true string você
+8:30
+pode fazer aqui na mão se você quiser ou você pode até gerar aqui ó o botão direito generate você pode gerar aqui o
+8:37
+two string E aí você diz o que que você quer que apareça no Twist string vou colocar que eu quero que pareça tipo o
+8:44
+nome e o documento apenas essas três propriedades e aqui tem vários modelos
+8:49
+de string Qual que você quer usar eu vou usar esse padrão mesmo aqui tá até nação
+8:54
+de Strings vou dar um ok veja que ele sobre escreveu o método
+9:01
+que herdou da classe o objetivo e colocou aqui uma string tá o formato que você vai colocar aqui você que decide
+9:08
+Mas vou deixar esse gerado mesmo agora quando a gente rodar novamente veja que
+9:13
+ao invés daquele código maluco ele apareceu aqui uma string que a gente consegue ler e entender que a string que
+9:21
+representa o objeto referenciado por essa variável é essa aqui tá bom então
+9:29
+Como eu disse nós estávamos estávamos aqui fazendo uma preparação você acabou aí aprendendo mais algumas coisas né
+9:35
+como que todas as classes herdam o objetivo aprendeu sobre o método e agora sim vamos entrar finalmente
+9:43
+nas na implementação aylist vamos criar uma lista e vamos instanciar uma lista
+9:50
+com a implementação ao realist bom para a gente declarar uma variável que é uma
+9:55
+lista nós podemos declarar usando aquele super tipo list você poderia declarar um
+10:02
+ao Rei Leste uma variável do tipo Power Elite sim mas é sempre uma boa prática você declara a variáveis usando super
+10:09
+tipos justamente para você ter o benefício do polimorfismo né então eu vou declarar aqui ó como leste lá do
+10:17
+pacote Java útil e quando você vai declarar uma lista você especifica aqui
+10:23
+um tipo parametrizado isso aqui é chamado de generics você vai passar aqui entre esse menor maior que um tipo
+10:31
+parametrizado aqui dentro ou seja para você informar para você limitar Qual é o
+10:37
+tipo de objeto que pode ser adicionado dentro dessa lista como nós queremos uma lista de pessoa então eu coloco aqui o
+10:43
+tipo pessoa tá bom E aí você não pode ter tipo primitiva aqui pelo menos até a
+10:49
+versão atual do Jaba você não pode ter uma lista de tipo primitivo você poderia ter uma lista de tipo rapper tá bom tipo
+10:57
+primitivo ainda não é possível mas não queremos isso nós queremos pessoa uma lista de pessoa então só podemos ter
+11:04
+objetos do tipo pessoa dentro dessa lista e agora eu coloco o nome da variável pessoas e eu já posso atribuir
+11:10
+aqui mas o que que eu tenho contribuir eu tenho que retribuir uma Instância de um objeto do tipo list
+11:17
+e nós temos algumas implementações como você viu lá naquele slide Mas nós vamos trabalhar aqui com a relístico é o mais
+11:23
+usado tá vamos trabalhar apenas com ele aqui então eu vou distanciar aqui
+11:29
+aqui já é a classe então enquanto list é uma interface a realist é uma classe e
+11:35
+nós vamos instanciar veja que alistanciar a ideia já completou para mim ela fez esse essa abertura e
+11:42
+fechamento aqui do sinal menor maior Você poderia colocar Assim pessoas especificando novamente mas é
+11:48
+desnecessário porque a linguagem Java você pode colocar isso aqui conhecido como operador diamante que ele faz
+11:56
+ele faz a referência e automaticamente ele já vai instanciar uma relístico de
+12:02
+pessoa porque ele infere que é ou seja ele descobre que é pessoa através da
+12:09
+declaração como foi declarado uma lista de pessoa ao installistanciar um instante
+12:14
+de pessoa também então agora sim nós temos aqui nessa referência pessoas uma
+12:21
+Instância que é uma lista uma playlist que nós podemos adicionar objetos dentro
+12:26
+dela internamente playlist possui uma capacidade inicial
+12:31
+de objetos tá isso é uma coisa da implementação interna ela tem uma capacidade mas a medida que a gente vai
+12:37
+adicionando novos objetos dentro dessa dessa relístico e a capacidade vai sendo
+12:42
+redimensionado automaticamente então na prática Não Existe limite de objetos que
+12:48
+você pode adicionar dentro da lista o limite mesmo é a memória do seu computador da jvm quanto vai suportar
+12:55
+beleza mas enfim não tem limite assim Teoricamente para você adicionar aqui
+13:00
+dentro Vamos então adicionar como que a gente adiciona essa pessoa aqui dentro dessa lista de pessoas a gente pega que
+13:07
+a referência da lista ponto e chamamos algum desses métodos esses métodos eles
+13:12
+são declarados na interface Liste e a classe a realística implementa esses
+13:18
+métodos tá vendo tanto que é importante você entender antes a orientação objetos agora para trabalhar com colections
+13:24
+porque tá usando aqui da melhor forma orientação objetos Então vamos chamar aqui o método Edge para adicionar um
+13:32
+novo objeto um novo elemento dentro da lista e aqui nós podemos passar então a
+13:38
+pessoa um que temos aqui distanciado antes certo se eu quiser mais uma pessoa
+13:46
+Vou colocar aqui Maria das couves
+13:54
+Beleza qualquer um documento qualquer que possa adicionar aqui ó vou adicionar pessoa 2 beleza e agora
+14:03
+eu vou simplesmente imprimir aqui ó a lista vou pegar a própria lista e fazer
+14:10
+um print nela e vou rodar para a gente ver o que que tem dentro Olha só agora Talvez você tenha entendido porque que
+14:16
+antes teve aquela preparação eu sobre escrever o tio string justamente para facilitar aqui na hora de rodar o nosso
+14:23
+programa para a gente fazer um print na lista e a gente já conseguir visualizar o que que tem dentro dessa lista Olha
+14:29
+então a gente chama esse aqui é como se estivesse chamando aqui o true string da nossa lista de pessoas e ele colocou
+14:37
+aqui que tem dois elementos lá dentro Ó tem essa pessoa que quer o João da Silva e tem essa outra pessoa aqui que é a
+14:43
+Maria das couves certo Então nesse ponto aqui nós temos uma lista com duas
+14:49
+pessoas Então beleza com a realist o acesso aleatório ou seja
+14:56
+o acesso a um elemento de um índice específico qualquer Ele é bem rápido tá
+15:02
+assim como a gente pode também fazer a interação em toda a lista Vamos
+15:07
+trabalhar aqui com acesso aleatório imagina que eu queira como Nossa lista tem dois elementos imagina que eu queira
+15:12
+que pegar o segundo elemento que está dentro dessa lista lembra que uma lista
+15:17
+trabalha com índices né começando no zero zero um dois três etc então vou fazer o seguinte vou declarar aqui
+15:23
+pessoa vou chamar de pessoa 3 vou pegar a lista pessoas ponto e vamos chamar
+15:28
+esse método get esse método get recebe um índice nós queremos a segunda pessoa que está nessa lista que tal a gente
+15:36
+passar assim então índice 2 será que vai funcionar vamos ver aqui ó e aqui eu vou
+15:41
+imprimir a pessoa triste deixa eu comentar isso aqui por enquanto e vou rodar aqui olha lançou uma exceção
+15:48
+ou seja o índice fora dos limites uma exceção do índice fora dos limites por
+15:54
+quê nós colocamos o índice 2 mas essa lista ela tem um tamanho de dois ué
+16:00
+Thiago tem tamanho de dois colocou dois por que que não funcionou porque começa no índice zero Então se a gente quer o
+16:07
+segundo é o 2 - 1 então é 1 aqui o 1 vai retornar a segunda pessoa que nós
+16:12
+adicionamos segundo elemento que é justamente a Maria das couves tá vendo Então essa é a forma de acesso aleatório
+16:20
+um índice específico a gente pode também fazer uma interação ou seja fazer um loop percorrer os
+16:27
+elementos dessa lista você pode fazer um loop por exemplo usando fortre tradicional pode fazer assim ó Enquanto
+16:35
+isso a gente igual a zero enquanto I for menor do que aí vou pegar a lista aqui ó
+16:40
+pessoas ponto e o list a interface list declaram um método chamado vai retornar
+16:47
+quantidade de elementos que tem lá dentro então quanto o I for menor do que sais e mais mais ou seja o incremento e
+16:54
+aqui eu pego assim ó pessoas é a lista né ponto get aí eu passo o i é variável
+17:00
+aqui né não vou passar um valor fixo é variável e simplesmente assim se você quiser pegar só o nome ó aqui vai chamar
+17:06
+o tio string né se eu quiser pegar só o nome eu posso também ó nome vamos fazer dessa forma e vou rodar veja João da
+17:14
+Silva e Maria das couves então nós interamos nesses nesses elementos né você também ao invés
+17:22
+de usar esse forte tradicional você poderia usar aqui várias formas de fazer né mas deixa eu te mostrar só mais uma
+17:28
+aqui é possível você percorrer as coleções usando em hansed 4 que que é isso é o for aprimorado do Java que que
+17:35
+é primorada é uma sintaxe mais simplificada que intera em elementos até o final quando você não precisa ter
+17:41
+controle de índices você não tem necessidade disso aí você pode usar ele Ó faz assim ó pessoa pessoa pessoas dois
+17:50
+pontos pessoas ou seja para cada elemento que tiver dentro da lista pessoas atribua este elemento esse
+17:56
+objeto a uma variável local chamada pessoa que pode ter Enfim vou colocar a
+18:01
+pessoa para ficar mais expressivo no nosso código e aqui eu vou imprimir ó pessoa ponto GAP nome
+18:07
+tá vendo É a mesma coisa do código acima porém com uma sintaxe mais enxuta né e
+18:14
+agora vamos verificar o seguinte deixa eu ver assim
+18:20
+vamos pegar fazer um print aqui ó
+18:27
+pessoa pessoa não colocar um boleando aliás vou fazer assim criar declarar um boleando aqui ó eu quero saber se
+18:34
+essa pessoa 1 se ela está dentro dessa lista de pessoas eu posso fazer o
+18:40
+seguinte ó vou chamar de existe aqui tá esboliano existe existe nome estranho
+18:45
+essa variável né mas deixa assim existe qualquer coisa eu mudo o nome dela depois quero saber se ela se essa pessoa
+18:51
+um ela está contida ela existe dentro dessa lista de pessoas Então vou pegar aqui a lista pessoas e vou chamar um
+18:58
+método contém esse método contém ele recebe um objeto um objetivo toda classe
+19:05
+como eu já te falei no início foi importante você saber isso também toda classe no final das contas é um objetivo
+19:12
+na hierarquia da herança ali no final toda classe é da objetivo então aqui tá
+19:17
+usando polimorfismo Você pode passar qualquer coisa porque o algoritmo vai verificar se esse objeto que você passou
+19:24
+se está dentro dessa lista mas claro vamos passar aqui o que a gente quer saber a pessoa um quer saber se a pessoa
+19:30
+um tá dentro dessa lista de pessoas né e está né porque nós adicionamos ela aqui
+19:36
+concorda comigo então vamos imprimir aqui agora o resultado o boleando existe a gente espera que retorne true não é
+19:42
+então beleza eu vou rodar o código aqui e retornou true realmente essa pessoa um
+19:50
+está aqui dentro da lista Ah agora eu vou declarar uma nova pessoa chamar de
+19:56
+pessoa pessoa 4 mil pessoas eu vou colocar Exatamente
+20:01
+isso aqui ó na verdade copiar aqui ó o João da Silva vou copiar colar sim João
+20:08
+da Silva eu quero saber se a pessoa 4 está dentro da lista e eu te pergunto essa pessoa que acabamos de distanciar
+20:14
+Está ou não está dentro dessa lista nota que o nome e o documento são exatamente
+20:20
+os mesmos Tá mas e aí é outro objeto nós estamos aqui outro objeto se eu rodar
+20:26
+veja que retornou falso não está dentro da lista E por que não está porque é um
+20:33
+objeto diferente então quer dizer que o método contém vai verificar apenas se é exatamente o mesmo objeto para saber se
+20:40
+está dentro da lista ou não não é assim que ele funciona esse método contém ele
+20:46
+vai percorrer toda a lista e vai verificar para cada objeto se ele é
+20:51
+igual ou seja por objeto que eu tô procurando aqui ele vai verificar se ele é igual a cada objeto que está dentro da
+20:57
+lista porém essa verificação de igualdade não é uma conferência de da
+21:05
+mesma Instância exatamente do mesmo objeto ele vai verificar se o conteúdo desses objetos são iguais Deixa eu te
+21:13
+explicar aqui ó para ficar mais fácil existe um existe um método dentro
+21:19
+das classes Vou Colocar assim uma pessoa um ponto existe um método chamado icous também esse método vem lá da
+21:26
+classe e objetivo você pode sobrescrever ele também tá esse método aqui é para
+21:31
+verificar se objeto é igual ao outro então se eu colocar assim pessoa um ponto iclos
+21:38
+pessoa 4 eu quero saber se esse objeto é igual ao objeto referenciado de pessoa 1 é
+21:45
+igual ao objeto referenciado por pessoa 4 se a gente rodar veja que deu falso não são E aí você pode pensar que tá
+21:51
+tudo certo não são iguais mesmo porque aqui é um novo uma nova Instância porém um ícone não é para você comparar a
+21:58
+Instância para você comparar conteúdo para você comparar a Instância você não usa o ícolas você usa igual ou igual
+22:05
+claramente vai dar falso né porque não é a mesma Instância se eu colocasse em pessoa um é igual a pessoa um vai
+22:12
+retornar true ó esse truque então se você quer comparar Instância você usa
+22:18
+igual a igual se você quer comparar conteúdo você não usa o igual você usa o operador igual você usa o ícolas que é
+22:24
+para comparar conteúdo Tá mas então qual o conteúdo é o nome é o documento isso
+22:30
+vai depender de qual algoritmo você fundamentar você pode sobrescrever
+22:37
+o método icous né esse método icous aqui na classe pessoa né
+22:44
+quando essa classe aqui tem algum tem um conhecimento lógico né que torna que que
+22:50
+torna esses dois objetos iguais né se você tem esse conhecimento que que torna duas pessoas iguais é o documento de
+22:56
+repente você pode falar assim é se o CPF de duas pessoas forem iguais podemos
+23:01
+dizer que eles esses dois objetos mesmo que sejam instâncias diferentes representam a mesma pessoa então beleza
+23:09
+então se você tem esse conhecimento você pode implementar o métodoicos aqui sobre
+23:14
+escrever ele tá vamos sobre a escrever então eu vou fazer na mão tá existe um
+23:20
+gerador que também de icos mas eu quero fazer na mão para você entender bem Tá eu vou fazer assim ó
+23:30
+aí ele já fez um overdrive aqui do método ecos lá da overwatch ou seja uma sobre a escrita do
+23:37
+iclos da classe Object e aqui nós vamos implementar a nossa lógica para dizer se
+23:43
+dois objetos são iguais ou seja se o objeto diz né porque estamos aqui dentro
+23:48
+de um método de Instância seu objeto diz se ele é igual em termos de conteúdo ou
+23:55
+seja representa o mesmo objeto que estamos recebendo como argumento aqui e para fazer isso vamos fazer alguma
+24:01
+verificação algumas verificações primeiro nós vamos verificar o seguinte os dias o próprio objeto que está sendo
+24:06
+executado esse método se a referência se ele for referenciado ou seja se a
+24:13
+referência é a mesma se a Instância exatamente a mesma do objeto recebemos como argumento já retorna truco né
+24:20
+porque aí a gente tá falando que é o mesmo objeto Então não preciso nem olhar conteúdo já é se a instância é a mesma
+24:26
+já é truco concorda vamos verificar outra coisa se esse objeto que recebemos como argumento
+24:32
+se for nulo se ele for nulo já retornamos falso porque não tem como um
+24:38
+objeto ser igual a nulo né então já retornamos falsa até mesmo para evitar alguma Exception quando a gente não tem
+24:44
+uma referência a gente pode tentar acessar daqui a pouco algum alguma variável de distância desse objeto ele
+24:50
+pode ter algum problema se for o caso né Agora eu vou verificar
+24:55
+outra coisa se a classe desse da se a classe do objeto
+25:02
+diz foi diferente da classe desse objeto ou seja essa a classe Qual que é a
+25:09
+classe do objeto diz é pessoa não é aqui ó tá vendo pessoa mas esse objeto aqui como a gente recebe um objetivo e ou
+25:15
+seja tem possibilidade aqui né do polimorfismo de passar um objeto qualquer de uma classe que não tem nada
+25:21
+a ver se essa classe for diferente de pessoa então nós também podemos retornar
+25:27
+falso já para a gente pegar qual que é a classe nós podemos chamar um método get Class que também todas as classes
+25:34
+possuem esse método get Class então vou fazer não preciso deles aqui posso deixar isso
+25:39
+implícito se esse aqui for diferente do objeto ponto get Class então retornamos
+25:46
+falsos ou seja eles possuem classes diferentes já retorna falso caso contrário nós vamos verificar aqui
+25:52
+ó já vou até fazer aqui eu vou verificar que o esse documento da pessoa tá vendo
+25:59
+documento aqui vou pegar imagina que a nossa lógica seja por documento tá se você falar não é por nome beleza faz a
+26:05
+lógica por nome se quiser usar duas propriedades para fazer a lógica use as duas ou três ou quatro no caso aqui eu
+26:11
+vou usar só o documento se dois objetos diferentes possuem o mesmo documento eu
+26:16
+digo que eles são iguais então eu vou fazer assim ó se o documento
+26:22
+foi igual eu vou chamar o ícolas olha que interessante o ícolas de pessoa dentro dele nós usamos o iclos do
+26:28
+documento que é o documento é uma string Então nós vamos usar o ícones de string é a forma correta de comparar string
+26:34
+inclusive usando o Igor também tudo que é objeto se você quer comparar conteúdo você usa o ícolas você não usa o
+26:39
+operador igual porque o operador igual vai comparar se é está apontando para o mesmo
+26:46
+endereço de memória se é exatamente a mesma Instância e não vai comparar conteúdo tá então usa o icos e o
+26:52
+documento ecos esse objeto aqui ponto documento ó eu fiz isso aqui e aí
+27:02
+o próprio ideia já fez um um casting aqui para mim ó porque porque
+27:10
+só pegando pelo objeto olha só eu não consigo ter acesso ao documento né
+27:16
+porque a gente tá usando um super tipo aqui e o objetivo Não tem essa não tem
+27:22
+essa variável de Instância documento e aí a ideia fez isso aqui para a gente ó para ficar até mais fácil deixa eu fazer
+27:28
+uma linha à parte aqui ó pessoa pessoa é igual
+27:34
+o BJ aqui ó então eu vou tentar atribuir esse objetivo que recebemos a uma pessoa
+27:39
+não funciona porque um objetivo não é uma pessoa o que nós podemos fazer é um
+27:45
+casting aqui ó é moldar essa ao fazer essa atribuição fazer essa
+27:52
+forçar esse Casting forçar entre aspas né porque a gente sabe que é do tipo
+27:57
+pessoa senão já teria esses IFES aqui já teria esse aqui já teria pego e retornado falso Então se tá tudo certo
+28:02
+nesses IFES aqui a gente já faz o Casting aqui isso aqui é bem seguro fazer para a gente enxergar esse objeto como
+28:09
+um tipo de pessoa porque aí a gente consegue aqui ó pegar o documento e comparar o documento da pessoa e
+28:16
+lembrando essa pessoa que é a mesma coisa desse objeto aqui eles apontam para a mesma são referências diferentes
+28:23
+apontando para o mesmo objeto mesma Instância tá Porém Aqui a gente consegue enxergar o documento fizemos isso Beleza
+28:30
+agora nós podemos fazer as comparação olha veja a pessoa um é igual a tirar isso
+28:38
+aqui ó pessoa um é igual a pessoa 4 veja que são objetos instâncias diferentes
+28:43
+porém com o mesmo conteúdo e agora ele retornou tru Se eu mudar alguma coisa aqui no documento ó mudei o documento aí
+28:51
+já retorna falsa tá vendo legal né então eu te ensinei Só lembrando aqui por que
+28:56
+que eu tô te ensinando esse método ecos ele é muito importante porque o contém
+29:02
+o contêmios usa ele quando você faz um contém pega uma lista e faz contentes
+29:08
+pessoa 4 antes estava retornando falso agora ele vai retornar à tua então
+29:13
+mesmo que você tenha adicionado um outro objeto que foi pessoa 1 né aí quando
+29:20
+você distancia aqui a pessoa 4 mesmo assim ele fala olha existe essa pessoa aqui porque o método contém ele vai ter
+29:28
+os elementos da sua lista e vai fazer a chamada do método e com os até encontrar
+29:34
+essa pessoa pelo documento porque a gente colocou a regra aqui no ícolas
+29:40
+pelo documento entendeu então beleza agora vamos falar de conjuntos dentro dessa pi de collections Framework que
+29:47
+que são conjuntos são coleções de objetos e a principal característica é
+29:53
+não aceitar elementos duplicados esse tipo de coleção também não possui índices para localizar elementos como as
+30:00
+listas possuem por é comum o uso de conjuntos em situações que queremos garantir que os elementos da coleção
+30:07
+serão únicos sendo aplicação e não temos a necessidade de acesso aleatório de
+30:13
+elementos através de um índice por exemplo imagine uma funcionalidade de um
+30:19
+sistema para envio de e-mails para uma coleção de contatos se vamos enviar o mesmo e-mail para uma coleção de
+30:25
+contatos é importante que não haja contatos duplicados para que a mensagem não seja enviada duas ou até mais vezes
+30:32
+para a mesma pessoa não é Além disso não existe necessidade de ter
+30:38
+índices nesse tipo de coleção porque não vai existir a necessidade de acesso aleatório a um contato específico
+30:45
+através de um índice Esse é um caso que o conjunto se encaixaria muito bem os
+30:50
+conjuntos são representados pela interface 7 tá vendo a interface 7 que
+30:56
+herda interface Collection essa interface vem lá do pacote de água quanto útil tá então a interface 7 era
+31:03
+da interface Collection assim como Liste também é da interface Collection que você já viu antes né e
+31:09
+existem três implementações da interface 7 dentro da pay de collections framer tudo Java tem aqui a hashtag tem a
+31:17
+linked 7 e a tres7 você pode ver que é 37 ela não implementa diretamente aqui o
+31:23
+sete ela implementa um certo de 7 anos aqui mas essas aqui ó essas três aqui embaixo são as implementações são as
+31:29
+classes que implementam a interface 7 tá bom Agora vamos pegar o nosso código
+31:35
+aqui que fizemos anteriormente Vamos alterar the list para sete ao invés de
+31:41
+declarar aqui uma coleção do tipo list a gente declara como sete da mesma forma e a implementação vamos usar aqui a hash
+31:49
+sete ó ao invés de lixo reset não funciona o Elite porque a realist não é
+31:54
+um tipo de set tem que ser então um tipo de sete e o headset é um deles tá essa
+31:59
+implementação aqui hashtag não garante a ordem dos elementos dentro do conjunto
+32:05
+Ou seja quando você foi inteirar nos elementos é possível que a ordem dos
+32:11
+elementos não seja a mesma que você adicionou então se você adicionou aqui ao João e Maria Pode ser que na hora de
+32:17
+tirar seja Maria e João tá não Você não tem essa garantia Tá talvez você possa até pensar que isso é estranho mas não é
+32:24
+não Em algumas situações Nossa implementação Nossa regra não depende da
+32:29
+ordem dos elementos você só precisa E terá no conjunto de elementos em qualquer ordem então nesses casos o uso
+32:36
+de hash sete é recomendado E aí vamos fazer aqui deixa eu comentar
+32:43
+isso aqui primeiro vamos fazer a interação você não consegue fazer Interação em um headset usando índices justamente porque a interface 7 não tem
+32:50
+um método get que você passa um índice porque headset não mantém índices Mas
+32:56
+você consegue fazer alteração por exemplo usando o em hanset four né Vamos fazer a interação aqui ó João e Maria
+33:03
+por coincidência eu também foi um poucas elementos poucos elementos que nós adicionamos aqui né mas por coincidência
+33:09
+João e Maria ficou na ordem que nós adicionamos mas lembrando poderia vir aqui em uma ordem diferente tá bom
+33:16
+então beleza agora vamos verificar se esse contexto aqui retorna verdadeiro
+33:24
+ou falso lembra que quando era um list ele retornava verdadeiro né inclusive deixa eu deixar aqui o lixo comentado
+33:31
+porque eu quero que você tenha isso aqui também deixar comentar dessa lista tá a gente
+33:36
+tá usando o sete aqui né tava retornando verdadeiro porque porque o método contém ele vai percorrer os elementos da sua
+33:44
+coleção e vai chamar o método ecos para eles até encontrar a correspondência né
+33:50
+até encontrar esse essa pessoa 4 tá lá dentro através do método não é isso então vamos ver se tá funcionando Opa
+33:58
+Mas agora deu falso que interessante Olha só se a gente mudar para list a
+34:03
+realist ele retorna true mas se eu mudar para sete
+34:09
+ele retorna falsa e agora que mistério é esse bom
+34:14
+para entender esse comportamento Aqui nós temos que falar de tabelas de espalhamento em inglês
+34:20
+hashtables um detalhe muito importante sobre o resto 7 é que ele funciona com
+34:26
+tabela de espalhamento por isso tem esse prefixo inclusive aqui ó de hash tá no
+34:31
+nome da classe obviamente por isso tivemos esse comportamento do método contém é diferente retornando falso
+34:40
+Então vamos entender o que são essas tabelas de espalhamento e Qual é o objetivo delas quando trabalhamos com
+34:47
+coleções algumas operações simples como buscar um elemento em uma coleção podem
+34:52
+ser executadas de forma mais lenta que a gente esperava por exemplo imagine uma coleção com milhares de objetos que
+35:00
+temos frutas aqui tá imagina uma coleção então com várias frutas poderíamos ter
+35:05
+milhares aqui se a gente quiser saber se um determinado objeto está nessa coleção
+35:10
+nós podemos chamar o método contém da coleção Então nesse exemplo aqui ó frutas é a referência da nossa coleção
+35:18
+ponto contém eu quero saber se tem aqui uma maçã e aí vai retornar um boleando se encontrou ou não beleza até aqui ok
+35:26
+essa operação vai fazer uma busca linear ou seja vai percorrer todos os elementos
+35:32
+da coleção até encontrar o objeto podendo chegar ao final da coleção e não ter encontrado nada inclusive como você
+35:39
+pode imaginar essa busca não é muito eficiente principalmente em grandes
+35:44
+coleções para resolver isso e melhorar a performance de operações simples como
+35:49
+essa a collections do Java fornece algumas implementações de coleções que
+35:55
+implementam uma estrutura de dados conhecida como tabelas de espalhamento
+36:00
+ou também conhecido como tabelas de dispersão em inglês o nome é hashta
+36:07
+assim as coleções que implementam hashtable calculam um valor de hash para
+36:14
+cada elemento ao adicioná-lo na coleção esse resto é um número inteiro é uma
+36:19
+chave de identificação única que categoriza o elemento de acordo com
+36:25
+alguma lógica por exemplo vamos categorizar alguns objetos pela letra inicial deles então assim laranja começa
+36:32
+com a letra L certo Então ele recebe um hashi por exemplo o número 76 a maçã
+36:38
+começa com a letra m então recebe o resto calculado e é 77 a manga também
+36:43
+começa com a letra m e por isso o resto calculado também a 77 e etc beleza
+36:48
+lembrando essa aqui é só um exemplo você pode definir o algoritmo que quiser Para calcular esse resto esse número de
+36:55
+identificação nesse exemplo aqui Nós escolhemos calcular esse resto baseado
+37:01
+na letra inicial Tá bom internamente a implementação dessa estrutura no Java foi um Array de
+37:09
+objetos para armazenar os elementos ou seja uma estrutura para armazenar esses
+37:14
+elementos cada posição dessa estrutura desse Away representa um compartimento
+37:19
+Onde serão colocados objetos de um mesmo hashi e a implementação faz um cálculo
+37:24
+que vai transformar esse hash que é um número inteiro né em um valor que está
+37:30
+dentro dos limites aqui ó do Ray dessa estrutura que possui então aqui eu tenho
+37:35
+do zero ao três então ele vai calcular a partir do hashi do elemento que está
+37:41
+sendo adicionado na coleção vai ser calculado para colocar dentro de algum desses compartimentos tá para
+37:47
+simplificar vamos imaginar que a letra L ficou na posição zero e a letra M ficou
+37:53
+na posição 3 se a gente adicionar um novo elemento com a letra m por exemplo
+37:58
+uma maçã o resto dele vai ser calculado também né e no nosso exemplo como a lógica que
+38:06
+definimos para calcular o resto é a Letra Inicial se adicionarmos uma maçã ela vai ter o mesmo resto que a melancia
+38:13
+portanto um novo elemento é adicionado na mesma posição desse Array para isso a
+38:20
+implementação usa implementação dessa tabela de espalhamento né usa uma implementação de
+38:26
+lista conhecida como lista ligada é o linkedlist ou seja dentro de cada
+38:32
+posição do Hawaii vai possuir uma lista uma lista ligada com os elementos que
+38:38
+tem algo em comum Eles estão no mesmo compartimento ali né nesse exemplo o nó
+38:44
+aqui com a melancia Ó tem aqui uma melancia chama isso aqui de nó né de
+38:49
+node esse nó que com a com a melancia aponta para o nó com a maçã então elas
+38:55
+ficam ligadas né ou seja nós temos dois elementos dentro da posição três que
+39:00
+representa o resto de elementos que começa com a letra m certo laranja então ficou
+39:06
+como começa com a letra L ficou no zero melancia e maçã ficou na posição 3 beleza e assim por diante tá todos os
+39:14
+elementos são categorizados conforme o código hash calculado Eu lustrei apenas alguns elementos aqui no slide Mas você
+39:20
+pode imaginar que nós poderíamos ter uma coleção gigante de elementos aqui como milhões de elementos tá bom Outra coisa
+39:27
+é que existe a possibilidade de acontecer uma colisão de resto por
+39:33
+exemplo ao adicionar uma fruta com a letra u Pode ser que o cálculo indique a
+39:39
+posição três do Hawaii onde estão as frutas com a letra m também isso não é
+39:44
+um problema tá bom nesse caso teríamos frutas iniciadas por m eu no mesmo
+39:50
+compartimento mas esse é um cenário não muito desejado por questões de performance quanto mais compartimentos a
+39:57
+gente tiver melhor fica indexado os objetos e qual é a vantagem dessa estrutura de
+40:02
+dados bom a vantagem aqui se a gente fizer a mesma busca por um elemento por
+40:07
+exemplo chamando a operação contém os buscando aí uma maçã o resto do objeto a
+40:13
+ser buscado é primeiramente calculado Então vai calcular Qual é o resto dessa maçã Antes de iniciar a busca por ele
+40:20
+com o resto a posição no Away calculado o que é super rápido de executar
+40:26
+inclusive né basta buscar a lista ligada que se encontra nessa posição do
+40:33
+Hawai ou seja na posição 3 né a implementação então ao encontrar a lista
+40:38
+ligada vai percorrer e fazer a busca linear apenas nesses elementos de um
+40:45
+mesmo compartimento ignorando todos os outros elementos da coleção e por isso será muito mais eficiente ou seja se
+40:52
+você estiver usando uma implementação que usa tabelas de espalhamento e por
+40:57
+exemplo existe o tipo hashtag que é clássico de implementação da Collection
+41:03
+que usa tabela de espanhamento se você tiver usando isso por exemplo mas não implementar o algoritmo de geração de
+41:11
+Hast você vai ter problemas como nós tivemos né não vai funcionar a pode até
+41:17
+não encontrar um elemento que está lá de fato dentro de uma coleção porém ele não
+41:22
+é encontrado porque você não implementou corretamente Ou nem implementou o
+41:28
+algoritmo de geração de resto e aí você pode estar pensando tá Thiago Mas onde
+41:33
+nós implementamos esse algoritmo de hashi bom aqui ó na classe pessoa assim
+41:39
+como nós implementamos o ícolas sobre escrevendo esse método ricos da classe o
+41:44
+objetivo Nós também temos que sobrescrever o método chamado de hash code também é um método da classe e
+41:51
+objetivo que nós vamos sobre a escrever e aqui nós vamos retornar um valor
+41:56
+inteiro que é gerado por um algoritmo de ha ou seja um código né para categorizar o
+42:03
+objeto em tabelas de espalhamento a implementação mais simples possível Vamos pensar assim e que também é válido
+42:10
+tá é você retornar o número fixo tipo assim ó 1 tá bom se fizer só isso aqui
+42:15
+vamos ver aqui antes tava retornando falso contém agora já vai começar a retornar true tá vendo simplesmente
+42:21
+retornando o número fixo um porque estamos aqui categorizando todos os
+42:27
+elementos da nossa coleção do nosso conjunto dentro de um compartimento
+42:33
+calculado pelo resto um ou seja dentro do mesmo compartimento logicamente isso aqui funcionou mas o problema é que como
+42:40
+todos os objetos são categorizados Com um único hashi a gente acaba perdendo a
+42:46
+função da tabela de espalhamento né porque na verdade eles não estão ficando espalhados é nada eles estão ficando
+42:51
+todos concentrados dentro daquele mesmo compartimento da tabela né Então tá
+42:58
+categorizando em compartimentos diferentes Como é o ideal quando a gente usa tabelas de espalhamento certo então
+43:05
+quanto melhor o algoritmo para você calcular os códigos hashi melhor vai ser a performance Inclusive das tabelas de
+43:12
+espalhamento isso vai fazer mais diferença quando você tiver conjuntos principalmente coleções muito grandes
+43:18
+nesse caso aqui que temos uma coleção com apenas dois elementos praticamente não vai fazer diferença nenhuma em
+43:24
+termos de performance Mas se você tiver milhões e milhões de objetos dentro de um de um conjunto Aí sim você veria
+43:31
+muita diferença por isso eu prefiro não escrever o código hash eu prefiro gerar
+43:37
+pela própria ideia que já tem um algoritmo bem mais eficiente Inclusive a
+43:42
+ideia quando você gera o resto code você gera o ecos junto esses dois métodos
+43:49
+aqui eles sempre é uma boa prática você sempre sobre escrever eles em conjunto
+43:56
+você nunca faz só um ao outro então vou pagar os dois aqui ó e vou clicar com o botão direito para gerar a implementação
+44:03
+ó tá vendo icons and code não tem opção só do ícolas ou só do hash code porque são
+44:08
+métodos que quando você implementa é importante você implementar junto para não ter nenhuma inconsistência e aqui
+44:14
+você pode escolher qual que é a forma que você quer gerar pode ser o defu eu vou colocar esse aqui ó
+44:21
+você acha que fica mais enxuto deixa eu ver aqui é o template né esse é o modelo ok aqui
+44:28
+você seleciona quais são as propriedades que você quer incluir no método ícolas
+44:34
+aqui a gente quer só o documento beleza só o documento e aqui qual quais são as propriedades
+44:40
+você quer incluir no rescode é só o documento em princípio assim em geral Como regra você sempre usa o mesmo então
+44:47
+já até filtrou aqui deixou só o documento Create Beleza então ele gerou o icos para a gente aqui veja que ficou
+44:55
+até bem semelhante ao que Nós criamos e gerou o hash code o hash code ficou bem
+45:01
+chuto aqui ele usou um método chamado hashi dessa classe objetivo
+45:07
+bom a gente vai confiar que ele é uma implementação eficiente inclusive uma
+45:12
+implementação que já veio no próprio Java né então a gente simplesmente vai usar dessa forma e agora sim ele tá
+45:19
+usando tabelas de espalhamento da forma correta e tá retornando o truco tá vendo
+
+
