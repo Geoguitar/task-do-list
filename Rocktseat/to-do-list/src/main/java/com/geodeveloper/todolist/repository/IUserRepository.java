@@ -8,5 +8,5 @@ import com.geodeveloper.todolist.entities.UserModel;
 
 
 public interface IUserRepository extends JpaRepository<UserModel, UUID> {
-    
+    UserModel findByUserName(String userName);
 }
