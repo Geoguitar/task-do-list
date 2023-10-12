@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.geodeveloper.todolist.entities.UserModel;
 import com.geodeveloper.todolist.repository.IUserRepository;
+import at.favre.lib.crypto.bcrypt.BCrypt;
 
 
 @RestController
@@ -26,7 +27,13 @@ public class UserController {
             //System.out.println("Usuário já existe !");
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Usuário já existe") ;
         }
+
+        var passwordHashred =  BCrypt.withDefaults().hashToString(12, userModel.getPassword().toCharArray());
+
+        userModel.setPassword(passwordHashred);
+
         var userCreated = this.iUserRepository.save(userModel);
         return ResponseEntity.status(HttpStatus.CREATED).body(userCreated);
     }
+
 }
