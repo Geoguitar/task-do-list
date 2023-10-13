@@ -36,7 +36,8 @@ public class TaskModel {
     private String description;
     private LocalDateTime startAt;
     private LocalDateTime endAt;
-    private UUID idUser;
+
+    private UUID iduser;
     
     @CreationTimestamp
     private LocalDateTime createAt;
