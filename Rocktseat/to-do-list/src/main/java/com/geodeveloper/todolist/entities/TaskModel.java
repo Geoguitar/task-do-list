@@ -42,4 +42,20 @@ public class TaskModel {
     @CreationTimestamp
     private LocalDateTime createAt;
 
+    public void setTitle(String title) throws Exception {
+
+        if (title.length() > 50) {
+            throw new Exception("O campo título permite 50 caracteres no máximo!");
+        }
+        this.title = title;
+    }
+
+     public void setPriority(String priority) throws Exception {
+        
+        if (priority.length() > 50) {
+            throw new Exception("O campo prioridade permite 50 caracteres no máximo!");
+        }
+        this.priority = priority;
+    }
+
 }
