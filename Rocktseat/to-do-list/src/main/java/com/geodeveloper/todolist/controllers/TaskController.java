@@ -59,14 +59,14 @@ public class TaskController {
     }
 
     @PutMapping("/{id}")
-    public void update(@RequestBody TaskModel taskModel, @PathVariable UUID id, HttpServletRequest request) {
+    public TaskModel update(@RequestBody TaskModel taskModel, @PathVariable UUID id, HttpServletRequest request) {
         var idUser = request.getAttribute("iduser");
 
         var task = this.iTaskRepository.findById(id).orElse(null);
 
         Utils.copyNonNullProperties(taskModel, task);
 
-        this.iTaskRepository.save(taskModel);
+        return this.iTaskRepository.save(task);
     }
 
 }
