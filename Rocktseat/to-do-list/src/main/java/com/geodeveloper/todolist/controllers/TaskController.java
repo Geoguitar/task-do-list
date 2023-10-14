@@ -9,11 +9,14 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.HttpStatusCode;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.geodeveloper.todolist.Utils.Utils;
 import com.geodeveloper.todolist.entities.TaskModel;
 import com.geodeveloper.todolist.repository.ITaskRepository;
 
@@ -36,12 +39,12 @@ public class TaskController {
 
             if (currentDate.isAfter(taskModel.getStartAt()) || currentDate.isAfter(taskModel.getEndAt())) {
                 return ResponseEntity.status(HttpStatus.BAD_REQUEST)
-                .body("A data de inicio /data término deve ser maior que a atual.");
+                .body("A data de inicio/data término, deve ser maior que a atual.");
             }
 
              if (taskModel.getStartAt().isAfter(taskModel.getEndAt())) {
                 return ResponseEntity.status(HttpStatus.BAD_REQUEST)
-                .body("A data de inicio deve ser menot que a data de término.");
+                .body("A data de inicio deve ser menor que a de término.");
             }
 
         var task = this.iTaskRepository.save(taskModel);
@@ -54,4 +57,16 @@ public class TaskController {
         var tasks = this.iTaskRepository.findByIduser((UUID) idUser);
         return tasks;
     }
+
+    @PutMapping("/{id}")
+    public void update(@RequestBody TaskModel taskModel, @PathVariable UUID id, HttpServletRequest request) {
+        var idUser = request.getAttribute("iduser");
+
+        var task = this.iTaskRepository.findById(id).orElse(null);
+
+        Utils.copyNonNullProperties(taskModel, task);
+
+        this.iTaskRepository.save(taskModel);
+    }
+
 }
